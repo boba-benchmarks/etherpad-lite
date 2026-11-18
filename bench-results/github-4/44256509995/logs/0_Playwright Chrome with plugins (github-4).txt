@@ -1,0 +1,932 @@
+﻿2026-11-18T07:08:11.3256899Z Current runner version: '2.338.2'
+2026-11-18T07:08:11.3279864Z ##[group]Runner Image Provisioner
+2026-11-18T07:08:11.3280640Z Hosted Compute Agent
+2026-11-18T07:08:11.3281106Z Version: 20261103.629
+2026-11-18T07:08:11.3281685Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-18T07:08:11.3282281Z Build Date: 2026-11-03T17:26:59Z
+2026-11-18T07:08:11.3283351Z Worker ID: {9b405a7b-a510-4bb1-800d-8c84572d0930}
+2026-11-18T07:08:11.3283992Z Region: westus3
+2026-11-18T07:08:11.3284445Z Cloud: Azure
+2026-11-18T07:08:11.3284925Z ##[endgroup]
+2026-11-18T07:08:11.3286082Z ##[group]Operating System
+2026-11-18T07:08:11.3286603Z Ubuntu
+2026-11-18T07:08:11.3287134Z 26.04.1
+2026-11-18T07:08:11.3287550Z LTS
+2026-11-18T07:08:11.3288008Z ##[endgroup]
+2026-11-18T07:08:11.3288465Z ##[group]Runner Image
+2026-11-18T07:08:11.3288978Z Image: ubuntu-26.04
+2026-11-18T07:08:11.3289496Z Version: 20261111.196.1
+2026-11-18T07:08:11.3290542Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-18T07:08:11.3291827Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+2026-11-18T07:08:11.3292630Z ##[endgroup]
+2026-11-18T07:08:11.3293973Z ##[group]GITHUB_TOKEN Permissions
+2026-11-18T07:08:11.3295821Z Actions: read
+2026-11-18T07:08:11.3296390Z Checks: write
+2026-11-18T07:08:11.3296876Z Contents: read
+2026-11-18T07:08:11.3297403Z Metadata: read
+2026-11-18T07:08:11.3297864Z PullRequests: write
+2026-11-18T07:08:11.3298313Z ##[endgroup]
+2026-11-18T07:08:11.3300117Z Secret source: Actions
+2026-11-18T07:08:11.3300877Z Cache mode: write
+2026-11-18T07:08:11.3301579Z Prepare workflow directory
+2026-11-18T07:08:11.3664433Z Prepare all required actions
+2026-11-18T07:08:11.3704738Z Getting action download info
+2026-11-18T07:08:11.6992061Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-18T07:08:11.8882081Z Download action repository 'actions/cache@v6' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+2026-11-18T07:08:12.0077084Z Download action repository 'pnpm/action-setup@v6.1.1' (SHA:73e46992e05b19abd31f2f3c20e0e7370d762115)
+2026-11-18T07:08:12.4979566Z Download action repository 'actions/setup-node@v7' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+2026-11-18T07:08:12.5698170Z Download action repository 'coldteadotai/boba@v1' (SHA:4ca4c1926a0f3307fc0d9f0f5c07aa08c2b6586a)
+2026-11-18T07:08:13.1526215Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-18T07:08:13.3794871Z Complete job name: Playwright Chrome with plugins (github-4)
+2026-11-18T07:08:13.4751772Z ##[group]Run actions/checkout@v7
+2026-11-18T07:08:13.4752901Z with:
+2026-11-18T07:08:13.4753815Z   repository: boba-benchmarks/etherpad-lite
+2026-11-18T07:08:13.4761550Z   token: ***
+2026-11-18T07:08:13.4762262Z   ssh-strict: true
+2026-11-18T07:08:13.4763001Z   ssh-user: git
+2026-11-18T07:08:13.4763955Z   persist-credentials: true
+2026-11-18T07:08:13.4764757Z   clean: true
+2026-11-18T07:08:13.4765539Z   sparse-checkout-cone-mode: true
+2026-11-18T07:08:13.4766389Z   fetch-depth: 1
+2026-11-18T07:08:13.4767092Z   fetch-tags: false
+2026-11-18T07:08:13.4767831Z   show-progress: true
+2026-11-18T07:08:13.4768584Z   lfs: false
+2026-11-18T07:08:13.4769260Z   submodules: false
+2026-11-18T07:08:13.4770002Z   set-safe-directory: true
+2026-11-18T07:08:13.4770838Z   allow-unsafe-pr-checkout: false
+2026-11-18T07:08:13.4771937Z env:
+2026-11-18T07:08:13.4772614Z   PNPM_HOME: ~/.pnpm-store
+2026-11-18T07:08:13.4773502Z ##[endgroup]
+2026-11-18T07:08:13.7269035Z Syncing repository: boba-benchmarks/etherpad-lite
+2026-11-18T07:08:13.7272456Z ##[group]Getting Git version info
+2026-11-18T07:08:13.7274238Z Working directory is '/home/runner/work/etherpad-lite/etherpad-lite'
+2026-11-18T07:08:13.7276721Z [command]/usr/bin/git version
+2026-11-18T07:08:13.7303767Z git version 2.56.1
+2026-11-18T07:08:13.7322965Z ##[endgroup]
+2026-11-18T07:08:13.7332174Z Temporarily overriding HOME='/home/runner/work/_temp/18498d65-7b58-44a0-a5f3-6a5c45762d8f' before making global git config changes
+2026-11-18T07:08:13.7336403Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-18T07:08:13.7339569Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/etherpad-lite/etherpad-lite
+2026-11-18T07:08:13.7389486Z Deleting the contents of '/home/runner/work/etherpad-lite/etherpad-lite'
+2026-11-18T07:08:13.7392656Z ##[group]Determining repository object format
+2026-11-18T07:08:13.7395329Z ##[endgroup]
+2026-11-18T07:08:13.7397415Z ##[group]Initializing the repository
+2026-11-18T07:08:13.7399639Z [command]/usr/bin/git init /home/runner/work/etherpad-lite/etherpad-lite
+2026-11-18T07:08:13.7475985Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-18T07:08:13.7478317Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-18T07:08:13.7480570Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-18T07:08:13.7482391Z hint: call:
+2026-11-18T07:08:13.7483469Z hint:
+2026-11-18T07:08:13.7484644Z hint: 	git config --global init.defaultBranch <name>
+2026-11-18T07:08:13.7486066Z hint:
+2026-11-18T07:08:13.7487396Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-18T07:08:13.7489586Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-18T07:08:13.7491392Z hint:
+2026-11-18T07:08:13.7492400Z hint: 	git branch -m <name>
+2026-11-18T07:08:13.7493648Z hint:
+2026-11-18T07:08:13.7495256Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-18T07:08:13.7497942Z Initialized empty Git repository in /home/runner/work/etherpad-lite/etherpad-lite/.git/
+2026-11-18T07:08:13.7504365Z [command]/usr/bin/git remote add origin https://github.com/boba-benchmarks/etherpad-lite
+2026-11-18T07:08:13.7549982Z ##[endgroup]
+2026-11-18T07:08:13.7551878Z ##[group]Disabling automatic garbage collection
+2026-11-18T07:08:13.7554763Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-18T07:08:13.7589491Z ##[endgroup]
+2026-11-18T07:08:13.7591251Z ##[group]Setting up auth
+2026-11-18T07:08:13.7592804Z Removing SSH command configuration
+2026-11-18T07:08:13.7594842Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-18T07:08:13.7625557Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-18T07:08:13.7980573Z Removing HTTP extra header
+2026-11-18T07:08:13.7985469Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-18T07:08:13.8014853Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-18T07:08:13.8248223Z Removing includeIf entries pointing to credentials config files
+2026-11-18T07:08:13.8251659Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-18T07:08:13.8282624Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-18T07:08:13.8527772Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-18T07:08:13.8564304Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git.path /home/runner/work/_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config
+2026-11-18T07:08:13.8594819Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config
+2026-11-18T07:08:13.8626067Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config
+2026-11-18T07:08:13.8655673Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config
+2026-11-18T07:08:13.8683068Z ##[endgroup]
+2026-11-18T07:08:13.8684652Z ##[group]Fetching the repository
+2026-11-18T07:08:13.8688760Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c8d95be90dd9b40d3aec77cba25a7ab0f5c96cdf:refs/remotes/origin/main
+2026-11-18T07:08:14.7427959Z From https://github.com/boba-benchmarks/etherpad-lite
+2026-11-18T07:08:14.7428598Z  * [new ref]         c8d95be90dd9b40d3aec77cba25a7ab0f5c96cdf -> origin/main
+2026-11-18T07:08:14.7435706Z [command]/usr/bin/git branch --list --remote origin/main
+2026-11-18T07:08:14.7459635Z   origin/main
+2026-11-18T07:08:14.7466482Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-11-18T07:08:14.7487851Z c8d95be90dd9b40d3aec77cba25a7ab0f5c96cdf
+2026-11-18T07:08:14.7491751Z ##[endgroup]
+2026-11-18T07:08:14.7492229Z ##[group]Determining the checkout info
+2026-11-18T07:08:14.7492779Z ##[endgroup]
+2026-11-18T07:08:14.7496153Z [command]/usr/bin/git sparse-checkout disable
+2026-11-18T07:08:14.7540759Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-18T07:08:14.7567856Z ##[group]Checking out the ref
+2026-11-18T07:08:14.7572422Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-18T07:08:14.8547896Z Switched to a new branch 'main'
+2026-11-18T07:08:14.8553927Z branch 'main' set up to track 'origin/main'.
+2026-11-18T07:08:14.8558515Z ##[endgroup]
+2026-11-18T07:08:14.8604193Z [command]/usr/bin/git log -1 --format=%H
+2026-11-18T07:08:14.8628983Z c8d95be90dd9b40d3aec77cba25a7ab0f5c96cdf
+2026-11-18T07:08:14.9997981Z ##[group]Run actions/cache@v6
+2026-11-18T07:08:14.9998232Z with:
+2026-11-18T07:08:14.9998423Z   path: ~/.pnpm-store
+2026-11-18T07:08:14.9998767Z   key: Linux-pnpm-store-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556
+2026-11-18T07:08:14.9999171Z   restore-keys: Linux-pnpm-store-
+
+2026-11-18T07:08:14.9999413Z   enableCrossOsArchive: false
+2026-11-18T07:08:14.9999624Z   fail-on-cache-miss: false
+2026-11-18T07:08:14.9999819Z   lookup-only: false
+2026-11-18T07:08:15.0000005Z   save-always: false
+2026-11-18T07:08:15.0000177Z env:
+2026-11-18T07:08:15.0000343Z   PNPM_HOME: ~/.pnpm-store
+2026-11-18T07:08:15.0000534Z ##[endgroup]
+2026-11-18T07:08:15.3020640Z Cache not found for input keys: Linux-pnpm-store-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556, Linux-pnpm-store-
+2026-11-18T07:08:15.3631184Z ##[group]Run actions/cache@v6
+2026-11-18T07:08:15.3631436Z with:
+2026-11-18T07:08:15.3631623Z   path: ~/.cache/ms-playwright
+2026-11-18T07:08:15.3631986Z   key: Linux-playwright-31ef7bd5f30c4727b0e0bee005389c5796459918031710bea412d2818bda471e
+2026-11-18T07:08:15.3632394Z   restore-keys: Linux-playwright-
+
+2026-11-18T07:08:15.3632630Z   enableCrossOsArchive: false
+2026-11-18T07:08:15.3632851Z   fail-on-cache-miss: false
+2026-11-18T07:08:15.3633056Z   lookup-only: false
+2026-11-18T07:08:15.3633756Z   save-always: false
+2026-11-18T07:08:15.3633957Z env:
+2026-11-18T07:08:15.3634131Z   PNPM_HOME: ~/.pnpm-store
+2026-11-18T07:08:15.3634330Z ##[endgroup]
+2026-11-18T07:08:15.6727525Z Cache hit for: Linux-playwright-31ef7bd5f30c4727b0e0bee005389c5796459918031710bea412d2818bda471e
+2026-11-18T07:08:16.8905723Z Received 67108864 of 306697050 (21.9%), 63.9 MBs/sec
+2026-11-18T07:08:17.8965189Z Received 213909504 of 306697050 (69.7%), 101.8 MBs/sec
+2026-11-18T07:08:18.7445095Z Received 306697050 of 306697050 (100.0%), 102.6 MBs/sec
+2026-11-18T07:08:18.7458344Z Cache Size: ~292 MB (306697050 B)
+2026-11-18T07:08:18.7502128Z [command]/usr/bin/tar -xf /home/runner/work/_temp/6cc111b2-f36e-49c8-8b14-bf7f35a409ba/cache.tzst -P -C /home/runner/work/etherpad-lite/etherpad-lite --use-compress-program unzstd
+2026-11-18T07:08:19.6915340Z Cache restored successfully
+2026-11-18T07:08:19.7946447Z Cache restored from key: Linux-playwright-31ef7bd5f30c4727b0e0bee005389c5796459918031710bea412d2818bda471e
+2026-11-18T07:08:19.8158281Z ##[group]Run pnpm/action-setup@v6.1.1
+2026-11-18T07:08:19.8158548Z with:
+2026-11-18T07:08:19.8158740Z   run_install: false
+2026-11-18T07:08:19.8158941Z   dest: ~/setup-pnpm
+2026-11-18T07:08:19.8159125Z   cache: false
+2026-11-18T07:08:19.8159314Z   cache_dependency_path: pnpm-lock.yaml
+2026-11-18T07:08:19.8159580Z   package_json_file: package.json
+2026-11-18T07:08:19.8159814Z   standalone: false
+2026-11-18T07:08:19.8159990Z env:
+2026-11-18T07:08:19.8160165Z   PNPM_HOME: ~/.pnpm-store
+2026-11-18T07:08:19.8160370Z ##[endgroup]
+2026-11-18T07:08:19.9416252Z ##[group]Running self-installer...
+2026-11-18T07:08:21.5311532Z 
+2026-11-18T07:08:21.5312002Z added 2 packages, and audited 3 packages in 1s
+2026-11-18T07:08:21.5317774Z 
+2026-11-18T07:08:21.5318065Z found 0 vulnerabilities
+2026-11-18T07:08:21.5792971Z Checking for updates...
+2026-11-18T07:08:21.8977008Z Switching pnpm from v12.17.0 to v12.4.2...
+2026-11-18T07:08:22.9233879Z Downloading @pnpm/exe.linux-x64@12.4.2: 0.00 B/21.06 MB
+2026-11-18T07:08:22.9760968Z Packages are copied from the content-addressable store to the virtual store.
+2026-11-18T07:08:22.9761882Z   Content-addressable store is at: /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-11-18T07:08:22.9770328Z   Virtual store is at:             node_modules/.bin/global/v11/92f-18e911fc88f68817-0/node_modules/.pnpm
+2026-11-18T07:08:23.2798012Z .../global/v11/92f-18e911fc88f68817-0    | Progress: resolved 2, reused 0, downloaded 2, added 2, done
+2026-11-18T07:08:23.4201874Z Successfully updated pnpm to v12.4.2
+2026-11-18T07:08:23.4252404Z ##[endgroup]
+2026-11-18T07:08:23.4252797Z Installation Completed!
+2026-11-18T07:08:23.4605145Z ##[group]Run actions/setup-node@v7
+2026-11-18T07:08:23.4605440Z with:
+2026-11-18T07:08:23.4605621Z   node-version: 24
+2026-11-18T07:08:23.4605822Z   cache: pnpm
+2026-11-18T07:08:23.4606003Z   check-latest: false
+2026-11-18T07:08:23.4608062Z   token: ***
+2026-11-18T07:08:23.4608250Z   package-manager-cache: true
+2026-11-18T07:08:23.4608454Z env:
+2026-11-18T07:08:23.4608654Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-18T07:08:23.4608912Z ##[endgroup]
+2026-11-18T07:08:23.5653801Z Found in cache @ /opt/hostedtoolcache/node/24.22.2/x64
+2026-11-18T07:08:23.6161506Z ##[group]Environment details
+2026-11-18T07:08:23.8982735Z node: v24.22.2
+2026-11-18T07:08:23.8982988Z npm: 11.19.1
+2026-11-18T07:08:23.8983353Z yarn: 1.22.22
+2026-11-18T07:08:23.8983928Z ##[endgroup]
+2026-11-18T07:08:23.9000216Z [command]/home/runner/setup-pnpm/node_modules/.bin/bin/pnpm store path --silent
+2026-11-18T07:08:23.9152747Z /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-11-18T07:08:24.1168811Z Cache hit for: node-cache-Linux-x64-pnpm-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556
+2026-11-18T07:08:25.3330873Z Received 58720256 of 154730476 (38.0%), 56.0 MBs/sec
+2026-11-18T07:08:25.9944292Z Received 154730476 of 154730476 (100.0%), 88.9 MBs/sec
+2026-11-18T07:08:25.9951147Z Cache Size: ~148 MB (154730476 B)
+2026-11-18T07:08:25.9989792Z [command]/usr/bin/tar -xf /home/runner/work/_temp/5847d2cf-4388-49a7-9453-adf5534fbbf6/cache.tzst -P -C /home/runner/work/etherpad-lite/etherpad-lite --use-compress-program unzstd
+2026-11-18T07:08:27.7430348Z Cache restored successfully
+2026-11-18T07:08:27.7496353Z Cache restored from key: node-cache-Linux-x64-pnpm-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556
+2026-11-18T07:08:27.7758367Z ##[group]Run pnpm install --frozen-lockfile
+2026-11-18T07:08:27.7758730Z [36;1mpnpm install --frozen-lockfile[0m
+2026-11-18T07:08:27.7816831Z shell: /usr/bin/bash -e {0}
+2026-11-18T07:08:27.7817065Z env:
+2026-11-18T07:08:27.7817296Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-18T07:08:27.7817564Z ##[endgroup]
+2026-11-18T07:08:27.8919013Z Scope: all 7 workspace projects
+2026-11-18T07:08:27.9324537Z ? Verifying lockfile against supply-chain policies (1211 entries)...
+2026-11-18T07:08:28.1176519Z Packages are hard linked from the content-addressable store to the virtual store.
+2026-11-18T07:08:28.1177651Z   Content-addressable store is at: /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-11-18T07:08:28.1178304Z   Virtual store is at:             node_modules/.pnpm
+2026-11-18T07:08:35.0152321Z ✓ Lockfile passes supply-chain policies (1211 entries in 7.1s)
+2026-11-18T07:08:35.0152925Z Lockfile is up to date, resolution step is skipped
+2026-11-18T07:08:35.0275779Z Packages: +1099
+2026-11-18T07:08:35.0276292Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-11-18T07:08:35.0736076Z Progress: resolved 1099, reused 1099, downloaded 0, added 1099, done
+2026-11-18T07:08:35.0838604Z Ignored build scripts: esbuild@0.28.2.
+2026-11-18T07:08:35.0839419Z Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.
+2026-11-18T07:08:35.2199818Z 
+2026-11-18T07:08:35.2200421Z dependencies:
+2026-11-18T07:08:35.2200771Z + ep_etherpad-lite link:src
+2026-11-18T07:08:35.2200976Z 
+2026-11-18T07:08:35.2201095Z devDependencies:
+2026-11-18T07:08:35.2201349Z + admin link:admin
+2026-11-18T07:08:35.2201578Z + docs link:doc
+2026-11-18T07:08:35.2201822Z + ui link:ui
+2026-11-18T07:08:35.2201946Z 
+2026-11-18T07:08:35.2215013Z Done in 7.3s using pnpm v12.4.2
+2026-11-18T07:08:35.2543526Z ##[group]Run pnpm add -w ep_align ep_author_hover ep_font_color ep_font_size ep_hash_auth ep_headings2 ep_markdown ep_guest ep_set_title_on_pad ep_spellcheck ep_subscript_and_superscript ep_table_of_contents
+2026-11-18T07:08:35.2544644Z [36;1mpnpm add -w ep_align ep_author_hover ep_font_color ep_font_size ep_hash_auth ep_headings2 ep_markdown ep_guest ep_set_title_on_pad ep_spellcheck ep_subscript_and_superscript ep_table_of_contents[0m
+2026-11-18T07:08:35.2588928Z shell: /usr/bin/bash -e {0}
+2026-11-18T07:08:35.2589149Z env:
+2026-11-18T07:08:35.2589379Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-18T07:08:35.2589659Z ##[endgroup]
+2026-11-18T07:08:35.4433728Z ✓ Lockfile passes supply-chain policies (verified 428ms ago)
+2026-11-18T07:08:36.5081981Z Progress: resolved 0, reused 148, downloaded 41, added 0
+2026-11-18T07:08:36.9940570Z src                                      | [WARN] deprecated prom-client@15.1.3
+2026-11-18T07:08:39.2006885Z Progress: resolved 0, reused 358, downloaded 46, added 0
+2026-11-18T07:08:40.2980368Z Progress: resolved 0, reused 512, downloaded 46, added 0
+2026-11-18T07:08:40.7895177Z [WARN] 3 deprecated subdependencies found: node-domexception@1.0.0, rspack-resolver@1.3.0, whatwg-encoding@3.1.1
+2026-11-18T07:08:40.9023693Z Packages: +50
+2026-11-18T07:08:40.9024189Z ++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-11-18T07:08:40.9148274Z Progress: resolved 50, reused 537, downloaded 46, added 50, done
+2026-11-18T07:08:40.9235548Z Ignored build scripts: argon2@0.45.2, bcrypt@6.0.0, esbuild@0.28.2.
+2026-11-18T07:08:40.9236493Z Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.
+2026-11-18T07:08:41.0068350Z [WARN] Issues with peer dependencies found. Run "pnpm peers check" to list them.
+2026-11-18T07:08:41.0068665Z 
+2026-11-18T07:08:41.0068904Z dependencies:
+2026-11-18T07:08:41.0069125Z + ep_align 11.0.58
+2026-11-18T07:08:41.0069337Z + ep_author_hover 11.0.39
+2026-11-18T07:08:41.0069617Z + ep_font_color 0.0.154
+2026-11-18T07:08:41.0069818Z + ep_font_size 0.4.113
+2026-11-18T07:08:41.0070024Z + ep_guest 1.0.72
+2026-11-18T07:08:41.0070221Z + ep_hash_auth 11.0.26
+2026-11-18T07:08:41.0070417Z + ep_headings2 0.2.135
+2026-11-18T07:08:41.0070614Z + ep_markdown 12.0.34
+2026-11-18T07:08:41.0070819Z + ep_set_title_on_pad 0.7.22
+2026-11-18T07:08:41.0071042Z + ep_spellcheck 0.0.116
+2026-11-18T07:08:41.0071288Z + ep_subscript_and_superscript 0.3.93
+2026-11-18T07:08:41.0071547Z + ep_table_of_contents 0.4.12
+2026-11-18T07:08:41.0071682Z 
+2026-11-18T07:08:41.0377063Z Done in 5.8s using pnpm v12.4.2
+2026-11-18T07:08:41.0688604Z ##[group]Run cp ./src/tests/settings.json settings.json
+2026-11-18T07:08:41.0689140Z [36;1mcp ./src/tests/settings.json settings.json[0m
+2026-11-18T07:08:41.0741383Z shell: /usr/bin/bash -e {0}
+2026-11-18T07:08:41.0741642Z env:
+2026-11-18T07:08:41.0741870Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-18T07:08:41.0742137Z ##[endgroup]
+2026-11-18T07:08:41.0853795Z ##[group]Run set -euo pipefail
+2026-11-18T07:08:41.0854232Z [36;1mset -euo pipefail[0m
+2026-11-18T07:08:41.0854637Z [36;1mpnpm run prod > /tmp/etherpad-server.log 2>&1 &[0m
+2026-11-18T07:08:41.0855261Z [36;1mcan_connect() { curl --max-time 3 -sSfo /dev/null http://localhost:9001/; }[0m
+2026-11-18T07:08:41.0855888Z [36;1mfor i in $(seq 1 90); do can_connect && break; sleep 1; done[0m
+2026-11-18T07:08:41.0856339Z [36;1mif ! can_connect; then[0m
+2026-11-18T07:08:41.0856768Z [36;1m  echo "::error::Etherpad did not respond on :9001 within 90s"[0m
+2026-11-18T07:08:41.0857210Z [36;1m  echo "----- server log -----"[0m
+2026-11-18T07:08:41.0857666Z [36;1m  tail -n 200 /tmp/etherpad-server.log || true[0m
+2026-11-18T07:08:41.0858024Z [36;1m  exit 1[0m
+2026-11-18T07:08:41.0858274Z [36;1mfi[0m
+2026-11-18T07:08:41.0858517Z [36;1mcd src[0m
+2026-11-18T07:08:41.0858864Z [36;1mpnpm exec playwright install chromium --with-deps[0m
+2026-11-18T07:08:41.0900070Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T07:08:41.0900357Z env:
+2026-11-18T07:08:41.0900590Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-18T07:08:41.0900891Z ##[endgroup]
+2026-11-18T07:08:41.1070844Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:42.1163766Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:43.1259081Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:44.1343837Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:45.1430601Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:46.1519910Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:47.1608909Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:48.1696274Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:49.1789508Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:50.1877268Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:51.1975301Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:52.2061660Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Could not connect to server
+2026-11-18T07:08:53.6243895Z Installing dependencies...
+2026-11-18T07:08:53.6309623Z Switching to root user to install dependencies...
+2026-11-18T07:08:53.7375086Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-18T07:08:53.7668907Z Hit:2 http://azure.archive.ubuntu.com/ubuntu resolute InRelease
+2026-11-18T07:08:53.7675880Z Get:6 https://packages.microsoft.com/ubuntu/26.04/prod resolute InRelease [3964 B]
+2026-11-18T07:08:53.7717197Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+2026-11-18T07:08:53.7757323Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+2026-11-18T07:08:53.7776343Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+2026-11-18T07:08:53.7965343Z Get:7 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main arm64 Packages [151 kB]
+2026-11-18T07:08:53.8148573Z Get:8 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 Packages [874 kB]
+2026-11-18T07:08:53.8224465Z Get:12 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main amd64 Packages [165 kB]
+2026-11-18T07:08:53.8234265Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [196 kB]
+2026-11-18T07:08:53.8307336Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 Packages [391 kB]
+2026-11-18T07:08:53.8334724Z Get:11 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [123 kB]
+2026-11-18T07:08:53.8471452Z Get:13 http://azure.archive.ubuntu.com/ubuntu resolute-security/main amd64v3 Packages [719 kB]
+2026-11-18T07:08:53.8483621Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute-security/main Translation-en [158 kB]
+2026-11-18T07:08:53.8501975Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe amd64v3 Packages [221 kB]
+2026-11-18T07:08:53.8514782Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe Translation-en [72.6 kB]
+2026-11-18T07:08:53.8527599Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted amd64v3 Packages [590 kB]
+2026-11-18T07:08:53.8574993Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted Translation-en [122 kB]
+2026-11-18T07:08:56.5169939Z Fetched 4197 kB in 0s (14.0 MB/s)
+2026-11-18T07:08:57.0637755Z Reading package lists...
+2026-11-18T07:08:57.0853947Z Reading package lists...
+2026-11-18T07:08:57.2354581Z Building dependency tree...
+2026-11-18T07:08:57.2360782Z Reading state information...
+2026-11-18T07:08:57.2648228Z libasound2t64 is already the newest version (1.2.15.3-1ubuntu1.1).
+2026-11-18T07:08:57.2648773Z libasound2t64 set to manually installed.
+2026-11-18T07:08:57.2649282Z libatk-bridge2.0-0t64 is already the newest version (2.60.4-0ubuntu0.1).
+2026-11-18T07:08:57.2649806Z libatk-bridge2.0-0t64 set to manually installed.
+2026-11-18T07:08:57.2650300Z libatk1.0-0t64 is already the newest version (2.60.4-0ubuntu0.1).
+2026-11-18T07:08:57.2650742Z libatk1.0-0t64 set to manually installed.
+2026-11-18T07:08:57.2651261Z libatspi2.0-0t64 is already the newest version (2.60.4-0ubuntu0.1).
+2026-11-18T07:08:57.2651774Z libatspi2.0-0t64 set to manually installed.
+2026-11-18T07:08:57.2652199Z libcairo2 is already the newest version (1.18.4-3).
+2026-11-18T07:08:57.2652591Z libcairo2 set to manually installed.
+2026-11-18T07:08:57.2653048Z libcups2t64 is already the newest version (2.4.16-1ubuntu1.3).
+2026-11-18T07:08:57.2653622Z libcups2t64 set to manually installed.
+2026-11-18T07:08:57.2654065Z libdbus-1-3 is already the newest version (1.16.2-2ubuntu4).
+2026-11-18T07:08:57.2654477Z libdbus-1-3 set to manually installed.
+2026-11-18T07:08:57.2654869Z libdrm2 is already the newest version (2.4.131-1).
+2026-11-18T07:08:57.2655253Z libdrm2 set to manually installed.
+2026-11-18T07:08:57.2655678Z libgbm1 is already the newest version (26.0.8-1ubuntu0.3).
+2026-11-18T07:08:57.2656081Z libgbm1 set to manually installed.
+2026-11-18T07:08:57.2656550Z libglib2.0-0t64 is already the newest version (2.88.0-1ubuntu0.1).
+2026-11-18T07:08:57.2657031Z libglib2.0-0t64 set to manually installed.
+2026-11-18T07:08:57.2657520Z libnspr4 is already the newest version (2:4.38.2-1ubuntu1).
+2026-11-18T07:08:57.2657948Z libnspr4 set to manually installed.
+2026-11-18T07:08:57.2658379Z libnss3 is already the newest version (2:3.120-1ubuntu2.2).
+2026-11-18T07:08:57.2658795Z libnss3 set to manually installed.
+2026-11-18T07:08:57.2659204Z libpango-1.0-0 is already the newest version (1.57.0-1).
+2026-11-18T07:08:57.2659627Z libpango-1.0-0 set to manually installed.
+2026-11-18T07:08:57.2660075Z libx11-6 is already the newest version (2:1.8.13-1ubuntu0.1).
+2026-11-18T07:08:57.2660491Z libx11-6 set to manually installed.
+2026-11-18T07:08:57.2660892Z libxcb1 is already the newest version (1.17.0-2ubuntu1).
+2026-11-18T07:08:57.2661307Z libxcb1 set to manually installed.
+2026-11-18T07:08:57.2661743Z libxcomposite1 is already the newest version (1:0.4.6-1build1).
+2026-11-18T07:08:57.2662178Z libxcomposite1 set to manually installed.
+2026-11-18T07:08:57.2662608Z libxdamage1 is already the newest version (1:1.1.7-1).
+2026-11-18T07:08:57.2663558Z libxdamage1 set to manually installed.
+2026-11-18T07:08:57.2663982Z libxext6 is already the newest version (2:1.3.4-1build3).
+2026-11-18T07:08:57.2664379Z libxext6 set to manually installed.
+2026-11-18T07:08:57.2664794Z libxfixes3 is already the newest version (1:6.0.0-2build2).
+2026-11-18T07:08:57.2665407Z libxfixes3 set to manually installed.
+2026-11-18T07:08:57.2665836Z libxkbcommon0 is already the newest version (1.13.1-1).
+2026-11-18T07:08:57.2666252Z libxkbcommon0 set to manually installed.
+2026-11-18T07:08:57.2666736Z libxrandr2 is already the newest version (2:1.5.4-1build1).
+2026-11-18T07:08:57.2667148Z libxrandr2 set to manually installed.
+2026-11-18T07:08:57.2667560Z xvfb is already the newest version (2:21.1.22-1ubuntu1.3).
+2026-11-18T07:08:57.2668131Z fonts-noto-color-emoji is already the newest version (2.051-1build1).
+2026-11-18T07:08:57.2668691Z libfontconfig1 is already the newest version (2.17.1-3ubuntu1).
+2026-11-18T07:08:57.2669149Z libfontconfig1 set to manually installed.
+2026-11-18T07:08:57.2669635Z libfreetype6 is already the newest version (2.14.2+dfsg-1ubuntu0.2).
+2026-11-18T07:08:57.2670092Z libfreetype6 set to manually installed.
+2026-11-18T07:08:57.2670563Z fonts-liberation is already the newest version (1:2.1.5-3build1).
+2026-11-18T07:08:57.2671024Z fonts-liberation set to manually installed.
+2026-11-18T07:08:57.3162069Z Solving dependencies...
+2026-11-18T07:08:57.3945980Z The following additional packages will be installed:
+2026-11-18T07:08:57.3946620Z   xfonts-encodings xfonts-utils
+2026-11-18T07:08:57.3950223Z Recommended packages:
+2026-11-18T07:08:57.3950582Z   fonts-ipafont-mincho fonts-tlwg-loma
+2026-11-18T07:08:57.4593813Z The following NEW packages will be installed:
+2026-11-18T07:08:57.4594518Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+2026-11-18T07:08:57.4599308Z   fonts-wqy-zenhei xfonts-cyrillic xfonts-encodings xfonts-scalable
+2026-11-18T07:08:57.4599827Z   xfonts-utils
+2026-11-18T07:08:57.4791921Z 0 upgraded, 9 newly installed, 0 to remove and 29 not upgraded.
+2026-11-18T07:08:57.4792469Z Need to get 21.9 MB of archives.
+2026-11-18T07:08:57.4792887Z After this operation, 80.2 MB of additional disk space will be used.
+2026-11-18T07:08:57.4793474Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-18T07:08:57.5414243Z Get:2 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-ipafont-gothic all 00303-23ubuntu1 [3703 kB]
+2026-11-18T07:08:57.7414401Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 fonts-freefont-ttf all 20211204+svn4273-4build1 [5656 kB]
+2026-11-18T07:08:58.0380135Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-tlwg-loma-otf all 1:0.7.3-1build1 [106 kB]
+2026-11-18T07:08:58.0849452Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-unifont all 1:16.0.04-1build1 [3169 kB]
+2026-11-18T07:08:58.2776324Z Get:6 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 fonts-wqy-zenhei all 0.9.45-8build1 [7863 kB]
+2026-11-18T07:08:58.6737970Z Get:7 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 xfonts-encodings all 1:1.0.5-0ubuntu3 [576 kB]
+2026-11-18T07:08:58.7281739Z Get:8 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 xfonts-utils amd64 1:7.7+7build1 [97.3 kB]
+2026-11-18T07:08:58.7747173Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 xfonts-cyrillic all 1:1.0.5+nmu1build1 [384 kB]
+2026-11-18T07:08:58.8321551Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 xfonts-scalable all 1:1.0.3-1.3build1 [304 kB]
+2026-11-18T07:08:59.1867247Z Fetched 21.9 MB in 1s (16.0 MB/s)
+2026-11-18T07:08:59.2181420Z Selecting previously unselected package fonts-ipafont-gothic.
+2026-11-18T07:08:59.2533853Z (Reading database ... 
+2026-11-18T07:08:59.2534366Z (Reading database ... 5%
+2026-11-18T07:08:59.2535030Z (Reading database ... 10%
+2026-11-18T07:08:59.2535405Z (Reading database ... 15%
+2026-11-18T07:08:59.2535770Z (Reading database ... 20%
+2026-11-18T07:08:59.2536395Z (Reading database ... 25%
+2026-11-18T07:08:59.2536736Z (Reading database ... 30%
+2026-11-18T07:08:59.2537051Z (Reading database ... 35%
+2026-11-18T07:08:59.2537370Z (Reading database ... 40%
+2026-11-18T07:08:59.2537754Z (Reading database ... 45%
+2026-11-18T07:08:59.2538082Z (Reading database ... 50%
+2026-11-18T07:08:59.3360343Z (Reading database ... 55%
+2026-11-18T07:08:59.5184250Z (Reading database ... 60%
+2026-11-18T07:08:59.7683517Z (Reading database ... 65%
+2026-11-18T07:08:59.9702852Z (Reading database ... 70%
+2026-11-18T07:09:00.1328894Z (Reading database ... 75%
+2026-11-18T07:09:00.2776755Z (Reading database ... 80%
+2026-11-18T07:09:00.5249557Z (Reading database ... 85%
+2026-11-18T07:09:00.6733682Z (Reading database ... 90%
+2026-11-18T07:09:00.8421111Z (Reading database ... 95%
+2026-11-18T07:09:00.8421526Z (Reading database ... 100%
+2026-11-18T07:09:00.8422151Z (Reading database ... 213946 files and directories currently installed.)
+2026-11-18T07:09:00.8463853Z Preparing to unpack .../0-fonts-ipafont-gothic_00303-23ubuntu1_all.deb ...
+2026-11-18T07:09:00.8599218Z Unpacking fonts-ipafont-gothic (00303-23ubuntu1) ...
+2026-11-18T07:09:01.1100667Z Selecting previously unselected package fonts-freefont-ttf.
+2026-11-18T07:09:01.1225202Z Preparing to unpack .../1-fonts-freefont-ttf_20211204+svn4273-4build1_all.deb ...
+2026-11-18T07:09:01.1230894Z Unpacking fonts-freefont-ttf (20211204+svn4273-4build1) ...
+2026-11-18T07:09:01.3176264Z Selecting previously unselected package fonts-tlwg-loma-otf.
+2026-11-18T07:09:01.3300720Z Preparing to unpack .../2-fonts-tlwg-loma-otf_1%3a0.7.3-1build1_all.deb ...
+2026-11-18T07:09:01.3378632Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1build1) ...
+2026-11-18T07:09:01.4937704Z Selecting previously unselected package fonts-unifont.
+2026-11-18T07:09:01.5065386Z Preparing to unpack .../3-fonts-unifont_1%3a16.0.04-1build1_all.deb ...
+2026-11-18T07:09:01.5089094Z Unpacking fonts-unifont (1:16.0.04-1build1) ...
+2026-11-18T07:09:01.7395844Z Selecting previously unselected package fonts-wqy-zenhei.
+2026-11-18T07:09:01.7519184Z Preparing to unpack .../4-fonts-wqy-zenhei_0.9.45-8build1_all.deb ...
+2026-11-18T07:09:01.7772300Z Unpacking fonts-wqy-zenhei (0.9.45-8build1) ...
+2026-11-18T07:09:01.9978382Z Selecting previously unselected package xfonts-encodings.
+2026-11-18T07:09:02.0132005Z Preparing to unpack .../5-xfonts-encodings_1%3a1.0.5-0ubuntu3_all.deb ...
+2026-11-18T07:09:02.0171314Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu3) ...
+2026-11-18T07:09:02.1100554Z Selecting previously unselected package xfonts-utils.
+2026-11-18T07:09:02.1232596Z Preparing to unpack .../6-xfonts-utils_1%3a7.7+7build1_amd64v3.deb ...
+2026-11-18T07:09:02.1250634Z Unpacking xfonts-utils (1:7.7+7build1) ...
+2026-11-18T07:09:02.2451719Z Selecting previously unselected package xfonts-cyrillic.
+2026-11-18T07:09:02.2578109Z Preparing to unpack .../7-xfonts-cyrillic_1%3a1.0.5+nmu1build1_all.deb ...
+2026-11-18T07:09:02.2629103Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1build1) ...
+2026-11-18T07:09:02.4712387Z Selecting previously unselected package xfonts-scalable.
+2026-11-18T07:09:02.4838710Z Preparing to unpack .../8-xfonts-scalable_1%3a1.0.3-1.3build1_all.deb ...
+2026-11-18T07:09:02.5269776Z Unpacking xfonts-scalable (1:1.0.3-1.3build1) ...
+2026-11-18T07:09:02.8165704Z Setting up fonts-wqy-zenhei (0.9.45-8build1) ...
+2026-11-18T07:09:02.8829755Z Setting up fonts-freefont-ttf (20211204+svn4273-4build1) ...
+2026-11-18T07:09:02.9029569Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1build1) ...
+2026-11-18T07:09:02.9710622Z Setting up xfonts-encodings (1:1.0.5-0ubuntu3) ...
+2026-11-18T07:09:03.0811227Z Setting up fonts-ipafont-gothic (00303-23ubuntu1) ...
+2026-11-18T07:09:03.1991503Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+2026-11-18T07:09:03.3231969Z Setting up fonts-unifont (1:16.0.04-1build1) ...
+2026-11-18T07:09:03.3692147Z Setting up xfonts-utils (1:7.7+7build1) ...
+2026-11-18T07:09:03.3756548Z Setting up xfonts-cyrillic (1:1.0.5+nmu1build1) ...
+2026-11-18T07:09:03.4139988Z Setting up xfonts-scalable (1:1.0.3-1.3build1) ...
+2026-11-18T07:09:03.4487490Z Processing triggers for man-db (2.13.1-1build1) ...
+2026-11-18T07:09:03.4504942Z Not building database; man-db/auto-update is not 'true'.
+2026-11-18T07:09:03.4515283Z Processing triggers for fontconfig (2.17.1-3ubuntu1) ...
+2026-11-18T07:09:04.0150403Z 
+2026-11-18T07:09:04.0151260Z Running kernel seems to be up-to-date.
+2026-11-18T07:09:04.0151656Z 
+2026-11-18T07:09:04.0151821Z Restarting services...
+2026-11-18T07:09:04.0235610Z 
+2026-11-18T07:09:04.0236134Z Service restarts being deferred:
+2026-11-18T07:09:04.0238070Z  systemctl restart hosted-compute-agent.service
+2026-11-18T07:09:04.0238564Z 
+2026-11-18T07:09:04.0239122Z No containers need to be restarted.
+2026-11-18T07:09:04.0239421Z 
+2026-11-18T07:09:04.0239794Z No user sessions are running outdated binaries.
+2026-11-18T07:09:04.0240233Z 
+2026-11-18T07:09:04.0240804Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-11-18T07:09:04.8152849Z ##[group]Run pnpm run test-ui --project=chromium --reporter=list,json
+2026-11-18T07:09:04.8153791Z [36;1mpnpm run test-ui --project=chromium --reporter=list,json[0m
+2026-11-18T07:09:04.8197187Z shell: /usr/bin/bash -e {0}
+2026-11-18T07:09:04.8197409Z env:
+2026-11-18T07:09:04.8197630Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-18T07:09:04.8197900Z   WITH_PLUGINS: 1
+2026-11-18T07:09:04.8198206Z   PLAYWRIGHT_JSON_OUTPUT_FILE: /home/runner/work/etherpad-lite/etherpad-lite/results.json
+2026-11-18T07:09:04.8198556Z ##[endgroup]
+2026-11-18T07:09:04.8410849Z $ cross-env NODE_ENV=production npx playwright test --project=chromium --reporter=list,json
+2026-11-18T07:09:06.7563316Z 
+2026-11-18T07:09:06.7563992Z Running 326 tests using 2 workers
+2026-11-18T07:09:06.7564318Z 
+2026-11-18T07:09:08.2315627Z   ✓    1 [chromium] › plugin_packages/.versions/ep_align@11.0.58/static/tests/frontend-new/specs/align.spec.ts:11:5 › Alignment of Text › Center aligns the text (881ms)
+2026-11-18T07:09:08.3942762Z   ✓    2 [chromium] › plugin_packages/.versions/ep_align@11.0.58/static/tests/frontend-new/specs/align.spec.ts:11:5 › Alignment of Text › Left aligns the text (1.0s)
+2026-11-18T07:09:08.9485183Z   ✓    3 [chromium] › plugin_packages/.versions/ep_align@11.0.58/static/tests/frontend-new/specs/align.spec.ts:11:5 › Alignment of Text › Right aligns the text (697ms)
+2026-11-18T07:09:09.0820342Z   ✓    4 [chromium] › plugin_packages/.versions/ep_align@11.0.58/static/tests/frontend-new/specs/align.spec.ts:11:5 › Alignment of Text › Justify aligns the text (668ms)
+2026-11-18T07:09:09.5971026Z   ✓    5 [chromium] › plugin_packages/.versions/ep_align@11.0.58/static/tests/frontend-new/specs/align.spec.ts:34:3 › Alignment of Text › toolbar buttons have no <button> nested inside <a> (633ms)
+2026-11-18T07:09:09.6218365Z   -    6 [chromium] › plugin_packages/.versions/ep_align@11.0.58/static/tests/frontend-new/specs/file_menu.spec.ts:17:5 › ep_align file menu › Aligns left from the Format menu
+2026-11-18T07:09:10.1144894Z   -    7 [chromium] › plugin_packages/.versions/ep_align@11.0.58/static/tests/frontend-new/specs/file_menu.spec.ts:17:5 › ep_align file menu › Aligns center from the Format menu
+2026-11-18T07:09:10.1170048Z   -    8 [chromium] › plugin_packages/.versions/ep_align@11.0.58/static/tests/frontend-new/specs/file_menu.spec.ts:17:5 › ep_align file menu › Aligns justify from the Format menu
+2026-11-18T07:09:10.5998918Z   -    9 [chromium] › plugin_packages/.versions/ep_align@11.0.58/static/tests/frontend-new/specs/file_menu.spec.ts:17:5 › ep_align file menu › Aligns right from the Format menu
+2026-11-18T07:09:10.6489693Z   ✓   10 [chromium] › plugin_packages/.versions/ep_author_hover@11.0.39/static/tests/frontend-new/specs/author_hover.spec.ts:32:3 › ep_author_hover › plugin is loaded and exposes itself in clientVars (512ms)
+2026-11-18T07:09:11.1331323Z   ✓   11 [chromium] › plugin_packages/.versions/ep_author_hover@11.0.39/static/tests/frontend-new/specs/author_hover.spec.ts:38:3 › ep_author_hover › settings popup exposes the author-hover toggle (511ms)
+2026-11-18T07:09:12.5762395Z   ✓   12 [chromium] › plugin_packages/.versions/ep_author_hover@11.0.39/static/tests/frontend-new/specs/author_hover.spec.ts:61:3 › ep_author_hover › shows a tooltip over your own writing (1.9s)
+2026-11-18T07:09:13.1088873Z   ✓   14 [chromium] › plugin_packages/.versions/ep_font_color@0.0.154/static/tests/frontend-new/specs/font_color.spec.ts:18:3 › ep_font_color › changes color from black to red and back to black (522ms)
+2026-11-18T07:09:13.9814916Z   ✓   15 [chromium] › plugin_packages/.versions/ep_font_color@0.0.154/static/tests/frontend-new/specs/font_color.spec.ts:35:3 › ep_font_color › selector reflects color of current caret position (863ms)
+2026-11-18T07:09:15.5822016Z   ✓   16 [chromium] › plugin_packages/.versions/ep_font_color@0.0.154/static/tests/frontend-new/specs/font_color.spec.ts:76:3 › ep_font_color l10n › dropdown options translate when language is changed (1.6s)
+2026-11-18T07:09:15.7251007Z   ✓   13 [chromium] › plugin_packages/.versions/ep_author_hover@11.0.39/static/tests/frontend-new/specs/author_hover.spec.ts:68:3 › ep_author_hover › shows no tooltip over text the system author holds (4.6s)
+2026-11-18T07:09:16.2303680Z   ✓   17 [chromium] › plugin_packages/.versions/ep_font_size@0.4.113/static/tests/frontend-new/specs/font_size.spec.ts:19:3 › ep_font_size › Changes from size 8 to 9 and back to 8 (637ms)
+2026-11-18T07:09:16.6636360Z   ✓   19 [chromium] › plugin_packages/.versions/ep_hash_auth@11.0.26/static/tests/frontend-new/specs/logout.spec.ts:15:3 › ep_hash_auth logout button › logout button is rendered in the userlist (422ms)
+2026-11-18T07:09:17.1459960Z   ✓   18 [chromium] › plugin_packages/.versions/ep_font_size@0.4.113/static/tests/frontend-new/specs/font_size.spec.ts:44:3 › ep_font_size › iframe height grows under very large font (regression #4914) (1.4s)
+2026-11-18T07:09:17.5333720Z   ✓   20 [chromium] › plugin_packages/.versions/ep_hash_auth@11.0.26/static/tests/frontend-new/specs/logout.spec.ts:24:3 › ep_hash_auth logout button › clicking logout navigates to / (861ms)
+2026-11-18T07:09:17.5719996Z   ✓   21 [chromium] › plugin_packages/.versions/ep_hash_auth@11.0.26/static/tests/frontend-new/specs/smoke.spec.ts:9:3 › ep_hash_auth › pad loads with plugin installed (413ms)
+2026-11-18T07:09:18.0549382Z   -   22 [chromium] › plugin_packages/.versions/ep_headings2@0.2.135/static/tests/frontend-new/specs/file_menu.spec.ts:11:3 › ep_headings2 file menu › Applies a heading from the Format menu
+2026-11-18T07:09:18.0927070Z   -   23 [chromium] › plugin_packages/.versions/ep_headings2@0.2.135/static/tests/frontend-new/specs/file_menu.spec.ts:33:3 › ep_headings2 file menu › Both heading dropdowns follow the caret
+2026-11-18T07:09:18.5540704Z   ✓   24 [chromium] › plugin_packages/.versions/ep_headings2@0.2.135/static/tests/frontend-new/specs/headings.spec.ts:10:3 › ep_headings2 - Set Heading and ensure its removed properly › Heading select has aria-label for accessibility (487ms)
+2026-11-18T07:09:18.7649719Z   ✓   25 [chromium] › plugin_packages/.versions/ep_headings2@0.2.135/static/tests/frontend-new/specs/headings.spec.ts:15:3 › ep_headings2 - Set Heading and ensure its removed properly › Focus returns to editor after selecting a heading (657ms)
+2026-11-18T07:09:19.4091172Z   ✓   27 [chromium] › plugin_packages/.versions/ep_markdown@12.0.34/static/tests/frontend-new/specs/markdown.spec.ts:10:3 › ep_markdown › Bold section renders the markdown class on body when "Show Markdown" is enabled (631ms)
+2026-11-18T07:09:19.5445838Z   ✓   26 [chromium] › plugin_packages/.versions/ep_headings2@0.2.135/static/tests/frontend-new/specs/headings.spec.ts:44:3 › ep_headings2 - Set Heading and ensure its removed properly › Option select is changed when heading is changed (978ms)
+2026-11-18T07:09:19.9850301Z   ✓   28 [chromium] › plugin_packages/.versions/ep_set_title_on_pad@0.7.22/static/tests/frontend-new/specs/title.spec.ts:9:3 › Set Title On Pad › Updating pad title to "JohnMcLear" works (562ms)
+2026-11-18T07:09:20.1094060Z   ✓   29 [chromium] › plugin_packages/.versions/ep_set_title_on_pad@0.7.22/static/tests/frontend-new/specs/title.spec.ts:20:3 › Set Title On Pad › title bar is rendered at a readable size (548ms)
+2026-11-18T07:09:20.5075744Z   ✓   30 [chromium] › plugin_packages/.versions/ep_spellcheck@0.0.116/static/tests/frontend-new/specs/spellcheck.spec.ts:25:3 › ep_spellcheck › Spellcheck is on by default when not disabled (505ms)
+2026-11-18T07:09:20.9247034Z   -   32 [chromium] › plugin_packages/.versions/ep_subscript_and_superscript@0.3.93/static/tests/frontend-new/specs/file_menu.spec.ts:15:5 › ep_subscript_and_superscript file menu › Applies superscript from the Format menu
+2026-11-18T07:09:21.0815282Z   ✓   31 [chromium] › plugin_packages/.versions/ep_spellcheck@0.0.116/static/tests/frontend-new/specs/spellcheck.spec.ts:31:3 › ep_spellcheck › Unchecking Spell Check turns it off, re-checking turns it back on (949ms)
+2026-11-18T07:09:21.3979399Z   -   33 [chromium] › plugin_packages/.versions/ep_subscript_and_superscript@0.3.93/static/tests/frontend-new/specs/file_menu.spec.ts:15:5 › ep_subscript_and_superscript file menu › Applies subscript from the Format menu
+2026-11-18T07:09:21.8026286Z   ✓   34 [chromium] › plugin_packages/.versions/ep_subscript_and_superscript@0.3.93/static/tests/frontend-new/specs/subscript_superscript.spec.ts:14:5 › ep_subscript_and_superscript › Applies superscript formatting (707ms)
+2026-11-18T07:09:22.0589068Z   ✓   35 [chromium] › plugin_packages/.versions/ep_subscript_and_superscript@0.3.93/static/tests/frontend-new/specs/subscript_superscript.spec.ts:14:5 › ep_subscript_and_superscript › Applies subscript formatting (642ms)
+2026-11-18T07:09:22.2514375Z   ✓   36 [chromium] › plugin_packages/.versions/ep_table_of_contents@0.4.12/static/tests/frontend-new/specs/toc.spec.ts:9:3 › ep_table_of_contents › plugin is loaded and exposes itself in clientVars (436ms)
+2026-11-18T07:09:22.5603918Z   ✓   37 [chromium] › plugin_packages/.versions/ep_table_of_contents@0.4.12/static/tests/frontend-new/specs/toc.spec.ts:15:3 › ep_table_of_contents › TOC sidebar element is rendered into the pad (485ms)
+2026-11-18T07:09:22.7305821Z   ✓   38 [chromium] › plugin_packages/.versions/ep_table_of_contents@0.4.12/static/tests/frontend-new/specs/toc.spec.ts:22:3 › ep_table_of_contents › toolbar TOC toggle button renders only when opted in via settings (467ms)
+2026-11-18T07:09:23.0634977Z   ✓   39 [chromium] › plugin_packages/.versions/ep_table_of_contents@0.4.12/static/tests/frontend-new/specs/toc.spec.ts:41:3 › ep_table_of_contents › settings panel exposes the TOC toggle checkbox (490ms)
+2026-11-18T07:09:23.2159810Z   ✓   40 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:14:1 › html element has a non-empty lang attribute (473ms)
+2026-11-18T07:09:23.6414929Z   ✓   41 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:20:1 › settings popup has dialog semantics, Escape closes it, focus returns to trigger (562ms)
+2026-11-18T07:09:23.7338899Z   ✓   42 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:39:1 › import_export popup has dialog semantics (508ms)
+2026-11-18T07:09:24.1554922Z   ✓   43 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:47:1 › embed popup has dialog semantics (504ms)
+2026-11-18T07:09:24.2718090Z   ✓   44 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:55:1 › users popup has dialog semantics with aria-label (526ms)
+2026-11-18T07:09:24.7277948Z   ✓   45 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:63:1 › users popup closes on Escape even when focus is outside the popup (561ms)
+2026-11-18T07:09:24.8845712Z   ✓   46 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:74:1 › export links have a localized aria-label and matching title (602ms)
+2026-11-18T07:09:25.2194627Z   ✓   47 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:102:1 › chaticon is a button with an accessible name @feature:chat (477ms)
+2026-11-18T07:09:25.4394773Z   ✓   48 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:114:1 › chat header close/pin controls are buttons with accessible names @feature:chat (545ms)
+2026-11-18T07:09:25.7470298Z   ✓   49 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:131:1 › otherusers region has aria-live and aria-label (no aria-role typo) (514ms)
+2026-11-18T07:09:25.9383618Z   ✓   50 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:142:1 › show-more toolbar button has an accessible name and aria-expanded (481ms)
+2026-11-18T07:09:26.2799650Z   ✓   51 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:154:1 › editbar toolbars have role=toolbar with accessible names (#7255) (524ms)
+2026-11-18T07:09:26.6118454Z   ✓   52 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:176:1 › toolbar <li>/<a> wrappers are presentational (Lighthouse listitem rule, #7255) (661ms)
+2026-11-18T07:09:26.7866389Z   ✓   53 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:205:1 › online_count badge has a localized accessible label (#7255) (496ms)
+2026-11-18T07:09:27.1087269Z   ✓   54 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:223:1 › linemetricsdiv is hidden from screen readers (#7255) (485ms)
+2026-11-18T07:09:27.2944206Z   ✓   55 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:233:1 › skip-to-content link bypasses toolbar (WCAG 2.4.1, #7255) (498ms)
+2026-11-18T07:09:27.6165693Z   ✓   56 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:248:1 › skip link is the first Tab target from a fresh page (WCAG 2.4.1, #7255) (496ms)
+2026-11-18T07:09:27.8130018Z   ✓   57 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:262:1 › editor-keyboard-hint exists in the editor iframe with localized text (#7255) (508ms)
+2026-11-18T07:09:28.2002523Z   ✓   58 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:283:1 › innerdocbody does not advertise role=textbox / aria-multiline (#7778) (567ms)
+2026-11-18T07:09:28.6059084Z   ✓   59 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:299:1 › pad lines are exposed to AT as separate paragraphs with navigable links (#7778) (783ms)
+2026-11-18T07:09:28.7238551Z   ✓   60 [chromium] › tests/frontend-new/specs/a11y_dialogs.spec.ts:335:1 › line-number sidediv is hidden from screen readers (#7255) (502ms)
+2026-11-18T07:09:29.2675360Z   ✓   61 [chromium] › tests/frontend-new/specs/alphabet.spec.ts:12:3 › All the alphabet works n stuff › when you enter any char it appears right (650ms)
+2026-11-18T07:09:34.6984868Z   ✓   62 [chromium] › tests/frontend-new/specs/anchor_scroll.spec.ts:9:3 › anchor scrolling › reapplies #L scroll after earlier content changes height (6.0s)
+2026-11-18T07:09:36.5076999Z   ✓   63 [chromium] › tests/frontend-new/specs/anchor_scroll.spec.ts:51:3 › anchor scrolling › reapply loop exits early once the target offset is stable (7.2s)
+2026-11-18T07:09:36.9074981Z   ✓   65 [chromium] › tests/frontend-new/specs/author_token_cookie.spec.ts:9:3 › author token cookie › author token cookie is HttpOnly and not readable via document.cookie (390ms)
+2026-11-18T07:09:37.4519985Z   ✓   66 [chromium] › tests/frontend-new/specs/author_token_cookie.spec.ts:24:3 › author token cookie › authorID is stable across reload in the same context (536ms)
+2026-11-18T07:09:38.1492211Z   ✓   64 [chromium] › tests/frontend-new/specs/anchor_scroll.spec.ts:80:3 › anchor scrolling › user scroll cancels the reapply loop so navigation is not locked (3.4s)
+2026-11-18T07:09:38.1883368Z   ✓   67 [chromium] › tests/frontend-new/specs/author_token_cookie.spec.ts:33:3 › author token cookie › authorID differs in an isolated second context (725ms)
+2026-11-18T07:09:38.7972886Z   ✓   69 [chromium] › tests/frontend-new/specs/bold.spec.ts:10:3 › bold button › makes text bold on click (597ms)
+2026-11-18T07:09:39.2701757Z   ✓   70 [chromium] › tests/frontend-new/specs/bold.spec.ts:34:3 › bold button › makes text bold on keypress (465ms)
+2026-11-18T07:09:41.7621672Z   ✓   68 [chromium] › tests/frontend-new/specs/bold_paste.spec.ts:9:1 › bold text retains formatting after copy-paste (3.6s)
+2026-11-18T07:09:42.0997889Z   ✓   71 [chromium] › tests/frontend-new/specs/change_user_color.spec.ts:10:3 › change user color › Color picker matches original color and remembers the user color after a refresh (2.8s)
+2026-11-18T07:09:43.1200523Z   ✓   73 [chromium] › tests/frontend-new/specs/change_user_name.spec.ts:11:1 › Remembers the username after a refresh @feature:username (1.0s)
+2026-11-18T07:09:43.6738538Z   ✓   72 [chromium] › tests/frontend-new/specs/change_user_color.spec.ts:59:3 › change user color › Own user color is shown when you enter a chat @feature:chat @feature:authorship-bg-color (1.9s)
+2026-11-18T07:09:44.0918117Z   ✓   75 [chromium] › tests/frontend-new/specs/change_user_name.spec.ts:46:1 › #myusernameform has 10px left margin and is not width-capped @feature:username (407ms)
+2026-11-18T07:09:44.6366318Z   ✓   74 [chromium] › tests/frontend-new/specs/change_user_name.spec.ts:25:1 › Own user name is shown when you enter a chat @feature:chat @feature:username (1.5s)
+2026-11-18T07:09:44.9835854Z   ✓   76 [chromium] › tests/frontend-new/specs/chat.spec.ts:23:1 › opens chat, sends a message, makes sure it exists on the page and hides chat @feature:chat (880ms)
+2026-11-18T07:09:45.5476442Z   ✓   77 [chromium] › tests/frontend-new/specs/chat.spec.ts:43:1 › makes sure that an empty message can't be sent @feature:chat (896ms)
+2026-11-18T07:09:45.8414280Z Chat true
+2026-11-18T07:09:45.9346640Z Chat false
+2026-11-18T07:09:45.9690758Z Chat false
+2026-11-18T07:09:46.0061240Z Chat false
+2026-11-18T07:09:46.0061747Z Chat 
+2026-11-18T07:09:46.0205348Z   ✓   78 [chromium] › tests/frontend-new/specs/chat.spec.ts:67:1 › makes chat stick to right side of the screen via settings, remove sticky via settings, close it @feature:chat (1.0s)
+2026-11-18T07:09:46.4303331Z Chat true
+2026-11-18T07:09:46.4318905Z Chat true
+2026-11-18T07:09:46.5004392Z Chat false
+2026-11-18T07:09:46.5048483Z Chat false
+2026-11-18T07:09:46.5489802Z Chat 
+2026-11-18T07:09:46.5666655Z   ✓   79 [chromium] › tests/frontend-new/specs/chat.spec.ts:85:1 › makes chat stick to right side of the screen via icon on the top right, remove sticky via icon, close it @feature:chat (1.0s)
+2026-11-18T07:09:46.8817916Z   ✓   80 [chromium] › tests/frontend-new/specs/chat.spec.ts:105:1 › Checks showChat=false URL Parameter hides chat then when removed it shows chat @feature:chat (853ms)
+2026-11-18T07:09:47.3671639Z   ✓   82 [chromium] › tests/frontend-new/specs/chat.spec.ts:152:1 › chat title bar lays out as a centred flex row with underscore minimize @feature:chat @feature:rtl-toggle (477ms)
+2026-11-18T07:09:47.7554904Z   ✓   81 [chromium] › tests/frontend-new/specs/chat.spec.ts:133:1 › chat icon click reveals chatbox after a disable → enable cycle @feature:chat (1.2s)
+2026-11-18T07:09:47.8843915Z   ✓   83 [chromium] › tests/frontend-new/specs/chat.spec.ts:207:1 › chat icon click reliably opens the chat box @feature:chat (507ms)
+2026-11-18T07:09:48.6947742Z   ✓   84 [chromium] › tests/frontend-new/specs/clear_authorship_color.spec.ts:17:1 › clear authorship color @feature:clear-authorship (919ms)
+2026-11-18T07:09:48.8096084Z   ✓   85 [chromium] › tests/frontend-new/specs/clear_authorship_color.spec.ts:40:1 › clear authorship colors can be undone to restore author colors @feature:clear-authorship (912ms)
+2026-11-18T07:09:49.8795286Z   ✓   86 [chromium] › tests/frontend-new/specs/clear_authorship_color.spec.ts:77:1 › clears authorship when first line has line attributes @feature:clear-authorship (1.2s)
+2026-11-18T07:09:50.5536637Z   ✓   88 [chromium] › tests/frontend-new/specs/delete.spec.ts:10:1 › delete keystroke (661ms)
+2026-11-18T07:09:51.0075068Z   ✓   89 [chromium] › tests/frontend-new/specs/editbar.spec.ts:9:1 › should go to home on pad (442ms)
+2026-11-18T07:09:51.6086005Z   ✓   90 [chromium] › tests/frontend-new/specs/embed_value.spec.ts:66:7 › embed links › read and write › the share link is the actual pad url (588ms)
+2026-11-18T07:09:51.7305818Z   ✓   87 [chromium] › tests/frontend-new/specs/collab_client.spec.ts:47:3 › Messages in the COLLABROOM › bug #4978 regression test (2.9s)
+2026-11-18T07:09:52.5264584Z   ✓   91 [chromium] › tests/frontend-new/specs/embed_value.spec.ts:78:5 › embed links › read and write › is an iframe with the correct url parameters and correct size (909ms)
+2026-11-18T07:09:52.6490880Z   ✓   92 [chromium] › tests/frontend-new/specs/embed_value.spec.ts:97:7 › embed links › when read only option is set › the share link shows a read only url (903ms)
+2026-11-18T07:09:53.3356475Z   ✓   94 [chromium] › tests/frontend-new/specs/embed_value.spec.ts:138:5 › embed links › URL encoding of pad names › share link encodes special characters in pad name (676ms)
+2026-11-18T07:09:53.4511899Z   ✓   93 [chromium] › tests/frontend-new/specs/embed_value.spec.ts:114:7 › embed links › when read only option is set › the embed as iframe code is an iframe with the correct url parameters and correct size (914ms)
+2026-11-18T07:09:53.9189053Z   ✓   95 [chromium] › tests/frontend-new/specs/enter.spec.ts:11:3 › enter keystroke › creates a new line & puts cursor onto a new line (565ms)
+2026-11-18T07:09:54.3702659Z   ✓   97 [chromium] › tests/frontend-new/specs/error_sanitization.spec.ts:12:3 › error sanitization › production mode hides error details from gritter popup @feature:error-gritter (439ms)
+2026-11-18T07:09:54.8262797Z   ✓   98 [chromium] › tests/frontend-new/specs/error_sanitization.spec.ts:47:3 › error sanitization › development mode shows full error details in gritter popup @feature:error-gritter (444ms)
+2026-11-18T07:09:54.8614155Z   ✓   96 [chromium] › tests/frontend-new/specs/enter.spec.ts:33:3 › enter keystroke › enter is always visible after event (1.4s)
+2026-11-18T07:09:55.3425569Z   ✓   99 [chromium] › tests/frontend-new/specs/error_sanitization.spec.ts:72:3 › error sanitization › duplicate errors are deduplicated in both modes @feature:error-gritter (504ms)
+2026-11-18T07:09:55.4356613Z   ✓  100 [chromium] › tests/frontend-new/specs/error_sanitization.spec.ts:95:3 › error sanitization › errors before clientVars handshake default to hiding details @feature:error-gritter (557ms)
+2026-11-18T07:09:55.9245332Z   ✓  102 [chromium] › tests/frontend-new/specs/hide_menu_right.spec.ts:13:3 › showMenuRight URL parameter › without the parameter, .menu_right is visible (475ms)
+2026-11-18T07:09:56.5430046Z   ✓  103 [chromium] › tests/frontend-new/specs/hide_menu_right.spec.ts:17:3 › showMenuRight URL parameter › showMenuRight=false hides .menu_right (608ms)
+2026-11-18T07:09:56.7615416Z   ✓  101 [chromium] › tests/frontend-new/specs/font_type.spec.ts:14:3 › font select › makes text RobotoMono (1.4s)
+2026-11-18T07:09:57.2323608Z   ✓  104 [chromium] › tests/frontend-new/specs/hide_menu_right.spec.ts:24:3 › showMenuRight URL parameter › showMenuRight=true keeps .menu_right visible (680ms)
+2026-11-18T07:09:57.5507058Z   ✓  105 [chromium] › tests/frontend-new/specs/hide_menu_right.spec.ts:47:3 › showMenuRight URL parameter › readonly pad shows .menu_right by default (776ms)
+2026-11-18T07:09:57.9828860Z   ✓  106 [chromium] › tests/frontend-new/specs/hide_menu_right.spec.ts:60:3 › showMenuRight URL parameter › readonly pad with showMenuRight=false hides the menu (740ms)
+2026-11-18T07:09:58.3238069Z   ✓  107 [chromium] › tests/frontend-new/specs/hide_menu_right.spec.ts:69:3 › showMenuRight URL parameter › readonly pad with showMenuRight=true keeps the menu visible (763ms)
+2026-11-18T07:09:58.4890506Z   ✓  108 [chromium] › tests/frontend-new/specs/html10n_form_controls_aria.spec.ts:21:1 › html10n auto-populates aria-label on <select> with data-l10n-id (492ms)
+2026-11-18T07:09:58.8776152Z   ✓  109 [chromium] › tests/frontend-new/specs/html10n_form_controls_aria.spec.ts:47:1 › html10n auto-populates aria-label on <textarea> with data-l10n-id (541ms)
+2026-11-18T07:09:59.0308724Z   ✓  110 [chromium] › tests/frontend-new/specs/html10n_form_controls_aria.spec.ts:62:1 › no "could not translate element content" warning for <select data-l10n-id> (527ms)
+2026-11-18T07:09:59.3905632Z   ✓  111 [chromium] › tests/frontend-new/specs/html10n_form_controls_aria.spec.ts:105:1 › an author-supplied aria-label on a form control is preserved (498ms)
+2026-11-18T07:09:59.5277960Z   ✓  112 [chromium] › tests/frontend-new/specs/inactive_color_fade.spec.ts:14:3 › fadeInactiveAuthorColors (issue #7138) › server-side default is true (legacy fade behavior preserved) (484ms)
+2026-11-18T07:09:59.9198156Z   ✓  113 [chromium] › tests/frontend-new/specs/inactive_color_fade.spec.ts:20:3 › fadeInactiveAuthorColors (issue #7138) › per-pad view default propagates from server settings (513ms)
+2026-11-18T07:10:00.3158280Z   ✓  114 [chromium] › tests/frontend-new/specs/inactive_color_fade.spec.ts:26:3 › fadeInactiveAuthorColors (issue #7138) › ?fadeInactiveAuthorColors=false flips the per-pad view value (776ms)
+2026-11-18T07:10:00.8194783Z   ✓  116 [chromium] › tests/frontend-new/specs/indentation.spec.ts:9:3 › indentation button › indent text with keypress (493ms)
+2026-11-18T07:10:00.9505434Z   ✓  115 [chromium] › tests/frontend-new/specs/inactive_color_fade.spec.ts:33:3 › fadeInactiveAuthorColors (issue #7138) › My View checkbox toggles the per-user cookie (1.0s)
+2026-11-18T07:10:01.3039581Z   ✓  117 [chromium] › tests/frontend-new/specs/indentation.spec.ts:28:3 › indentation button › indent text with button (474ms)
+2026-11-18T07:10:01.6631479Z   ✓  118 [chromium] › tests/frontend-new/specs/indentation.spec.ts:37:3 › indentation button › keeps the indent on enter for the new line (696ms)
+2026-11-18T07:10:02.2739414Z   ✓  119 [chromium] › tests/frontend-new/specs/indentation.spec.ts:61:3 › indentation button › indents text with spaces on enter if previous line ends with ':', '[', '(', or '{' (960ms)
+2026-11-18T07:10:02.3763885Z   ✓  120 [chromium] › tests/frontend-new/specs/indentation.spec.ts:122:3 › indentation button › appends indentation to the indent of previous line if previous line ends with ':', '[', '(', or '{' (701ms)
+2026-11-18T07:10:02.9300668Z   ✓  122 [chromium] › tests/frontend-new/specs/indentation.spec.ts:191:3 › indentation button › makes text indented and outdented (541ms)
+2026-11-18T07:10:03.2218347Z   ✓  121 [chromium] › tests/frontend-new/specs/indentation.spec.ts:144:3 › indentation button › issue #2772 shows '*' when multiple indented lines  receive a style and are outdented (935ms)
+2026-11-18T07:10:03.5323107Z   ✓  123 [chromium] › tests/frontend-new/specs/inner_height.spec.ts:12:3 › height regression after ace.js refactoring › clientHeight should equal scrollHeight with few lines (590ms)
+2026-11-18T07:10:04.4027113Z   ✓  125 [chromium] › tests/frontend-new/specs/italic.spec.ts:10:3 › italic some text › makes text italic using button (856ms)
+2026-11-18T07:10:05.0291943Z   ✓  126 [chromium] › tests/frontend-new/specs/italic.spec.ts:40:3 › italic some text › makes text italic using keypress (615ms)
+2026-11-18T07:10:05.0617355Z   ✓  124 [chromium] › tests/frontend-new/specs/inner_height.spec.ts:30:3 › height regression after ace.js refactoring › client height should be less than scrollHeight with many lines (1.8s)
+2026-11-18T07:10:06.4042827Z   ✓  127 [chromium] › tests/frontend-new/specs/language.spec.ts:21:3 › Language select and change › makes text german (1.4s)
+2026-11-18T07:10:06.9306171Z   ✓  128 [chromium] › tests/frontend-new/specs/language.spec.ts:36:3 › Language select and change › makes text English (1.9s)
+2026-11-18T07:10:08.1439308Z   ✓  129 [chromium] › tests/frontend-new/specs/language.spec.ts:56:3 › Language select and change › changes direction when picking an rtl lang (1.7s)
+2026-11-18T07:10:08.2575962Z   ✓  130 [chromium] › tests/frontend-new/specs/language.spec.ts:76:3 › Language select and change › changes direction when picking an ltr lang (1.3s)
+2026-11-18T07:10:09.3070901Z   ✓  131 [chromium] › tests/frontend-new/specs/language.spec.ts:97:3 › Language select and change › dropdown reflects the browser-detected language (1.1s)
+2026-11-18T07:10:09.6095949Z   ✓  132 [chromium] › tests/frontend-new/specs/line_ops.spec.ts:20:3 › Line ops (#6433) › Ctrl+Shift+D duplicates the current line below itself (1.3s)
+2026-11-18T07:10:10.4659138Z   ✓  133 [chromium] › tests/frontend-new/specs/line_ops.spec.ts:41:3 › Line ops (#6433) › Ctrl+Shift+K deletes the current line (1.1s)
+2026-11-18T07:10:10.9789316Z   ✓  135 [chromium] › tests/frontend-new/specs/list_wrap_indent.spec.ts:10:3 › numbered list wrapped line indentation › wrapped lines in a numbered list item are indented (499ms)
+2026-11-18T07:10:11.0648526Z   ✓  134 [chromium] › tests/frontend-new/specs/line_ops.spec.ts:65:3 › Line ops (#6433) › Ctrl+Shift+D duplicates every line in a multi-line selection (1.4s)
+2026-11-18T07:10:11.6228557Z   ✓  136 [chromium] › tests/frontend-new/specs/ordered_list.spec.ts:11:5 › ordered_list.js › issue #4748 keeps numbers increment on OL (630ms)
+2026-11-18T07:10:11.7357606Z   ✓  137 [chromium] › tests/frontend-new/specs/ordered_list.spec.ts:34:5 › ordered_list.js › issue #1125 keeps the numbered list on enter for the new line (657ms)
+2026-11-18T07:10:12.5216111Z   ✓  139 [chromium] › tests/frontend-new/specs/ordered_list.spec.ts:97:3 › issue #5718 consecutive numbering works after indented sub-bullets (775ms)
+2026-11-18T07:10:12.9433495Z   ✓  138 [chromium] › tests/frontend-new/specs/ordered_list.spec.ts:59:3 › issue #5160 ordered list increments correctly after unordered list (1.3s)
+2026-11-18T07:10:13.0031218Z   ✓  140 [chromium] › tests/frontend-new/specs/ordered_list.spec.ts:142:5 › Pressing Tab in an OL increases and decreases indentation › indent and de-indent list item with keypress (467ms)
+2026-11-18T07:10:13.5080863Z   ✓  142 [chromium] › tests/frontend-new/specs/outdated_notice.spec.ts:43:3 › outdated notice (gritter-based) › outdated:null — no outdated-notice gritter is shown (490ms)
+2026-11-18T07:10:13.6289810Z   ✓  141 [chromium] › tests/frontend-new/specs/ordered_list.spec.ts:169:5 › Pressing indent/outdent button in an OL increases and decreases indentation and bullet / ol formatting › indent and de-indent list item with indent button (672ms)
+2026-11-18T07:10:14.0078860Z   ✓  143 [chromium] › tests/frontend-new/specs/outdated_notice.spec.ts:54:3 › outdated notice (gritter-based) › outdated:minor, isFirstAuthor:false — no gritter shown (client guard) (488ms)
+2026-11-18T07:10:14.1736520Z   ✓  144 [chromium] › tests/frontend-new/specs/outdated_notice.spec.ts:66:3 › outdated notice (gritter-based) › outdated:minor, isFirstAuthor:true — gritter appears with correct text (525ms)
+2026-11-18T07:10:15.1532937Z   ✓  146 [chromium] › tests/frontend-new/specs/outdated_notice.spec.ts:96:3 › outdated notice (gritter-based) › server returns 500 — no gritter and no user-visible error (968ms)
+2026-11-18T07:10:15.3453905Z   ✓  145 [chromium] › tests/frontend-new/specs/outdated_notice.spec.ts:82:3 › outdated notice (gritter-based) › user dismisses by clicking X — gritter disappears (1.3s)
+2026-11-18T07:10:15.7910509Z   ✓  148 [chromium] › tests/frontend-new/specs/pad_deletion_token.spec.ts:22:3 › pad deletion token › creator sees a token modal exactly once and can dismiss it (431ms)
+2026-11-18T07:10:17.0161212Z   ✓  149 [chromium] › tests/frontend-new/specs/pad_deletion_token.spec.ts:38:3 › pad deletion token › second device can delete using the captured token (1.2s)
+2026-11-18T07:10:18.1141589Z   ✓  150 [chromium] › tests/frontend-new/specs/pad_deletion_token.spec.ts:59:3 › pad deletion token › creator pasting a wrong token into the disclosure field does not delete the pad (1.1s)
+2026-11-18T07:10:19.6027091Z   ✓  151 [chromium] › tests/frontend-new/specs/pad_deletion_token.spec.ts:91:3 › pad deletion token › wrong token keeps the pad alive and surfaces a shout (1.5s)
+2026-11-18T07:10:21.9456639Z   ✓  152 [chromium] › tests/frontend-new/specs/pad_deletion_token.spec.ts:149:3 › pad deletion token with the modal suppressed › no modal; the settings toggle shows and copies a working token, across reloads (2.3s)
+2026-11-18T07:10:22.3787926Z   ✓  153 [chromium] › tests/frontend-new/specs/pad_deletion_token.spec.ts:208:3 › pad deletion token with the modal suppressed › not offered when the modal is not suppressed (423ms)
+2026-11-18T07:10:22.7335778Z   ✓  154 [chromium] › tests/frontend-new/specs/pad_retention_notice.spec.ts:27:3 › pad retention notice › no notice when retention is off (344ms)
+2026-11-18T07:10:23.0877958Z   ✓  155 [chromium] › tests/frontend-new/specs/pad_retention_notice.spec.ts:32:3 › pad retention notice › warns in days when more than a day is left (344ms)
+2026-11-18T07:10:23.4357742Z   ✓  156 [chromium] › tests/frontend-new/specs/pad_retention_notice.spec.ts:43:3 › pad retention notice › warns in hours, singular, when under a day is left (339ms)
+2026-11-18T07:10:23.7924179Z   ✓  157 [chromium] › tests/frontend-new/specs/pad_retention_notice.spec.ts:50:3 › pad retention notice › tells the user an expired pad was deleted (346ms)
+2026-11-18T07:10:24.6259647Z   ✓  147 [chromium] › tests/frontend-new/specs/outdated_notice.spec.ts:107:3 › outdated notice (gritter-based) › auto-fade after 8s — gritter gone after 9s (9.5s)
+2026-11-18T07:10:25.0054901Z   ✓  158 [chromium] › tests/frontend-new/specs/pad_retention_notice.spec.ts:60:3 › pad retention notice › the notice can be closed (1.2s)
+2026-11-18T07:10:25.6978787Z   ✓  159 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:6:3 › creator-owned pad settings › shows pad settings only to the creator; delete pad is creator-gated but separate (1.1s)
+2026-11-18T07:10:27.4652757Z   ✓  160 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:34:3 › creator-owned pad settings › pad settings act as defaults until enforcement is enabled @feature:line-numbers (2.4s)
+2026-11-18T07:10:27.5154946Z   ✓  161 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:93:3 › creator-owned pad settings › creator can keep authorship colors while pad-wide enforced settings keep them off for other users (1.8s)
+2026-11-18T07:10:28.8418839Z   ✓  162 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:130:3 › creator-owned pad settings › uses My View defaults for newly created pads without changing an existing pad default @feature:line-numbers (1.4s)
+2026-11-18T07:10:29.3654349Z   ✓  163 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:153:3 › creator-owned pad settings › disabling chat suppresses chat gritter notifications @feature:chat (1.8s)
+2026-11-18T07:10:29.7048003Z   ✓  164 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:176:3 › creator-owned pad settings › settings popup stays scrollable when the viewport is short (847ms)
+2026-11-18T07:10:30.7414733Z   ✓  165 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:202:3 › creator-owned pad settings › Pad-wide font dropdown opens visibly when popup is scrolled to bottom (1.4s)
+2026-11-18T07:10:30.9016705Z   ✓  166 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:232:5 › creator-owned pad settings › #padsettings-viewfontmenu dropdown opens under prefers-reduced-motion (1.2s)
+2026-11-18T07:10:31.8989507Z   ✓  168 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:254:3 › creator-owned pad settings › disabling chat disables and visually greys the dependent chat toggles @feature:chat (984ms)
+2026-11-18T07:10:31.9975566Z   ✓  167 [chromium] › tests/frontend-new/specs/pad_settings.spec.ts:232:5 › creator-owned pad settings › #padsettings-languagemenu dropdown opens under prefers-reduced-motion (1.2s)
+2026-11-18T07:10:33.3464907Z   ✓  170 [chromium] › tests/frontend-new/specs/padmode.spec.ts:49:3 › in-pad history mode › Return-to-live exits history and clears the hash (1.3s)
+2026-11-18T07:10:33.8117667Z   ✓  169 [chromium] › tests/frontend-new/specs/padmode.spec.ts:13:3 › in-pad history mode › toolbar button enters history without leaving the pad URL (1.9s)
+2026-11-18T07:10:34.3051886Z   ✓  171 [chromium] › tests/frontend-new/specs/padmode.spec.ts:66:3 › in-pad history mode › browser back exits history mode (947ms)
+2026-11-18T07:10:34.6875183Z   ✓  172 [chromium] › tests/frontend-new/specs/padmode.spec.ts:80:3 › in-pad history mode › legacy /p/:pad/timeslider URL redirects to the pad page (865ms)
+2026-11-18T07:10:35.2503451Z   ✓  173 [chromium] › tests/frontend-new/specs/padmode.spec.ts:96:3 › in-pad history mode › Follow + Playback speed are inline in the toolbar in history mode (934ms)
+2026-11-18T07:10:35.6803048Z   ✓  174 [chromium] › tests/frontend-new/specs/padmode.spec.ts:117:3 › in-pad history mode › embedded iframe shows only the editor surface (no inner editbar) (980ms)
+2026-11-18T07:10:36.2457323Z   ✓  175 [chromium] › tests/frontend-new/specs/padmode.spec.ts:134:3 › in-pad history mode › outer toolbar swaps formatting menu for history controls (983ms)
+2026-11-18T07:10:37.8292429Z   ✓  176 [chromium] › tests/frontend-new/specs/padmode.spec.ts:158:3 › in-pad history mode › outer slider drives the embedded timeslider revision (2.1s)
+2026-11-18T07:10:38.0504844Z   ✓  177 [chromium] › tests/frontend-new/specs/padmode.spec.ts:190:3 › in-pad history mode › dark mode propagates into the history iframe (1.8s)
+2026-11-18T07:10:38.9763434Z   ✓  178 [chromium] › tests/frontend-new/specs/padmode.spec.ts:217:3 › in-pad history mode › chat panel is filtered to messages newer than the historical revision (1.1s)
+2026-11-18T07:10:40.6117208Z   ✓  179 [chromium] › tests/frontend-new/specs/padmode.spec.ts:261:3 › in-pad history mode › outer Export hrefs point at the historical revision in history mode (2.5s)
+2026-11-18T07:10:41.0516825Z   ✓  180 [chromium] › tests/frontend-new/specs/padmode.spec.ts:284:3 › in-pad history mode › line numbers align with each line of text in history mode (2.1s)
+2026-11-18T07:10:42.2947114Z   ✓  181 [chromium] › tests/frontend-new/specs/padmode.spec.ts:329:3 › in-pad history mode › users panel shows authors-at-this-revision in history mode (1.7s)
+2026-11-18T07:10:42.6095996Z   ✓  182 [chromium] › tests/frontend-new/specs/padmode.spec.ts:349:3 › in-pad history mode › history iframe occupies the editor flex slot so side panels sit beside it (1.5s)
+2026-11-18T07:10:46.8229285Z   ✓  184 [chromium] › tests/frontend-new/specs/page_up_down.spec.ts:51:3 › Page Up / Page Down › PageUp moves caret backward by a page of lines (4.2s)
+2026-11-18T07:10:47.0891284Z   ✓  183 [chromium] › tests/frontend-new/specs/page_up_down.spec.ts:12:3 › Page Up / Page Down › PageDown moves caret forward by a page of lines (4.8s)
+2026-11-18T07:10:51.5805385Z   ✓  185 [chromium] › tests/frontend-new/specs/page_up_down.spec.ts:91:3 › Page Up / Page Down › PageDown with consecutive long wrapped lines moves by correct amount (#4562) (4.7s)
+2026-11-18T07:10:52.4433945Z   ✓  186 [chromium] › tests/frontend-new/specs/page_up_down.spec.ts:146:3 › Page Up / Page Down › PageDown then PageUp returns to approximately same position (5.3s)
+2026-11-18T07:10:52.8105735Z   ✓  188 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:44:3 › privacy banner (gritter-based) › disabled by default — no privacy gritter is shown (351ms)
+2026-11-18T07:10:53.1641390Z   ✓  189 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:49:3 › privacy banner (gritter-based) › enabled=false leaves the page free of a privacy gritter (342ms)
+2026-11-18T07:10:53.3338170Z   ✓  187 [chromium] › tests/frontend-new/specs/pagedown_wrapped_lines.spec.ts:16:3 › PageDown on consecutive long wrapped lines (#4562) › PageDown scrolls when three very long lines fill the viewport (1.7s)
+2026-11-18T07:10:53.6491329Z   ✓  190 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:61:3 › privacy banner (gritter-based) › renders title, body paragraphs, and link as a sticky bottom gritter (472ms)
+2026-11-18T07:10:54.0595749Z   ✓  192 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:107:3 › privacy banner (gritter-based) › dismissible — pre-existing localStorage flag suppresses the gritter (393ms)
+2026-11-18T07:10:54.6805342Z   ✓  191 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:86:3 › privacy banner (gritter-based) › dismissible — clicking gritter close persists flag in localStorage (1.3s)
+2026-11-18T07:10:55.0335535Z   ✓  194 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:146:3 › privacy banner (gritter-based) › sticky — pre-existing localStorage flag is ignored (341ms)
+2026-11-18T07:10:55.2381250Z   ✓  193 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:123:3 › privacy banner (gritter-based) › sticky — closing the gritter does NOT persist a dismissal flag (1.2s)
+2026-11-18T07:10:55.4717916Z   ✓  195 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:162:3 › privacy banner (gritter-based) › javascript: learnMoreUrl is rejected — no anchor rendered (425ms)
+2026-11-18T07:10:55.7457242Z   ✓  196 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:175:3 › privacy banner (gritter-based) › data: learnMoreUrl is rejected — no anchor rendered (489ms)
+2026-11-18T07:10:56.1931730Z   ✓  198 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:210:3 › privacy banner (gritter-based) › mailto: learnMoreUrl is allowed (435ms)
+2026-11-18T07:10:56.8109295Z   ✓  197 [chromium] › tests/frontend-new/specs/privacy_banner.spec.ts:187:3 › privacy banner (gritter-based) › unknown dismissal value is treated as dismissible (defense-in-depth) (1.3s)
+2026-11-18T07:10:57.1202210Z   ✓  199 [chromium] › tests/frontend-new/specs/recent_pads_delete.spec.ts:21:3 › recent pads after pad deletion › creator deleting a pad removes it from the welcome screen (911ms)
+2026-11-18T07:10:57.8203637Z   ✓  200 [chromium] › tests/frontend-new/specs/recent_pads_delete.spec.ts:34:3 › recent pads after pad deletion › legacy URL-encoded recent pad entries are removed too (992ms)
+2026-11-18T07:10:57.9866561Z   ✓  202 [chromium] › tests/frontend-new/specs/recent_pads.spec.ts:4:3 › Recent Pads › should display correctly encoded URLs for recent pads (150ms)
+2026-11-18T07:10:58.6246421Z   ✓  201 [chromium] › tests/frontend-new/specs/recent_pads_delete.spec.ts:57:3 › recent pads after pad deletion › deleting with a token on a second device removes it from that device (1.5s)
+2026-11-18T07:10:58.9314760Z   ✓  203 [chromium] › tests/frontend-new/specs/redo.spec.ts:12:3 › undo button then redo button › redo some typing with button (929ms)
+2026-11-18T07:10:59.5406184Z   ✓  204 [chromium] › tests/frontend-new/specs/redo.spec.ts:39:3 › undo button then redo button › redo some typing with keypress (904ms)
+2026-11-18T07:11:00.2064385Z   ✓  206 [chromium] › tests/frontend-new/specs/rtl_url_param.spec.ts:11:3 › RTL URL parameter › rtl=true enables RTL mode (650ms)
+2026-11-18T07:11:00.2524509Z   ✓  205 [chromium] › tests/frontend-new/specs/rtl_pad_wide_enforce.spec.ts:26:3 › RTL pad-wide + enforce › pad-wide RTL applies to the creator even with a stale personal setting @feature:rtl-toggle (1.3s)
+2026-11-18T07:11:01.2455535Z   ✓  208 [chromium] › tests/frontend-new/specs/rtl_url_param.spec.ts:26:3 › RTL URL parameter › no rtl param falls back to the pad setting after an RTL URL override @feature:rtl-toggle (977ms)
+2026-11-18T07:11:01.2707277Z   ✓  207 [chromium] › tests/frontend-new/specs/rtl_url_param.spec.ts:16:3 › RTL URL parameter › rtl=false disables RTL mode after rtl=true @feature:rtl-toggle (1.0s)
+2026-11-18T07:11:02.1215327Z   ✓  209 [chromium] › tests/frontend-new/specs/rtl_url_param.spec.ts:38:3 › RTL URL parameter › rtl content option flips only the pad inner contents, not the whole page @feature:rtl-toggle (865ms)
+2026-11-18T07:11:03.9897154Z   ✓  210 [chromium] › tests/frontend-new/specs/scroll_caret_viewport.spec.ts:166:3 › scroll when caret is in the last line of the viewport › moving the caret to the bottom of the viewport does not throw (2.7s)
+2026-11-18T07:11:04.5549857Z   ✓  211 [chromium] › tests/frontend-new/specs/scroll_caret_viewport.spec.ts:179:3 › scroll when caret is in the last line of the viewport › scrolls the caret line clear of the bottom edge of the viewport (2.4s)
+2026-11-18T07:11:04.6830271Z   ✓  212 [chromium] › tests/frontend-new/specs/select_focus_restore.spec.ts:8:1 › toolbar select change returns focus to the pad editor (#7589) (678ms)
+2026-11-18T07:11:04.8365785Z   ✓  213 [chromium] › tests/frontend-new/specs/session_transfer_copy.spec.ts:16:3 › session transfer dialog copy › transfer tab describes a code, not a link (269ms)
+2026-11-18T07:11:04.9862139Z   ✓  214 [chromium] › tests/frontend-new/specs/session_transfer_copy.spec.ts:42:3 › session transfer dialog copy › receive tab asks for the code to be pasted (273ms)
+2026-11-18T07:11:05.4539335Z   ✓  215 [chromium] › tests/frontend-new/specs/share_readonly.spec.ts:12:1 › explains that read-only sharing selects a link, not pad permissions (605ms)
+2026-11-18T07:11:05.9128002Z   ✓  217 [chromium] › tests/frontend-new/specs/strikethrough.spec.ts:10:3 › strikethrough button › makes text strikethrough (446ms)
+2026-11-18T07:11:06.6974676Z   ✓  216 [chromium] › tests/frontend-new/specs/share_readonly.spec.ts:23:1 › switches share links without changing access through either link (1.7s)
+2026-11-18T07:11:07.0905100Z   ✓  218 [chromium] › tests/frontend-new/specs/theme_color_dark_mode.spec.ts:18:3 › light color scheme › theme-color meta tracks the dark-mode toggle (1.2s)
+2026-11-18T07:11:07.1778688Z   ✓  219 [chromium] › tests/frontend-new/specs/theme_color_dark_mode.spec.ts:43:3 › dark color scheme › theme-color meta is dark at first paint on dark-OS clients (459ms)
+2026-11-18T07:11:07.6146788Z   ✓  220 [chromium] › tests/frontend-new/specs/theme_color_dark_mode.spec.ts:52:3 › dark color scheme › page paints dark without a light flash on dark-OS clients (513ms)
+2026-11-18T07:11:07.6878808Z   ✓  221 [chromium] › tests/frontend-new/specs/theme_color_dark_mode.spec.ts:63:3 › dark color scheme › root canvas matches the toolbar so the iOS status-bar area is not white (494ms)
+2026-11-18T07:11:08.1461504Z   ✓  222 [chromium] › tests/frontend-new/specs/theme_color_dark_mode.spec.ts:77:3 › dark color scheme › root colour variables follow the dark background, not the light :root defaults (519ms)
+2026-11-18T07:11:09.0436171Z   ✓  223 [chromium] › tests/frontend-new/specs/timeslider_author_colors.spec.ts:9:3 › timeslider authorship colors › respects showAuthorshipColors=false cookie from pad editor (1.3s)
+2026-11-18T07:11:09.3215668Z   ✓  224 [chromium] › tests/frontend-new/specs/timeslider_author_colors.spec.ts:27:3 › timeslider authorship colors › shows author colors by default (cookie unset) (1.2s)
+2026-11-18T07:11:10.4428653Z   ✓  225 [chromium] › tests/frontend-new/specs/timeslider_author_colors.spec.ts:39:3 › timeslider authorship colors › font type selector applies font-family to innerdocbody (1.4s)
+2026-11-18T07:11:10.5295507Z   ✓  226 [chromium] › tests/frontend-new/specs/timeslider_author_colors.spec.ts:64:3 › timeslider authorship colors › font-type selection persists and restores from cookie (1.2s)
+2026-11-18T07:11:12.2758314Z   ✓  227 [chromium] › tests/frontend-new/specs/timeslider_deeplink.spec.ts:29:3 › timeslider deep link › #rev/N hash boots into history mode at that revision (1.8s)
+2026-11-18T07:11:12.6356330Z   ✓  228 [chromium] › tests/frontend-new/specs/timeslider_export_links.spec.ts:51:3 › timeslider export links › export hrefs target the viewed revision, including a numeric pad id (2.1s)
+2026-11-18T07:11:13.0727803Z   -  230 [chromium] › tests/frontend-new/specs/timeslider_follow.spec.ts:15:3 › timeslider follow › content as it's added to timeslider
+2026-11-18T07:11:13.4581284Z   -  231 [chromium] › tests/frontend-new/specs/timeslider_follow.spec.ts:56:3 › timeslider follow › only to lines that exist in the pad view, regression test for #4389
+2026-11-18T07:11:14.2286046Z   ✓  229 [chromium] › tests/frontend-new/specs/timeslider_deeplink.spec.ts:42:3 › timeslider deep link › legacy #N shortlink hash still enters history mode (1.9s)
+2026-11-18T07:11:18.3789701Z   ✓  233 [chromium] › tests/frontend-new/specs/timeslider_identity_changeset.spec.ts:61:3 › Timeslider with identity changesets (bug #5214) › timeslider can scrub through all revisions without error (4.1s)
+2026-11-18T07:11:21.0080940Z   ✓  234 [chromium] › tests/frontend-new/specs/timeslider_line_numbers.spec.ts:9:3 › timeslider line numbers › shows line numbers aligned with the rendered document lines (2.6s)
+2026-11-18T07:11:21.5995915Z   ✓  235 [chromium] › tests/frontend-new/specs/timeslider_line_numbers.spec.ts:47:3 › timeslider line numbers › inherits and persists the line-number preference from the shared cookie (580ms)
+2026-11-18T07:11:22.1598752Z   ✓  232 [chromium] › tests/frontend-new/specs/timeslider_identity_changeset.spec.ts:17:3 › Timeslider with identity changesets (bug #5214) › timeslider playback advances through all revisions including identity changesets (8.7s)
+2026-11-18T07:11:23.1945646Z   ✓  236 [chromium] › tests/frontend-new/specs/timeslider_playback_speed.spec.ts:18:3 › timeslider playback speed › defaults to original speed with no cookies (1.6s)
+2026-11-18T07:11:24.6215005Z   ✓  237 [chromium] › tests/frontend-new/specs/timeslider_revision_labels.spec.ts:41:3 › timeslider revision labels › shows Version label and a valid date that update while scrubbing (2.4s)
+2026-11-18T07:11:25.2332080Z   ✓  238 [chromium] › tests/frontend-new/specs/timeslider_playback_speed.spec.ts:41:3 › timeslider playback speed › persists the selected playback speed (2.0s)
+2026-11-18T07:11:26.8768213Z   ✓  240 [chromium] › tests/frontend-new/specs/timeslider_playback_speed.spec.ts:76:3 › timeslider playback speed › uses revision timestamps for realtime playback (1.6s)
+2026-11-18T07:11:27.6881487Z   ✓  239 [chromium] › tests/frontend-new/specs/timeslider_saved_revisions.spec.ts:23:3 › timeslider saved-revision markers › a saved revision shows a marker on the outer history slider (3.1s)
+2026-11-18T07:11:27.8959903Z   ✓  241 [chromium] › tests/frontend-new/specs/timeslider.spec.ts:14:3 › history toolbar button enters in-pad history mode › history mode mounts iframe and sets #rev/ hash (1.0s)
+2026-11-18T07:11:29.1750249Z   ✓  243 [chromium] › tests/frontend-new/specs/timeslider.spec.ts:49:3 › history toolbar button enters in-pad history mode › follow toggle eye icon does not overlap the speed control (1.3s)
+2026-11-18T07:11:29.6467040Z   ✓  244 [chromium] › tests/frontend-new/specs/unaccepted_commit_warning.spec.ts:5:3 › unaccepted commit warning › hasUnacceptedCommit clears once the server acknowledges the commit (457ms)
+2026-11-18T07:11:30.0803978Z   ✓  245 [chromium] › tests/frontend-new/specs/unaccepted_commit_warning.spec.ts:18:3 › unaccepted commit warning › disconnect with a pending commit surfaces the unsaved-edit gritter (419ms)
+2026-11-18T07:11:31.5346732Z   ✓  242 [chromium] › tests/frontend-new/specs/timeslider_saved_revisions.spec.ts:62:3 › timeslider saved-revision markers › a revision saved live appears on an already-open history slider (3.8s)
+2026-11-18T07:11:32.6917564Z   ✓  247 [chromium] › tests/frontend-new/specs/undo_clear_authorship.spec.ts:107:3 › undo clear authorship colors with multiple authors (bug #2802) › single user can undo clear authorship without disconnect @feature:clear-authorship (1.1s)
+2026-11-18T07:11:34.4280559Z   ✓  246 [chromium] › tests/frontend-new/specs/undo_clear_authorship.spec.ts:33:3 › undo clear authorship colors with multiple authors (bug #2802) › User B should not be disconnected after undoing clear authorship @feature:clear-authorship (4.3s)
+2026-11-18T07:11:35.2195818Z   ✘  248 [chromium] › tests/frontend-new/specs/undo_redo_scroll.spec.ts:31:3 › Undo scroll-to-caret (#7007) › Ctrl+Z scrolls viewport up when the caret lands above the view (2.5s)
+2026-11-18T07:11:36.8578856Z   ✓  249 [chromium] › tests/frontend-new/specs/undo_redo_scroll.spec.ts:77:3 › Undo scroll-to-caret (#7007) › Ctrl+Z scrolls viewport down when the caret lands below the view (2.4s)
+2026-11-18T07:11:37.7613036Z   ✓  251 [chromium] › tests/frontend-new/specs/undo.spec.ts:13:3 › undo button › undo some typing by clicking undo button (882ms)
+2026-11-18T07:11:38.5891727Z   ✓  252 [chromium] › tests/frontend-new/specs/undo.spec.ts:36:3 › undo button › undo some typing using a keypress (810ms)
+2026-11-18T07:11:39.0953987Z   ✓  253 [chromium] › tests/frontend-new/specs/unordered_list.spec.ts:11:5 › unordered_list.js › assign unordered list › insert unordered list text then removes by outdent (490ms)
+2026-11-18T07:11:39.5632402Z   ✓  254 [chromium] › tests/frontend-new/specs/unordered_list.spec.ts:32:5 › unordered_list.js › unassign unordered list › insert unordered list text then remove by clicking list again (452ms)
+2026-11-18T07:11:40.1808243Z   ✓  255 [chromium] › tests/frontend-new/specs/unordered_list.spec.ts:52:5 › unordered_list.js › keep unordered list on enter key › Keeps the unordered list on enter for the new line (602ms)
+2026-11-18T07:11:40.8806630Z   ✓  256 [chromium] › tests/frontend-new/specs/unordered_list.spec.ts:86:5 › unordered_list.js › Pressing Tab in an UL increases and decreases indentation › indent and de-indent list item with keypress (686ms)
+2026-11-18T07:11:40.9375481Z   ✓  250 [chromium] › tests/frontend-new/specs/undo_redo_scroll.spec.ts:31:3 › Undo scroll-to-caret (#7007) › Ctrl+Z scrolls viewport up when the caret lands above the view (retry #1) (5.0s)
+2026-11-18T07:11:41.4727526Z   ✓  257 [chromium] › tests/frontend-new/specs/unordered_list.spec.ts:111:5 › unordered_list.js › Pressing indent/outdent button in an UL increases and decreases indentation and bullet / ol formatting › indent and de-indent list item with indent button (574ms)
+2026-11-18T07:11:41.7519137Z   ✓  258 [chromium] › tests/frontend-new/specs/url_view_options.spec.ts:20:3 › URL-param view options apply on initial load (race-free) › ?showLineNumbers=false hides the line-number gutter on first paint (797ms)
+2026-11-18T07:11:42.2445275Z   ✓  259 [chromium] › tests/frontend-new/specs/url_view_options.spec.ts:29:3 › URL-param view options apply on initial load (race-free) › ?showLineNumbers=true keeps the gutter visible (no regression) (753ms)
+2026-11-18T07:11:42.5405579Z   ✓  260 [chromium] › tests/frontend-new/specs/url_view_options.spec.ts:38:3 › URL-param view options apply on initial load (race-free) › ?useMonospaceFont=true applies monospace on first paint (768ms)
+2026-11-18T07:11:43.0193008Z   ✓  261 [chromium] › tests/frontend-new/specs/url_wrapping.spec.ts:10:3 › long URL wrapping in pad editor › long URLs should wrap instead of overflowing the editor (754ms)
+2026-11-18T07:11:43.5030230Z   ✓  262 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:15:5 › entering a URL makes a link › https://etherpad.org (948ms)
+2026-11-18T07:11:43.8909488Z   ✓  263 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:15:5 › entering a URL makes a link › www.etherpad.org (850ms)
+2026-11-18T07:11:44.3420590Z   ✓  264 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:15:5 › entering a URL makes a link › https://www.etherpad.org (829ms)
+2026-11-18T07:11:44.8806100Z   ✓  265 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/-foo (973ms)
+2026-11-18T07:11:45.2665909Z   ✓  266 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/:foo (914ms)
+2026-11-18T07:11:45.8204196Z   ✓  267 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/@foo (925ms)
+2026-11-18T07:11:46.2112353Z   ✓  268 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/_foo (933ms)
+2026-11-18T07:11:46.8216419Z   ✓  269 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/.foo (984ms)
+2026-11-18T07:11:47.1757213Z   ✓  270 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/,foo (953ms)
+2026-11-18T07:11:47.7465420Z   ✓  271 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/~foo (907ms)
+2026-11-18T07:11:48.1450475Z   ✓  272 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/%foo (957ms)
+2026-11-18T07:11:48.6959925Z   ✓  273 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/+foo (934ms)
+2026-11-18T07:11:49.1134888Z   ✓  274 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org//foo (958ms)
+2026-11-18T07:11:49.6447507Z   ✓  275 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/?foo (934ms)
+2026-11-18T07:11:50.0635678Z   ✓  276 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/=foo (938ms)
+2026-11-18T07:11:50.5924237Z   ✓  277 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/&foo (933ms)
+2026-11-18T07:11:50.9673947Z   ✓  278 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/#foo (894ms)
+2026-11-18T07:11:51.5613635Z   ✓  279 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/!foo (952ms)
+2026-11-18T07:11:51.9937951Z   ✓  280 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/;foo (1.0s)
+2026-11-18T07:11:52.5104771Z   ✓  281 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/(foo (935ms)
+2026-11-18T07:11:52.9568508Z   ✓  282 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/)foo (954ms)
+2026-11-18T07:11:53.4418032Z   ✓  283 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/[foo (913ms)
+2026-11-18T07:11:53.8872229Z   ✓  284 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/]foo (919ms)
+2026-11-18T07:11:54.3772247Z   ✓  285 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/$foo (919ms)
+2026-11-18T07:11:54.8215063Z   ✓  286 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/'foo (924ms)
+2026-11-18T07:11:55.3265649Z   ✓  287 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:31:5 › special characters inside URL › https://etherpad.org/*foo (934ms)
+2026-11-18T07:11:55.6662622Z   ✓  288 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org: (835ms)
+2026-11-18T07:11:56.1975669Z   ✓  289 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org. (857ms)
+2026-11-18T07:11:56.5130932Z   ✓  290 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org, (836ms)
+2026-11-18T07:11:57.0704793Z   ✓  291 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org; (856ms)
+2026-11-18T07:11:57.3428758Z   ✓  292 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org? (820ms)
+2026-11-18T07:11:57.9313323Z   ✓  293 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org! (842ms)
+2026-11-18T07:11:58.2338521Z   ✓  294 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org) (879ms)
+2026-11-18T07:11:58.7606945Z   ✓  295 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org] (812ms)
+2026-11-18T07:11:59.0694730Z   ✓  296 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org' (824ms)
+2026-11-18T07:11:59.5963890Z   ✓  297 [chromium] › tests/frontend-new/specs/urls_become_clickable.spec.ts:48:5 › punctuation after URL is ignored › https://etherpad.org* (820ms)
+2026-11-18T07:12:01.4738936Z   ✓  298 [chromium] › tests/frontend-new/specs/userlist_click_to_chat.spec.ts:33:3 › userlist click → chat prefill › clicking another user opens chat and prefills @<name> @feature:chat @feature:username (2.4s)
+2026-11-18T07:12:02.1425693Z   ✓  299 [chromium] › tests/frontend-new/specs/userlist_click_to_chat.spec.ts:72:3 › userlist click → chat prefill › clicking the swatch opens the color picker, not chat @feature:chat @feature:username (2.5s)
+2026-11-18T07:12:03.6170657Z   ✓  300 [chromium] › tests/frontend-new/specs/userlist_click_to_chat.spec.ts:104:3 › userlist click → chat prefill › clicking the rename input on an unnamed user does not steal focus @feature:chat @feature:username (2.1s)
+2026-11-18T07:12:04.5855809Z   ✓  301 [chromium] › tests/frontend-new/specs/userlist_click_to_chat.spec.ts:140:3 › userlist click → chat prefill › partial message in chat input is preserved when prefilling @feature:chat @feature:username (2.4s)
+2026-11-18T07:12:05.6397828Z   ✓  302 [chromium] › tests/frontend-new/specs/wcag_author_color.spec.ts:70:3 › WCAG author colour (issue #7377) › issue scenario: #9AB3FA renders >= AA against the author text @feature:authorship-bg-color (2.0s)
+2026-11-18T07:12:06.6255371Z   ✓  303 [chromium] › tests/frontend-new/specs/wcag_author_color.spec.ts:79:3 › WCAG author colour (issue #7377) › pure red #ff0000 renders >= AA after the clamp @feature:authorship-bg-color (2.0s)
+2026-11-18T07:12:06.8582377Z   ✓  305 [chromium] › tests/frontend-new/specs/welcome.spec.ts:69:5 › Session Transfer Functionality › creating a transfer code › should open settings dialog and transfer session (214ms)
+2026-11-18T07:12:07.1579208Z   ✓  306 [chromium] › tests/frontend-new/specs/welcome.spec.ts:84:5 › Session Transfer Functionality › creating a transfer code › should copy transfer ID to clipboard (284ms)
+2026-11-18T07:12:07.3968895Z   ✓  307 [chromium] › tests/frontend-new/specs/welcome.spec.ts:99:5 › Session Transfer Functionality › creating a transfer code › should show a localized error and stay usable after a 400 response (223ms)
+2026-11-18T07:12:07.6190895Z   ✓  308 [chromium] › tests/frontend-new/specs/welcome.spec.ts:115:5 › Session Transfer Functionality › creating a transfer code › should never render server-supplied error content (204ms)
+2026-11-18T07:12:07.6804476Z   ✓  304 [chromium] › tests/frontend-new/specs/wcag_author_color.spec.ts:88:3 › WCAG author colour (issue #7377) › already-AA-friendly #ffeedd is rendered unchanged @feature:authorship-bg-color (2.0s)
+2026-11-18T07:12:07.9275366Z   ✓  309 [chromium] › tests/frontend-new/specs/welcome.spec.ts:132:7 › Session Transfer Functionality › creating a transfer code › should treat a create response 2xx without an id as a failure (286ms)
+2026-11-18T07:12:07.9678001Z   ✓  310 [chromium] › tests/frontend-new/specs/welcome.spec.ts:132:7 › Session Transfer Functionality › creating a transfer code › should treat a create response 2xx with an invalid id as a failure (262ms)
+2026-11-18T07:12:08.2303505Z   ✓  311 [chromium] › tests/frontend-new/specs/welcome.spec.ts:132:7 › Session Transfer Functionality › creating a transfer code › should treat a create response non-2xx with an id as a failure (285ms)
+2026-11-18T07:12:08.2600402Z   ✓  312 [chromium] › tests/frontend-new/specs/welcome.spec.ts:144:5 › Session Transfer Functionality › creating a transfer code › should treat a non-JSON create response as a failure (273ms)
+2026-11-18T07:12:08.5238347Z   ✓  313 [chromium] › tests/frontend-new/specs/welcome.spec.ts:157:5 › Session Transfer Functionality › creating a transfer code › should not expose copy state after a network failure (268ms)
+2026-11-18T07:12:08.6705966Z   ✓  314 [chromium] › tests/frontend-new/specs/welcome.spec.ts:168:5 › Session Transfer Functionality › creating a transfer code › should hide a previous error when retrying succeeds (392ms)
+2026-11-18T07:12:08.9396478Z   ✓  315 [chromium] › tests/frontend-new/specs/welcome.spec.ts:184:5 › Session Transfer Functionality › creating a transfer code › should keep the transfer code if the dialog is closed mid-request (386ms)
+2026-11-18T07:12:09.0808771Z   ✓  316 [chromium] › tests/frontend-new/specs/welcome.spec.ts:205:5 › Session Transfer Functionality › redeeming a transfer code › should receive session with valid code (397ms)
+2026-11-18T07:12:09.3221537Z   ✓  317 [chromium] › tests/frontend-new/specs/welcome.spec.ts:229:7 › Session Transfer Functionality › redeeming a transfer code › should not reload and should preserve code after a missing transfer id (404) (360ms)
+2026-11-18T07:12:09.4541197Z   ✓  318 [chromium] › tests/frontend-new/specs/welcome.spec.ts:229:7 › Session Transfer Functionality › redeeming a transfer code › should not reload and should preserve code after an expired transfer id (410) (355ms)
+2026-11-18T07:12:09.7164744Z   ✓  319 [chromium] › tests/frontend-new/specs/welcome.spec.ts:229:7 › Session Transfer Functionality › redeeming a transfer code › should not reload and should preserve code after a 2xx response without ok:true (369ms)
+2026-11-18T07:12:09.8416858Z   ✓  320 [chromium] › tests/frontend-new/specs/welcome.spec.ts:250:5 › Session Transfer Functionality › redeeming a transfer code › should not reload when receive response is not valid JSON (370ms)
+2026-11-18T07:12:10.0579072Z   ✓  321 [chromium] › tests/frontend-new/specs/welcome.spec.ts:267:5 › Session Transfer Functionality › redeeming a transfer code › should not reload after a network failure (321ms)
+2026-11-18T07:12:10.2113599Z   ✓  322 [chromium] › tests/frontend-new/specs/welcome.spec.ts:281:5 › Session Transfer Functionality › redeeming a transfer code › should hide the error when the code is edited (350ms)
+2026-11-18T07:12:10.3721426Z   ✓  323 [chromium] › tests/frontend-new/specs/welcome.spec.ts:294:5 › Session Transfer Functionality › redeeming a transfer code › should keep transfer button disabled for invalid codes (288ms)
+2026-11-18T07:12:10.5246055Z   ✓  324 [chromium] › tests/frontend-new/specs/welcome.spec.ts:310:5 › Session Transfer Functionality › redeeming a transfer code › should disable the button when the code becomes invalid during a failed request (300ms)
+2026-11-18T07:12:10.7240752Z   ✓  325 [chromium] › tests/frontend-new/specs/welcome.spec.ts:330:5 › Session Transfer Functionality › redeeming a transfer code › should not allow a second redemption while one is pending (332ms)
+2026-11-18T07:12:10.8548322Z   ✓  326 [chromium] › tests/frontend-new/specs/welcome.spec.ts:358:5 › Session Transfer Functionality › settings dialog › should switch between tabs in settings dialog (314ms)
+2026-11-18T07:12:10.9465800Z   ✓  327 [chromium] › tests/frontend-new/specs/welcome.spec.ts:373:5 › Session Transfer Functionality › settings dialog › should close dialog when clicking outside (205ms)
+2026-11-18T07:12:11.0481260Z 
+2026-11-18T07:12:11.0489696Z 
+2026-11-18T07:12:11.0492540Z   1) [chromium] › tests/frontend-new/specs/undo_redo_scroll.spec.ts:31:3 › Undo scroll-to-caret (#7007) › Ctrl+Z scrolls viewport up when the caret lands above the view 
+2026-11-18T07:12:11.0493461Z 
+2026-11-18T07:12:11.0493696Z     Error: expect(received).toBeLessThan(expected)
+2026-11-18T07:12:11.0494028Z 
+2026-11-18T07:12:11.0494140Z     Expected: < 594
+2026-11-18T07:12:11.0494641Z     Received:   595
+2026-11-18T07:12:11.0494753Z 
+2026-11-18T07:12:11.0495007Z       72 |     // Pre-fix: scrollAfter ≈ scrollBefore (no scroll).
+2026-11-18T07:12:11.0495425Z       73 |     // Fixed: scrollAfter < scrollBefore (viewport moved up toward the caret).
+2026-11-18T07:12:11.0495833Z     > 74 |     expect(scrollAfter).toBeLessThan(scrollBefore);
+2026-11-18T07:12:11.0496114Z          |                         ^
+2026-11-18T07:12:11.0496340Z       75 |   });
+2026-11-18T07:12:11.0496520Z       76 |
+2026-11-18T07:12:11.0496903Z       77 |   test('Ctrl+Z scrolls viewport down when the caret lands below the view', async function ({page}) {
+2026-11-18T07:12:11.0497533Z         at /home/runner/work/etherpad-lite/etherpad-lite/src/tests/frontend-new/specs/undo_redo_scroll.spec.ts:74:25
+2026-11-18T07:12:11.0497882Z 
+2026-11-18T07:12:11.0498244Z     Error Context: test-results/tests-frontend-new-specs-u-1c191--caret-lands-above-the-view-chromium/error-context.md
+2026-11-18T07:12:11.0498622Z 
+2026-11-18T07:12:11.0498712Z   1 flaky
+2026-11-18T07:12:11.0499359Z     [chromium] › tests/frontend-new/specs/undo_redo_scroll.spec.ts:31:3 › Undo scroll-to-caret (#7007) › Ctrl+Z scrolls viewport up when the caret lands above the view 
+2026-11-18T07:12:11.0499875Z   10 skipped
+2026-11-18T07:12:11.0500058Z   315 passed (3.1m)
+2026-11-18T07:12:11.1198537Z ##[group]Run actions/upload-artifact@v7
+2026-11-18T07:12:11.1198790Z with:
+2026-11-18T07:12:11.1199000Z   name: results-github-4-chrome-with-plugins
+2026-11-18T07:12:11.1199250Z   path: results.json
+2026-11-18T07:12:11.1199451Z   retention-days: 30
+2026-11-18T07:12:11.1199638Z   if-no-files-found: warn
+2026-11-18T07:12:11.1199840Z   compression-level: 6
+2026-11-18T07:12:11.1200037Z   overwrite: false
+2026-11-18T07:12:11.1200231Z   include-hidden-files: false
+2026-11-18T07:12:11.1200438Z   archive: true
+2026-11-18T07:12:11.1200629Z env:
+2026-11-18T07:12:11.1200839Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-18T07:12:11.1201122Z ##[endgroup]
+2026-11-18T07:12:11.2360933Z With the provided path, there will be 1 file uploaded
+2026-11-18T07:12:11.2377454Z Artifact name is valid!
+2026-11-18T07:12:11.2378118Z Root directory input is valid!
+2026-11-18T07:12:11.5874448Z Uploading artifact: results-github-4-chrome-with-plugins.zip
+2026-11-18T07:12:11.5903955Z Beginning upload of artifact content to blob storage
+2026-11-18T07:12:11.8951747Z Uploaded bytes 30367
+2026-11-18T07:12:11.9589931Z Finished uploading artifact content to blob storage!
+2026-11-18T07:12:11.9590833Z SHA256 digest of uploaded artifact is a4402c4f3b68d1dddac7fb26a11d3f85723522840c37a2aa55b27b48f001528b
+2026-11-18T07:12:11.9591566Z Finalizing artifact upload
+2026-11-18T07:12:12.4610663Z Artifact results-github-4-chrome-with-plugins successfully finalized. Artifact ID 14406367456
+2026-11-18T07:12:12.4611855Z Artifact results-github-4-chrome-with-plugins has been successfully uploaded! Final size is 30367 bytes. Artifact ID is 14406367456
+2026-11-18T07:12:12.4614326Z Artifact download URL: https://github.com/boba-benchmarks/etherpad-lite/actions/runs/44256509995/artifacts/14406367456
+2026-11-18T07:12:12.4782088Z Post job cleanup.
+2026-11-18T07:12:12.5702380Z Cache hit occurred on the primary key node-cache-Linux-x64-pnpm-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556, not saving cache.
+2026-11-18T07:12:12.5808752Z Post job cleanup.
+2026-11-18T07:12:12.7041408Z Pruning is unnecessary.
+2026-11-18T07:12:12.7711814Z Post job cleanup.
+2026-11-18T07:12:12.8746272Z Cache hit occurred on the primary key Linux-playwright-31ef7bd5f30c4727b0e0bee005389c5796459918031710bea412d2818bda471e, not saving cache.
+2026-11-18T07:12:15.5005935Z Post job cleanup.
+2026-11-18T07:12:15.6159822Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/etherpad-lite/etherpad-lite --files-from manifest.txt --use-compress-program zstdmt
+2026-11-18T07:12:17.6990383Z Failed to save: Unable to reserve cache with key Linux-pnpm-store-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556, another job may be creating this cache.
+2026-11-18T07:12:17.7249645Z Post job cleanup.
+2026-11-18T07:12:17.7924840Z [command]/usr/bin/git version
+2026-11-18T07:12:17.7972067Z git version 2.56.1
+2026-11-18T07:12:17.8003363Z Temporarily overriding HOME='/home/runner/work/_temp/fb253ac7-f672-4f1a-8d24-261b05f1a62b' before making global git config changes
+2026-11-18T07:12:17.8004503Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-18T07:12:17.8008012Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/etherpad-lite/etherpad-lite
+2026-11-18T07:12:17.8040189Z Removing SSH command configuration
+2026-11-18T07:12:17.8045920Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-18T07:12:17.8080950Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-18T07:12:17.8370251Z Removing HTTP extra header
+2026-11-18T07:12:17.8375211Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-18T07:12:17.8410159Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-18T07:12:17.8680047Z Removing includeIf entries pointing to credentials config files
+2026-11-18T07:12:17.8685950Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-18T07:12:17.8709829Z includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git.path
+2026-11-18T07:12:17.8710592Z includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git/worktrees/*.path
+2026-11-18T07:12:17.8711026Z includeif.gitdir:/github/workspace/.git.path
+2026-11-18T07:12:17.8711407Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-18T07:12:17.8717075Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git.path
+2026-11-18T07:12:17.8737752Z /home/runner/work/_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config
+2026-11-18T07:12:17.8745858Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-514f7a42\-0c17\-4f53\-9171\-5c354d3768d0\.config
+2026-11-18T07:12:17.8777672Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git/worktrees/*.path
+2026-11-18T07:12:17.8798615Z /home/runner/work/_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config
+2026-11-18T07:12:17.8805695Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-514f7a42\-0c17\-4f53\-9171\-5c354d3768d0\.config
+2026-11-18T07:12:17.8870899Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-18T07:12:17.8892162Z /github/runner_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config
+2026-11-18T07:12:17.8898512Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-514f7a42\-0c17\-4f53\-9171\-5c354d3768d0\.config
+2026-11-18T07:12:17.8930514Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-18T07:12:17.8951462Z /github/runner_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config
+2026-11-18T07:12:17.8957836Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-514f7a42\-0c17\-4f53\-9171\-5c354d3768d0\.config
+2026-11-18T07:12:17.8989277Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-18T07:12:17.9227764Z Removing credentials config '/home/runner/work/_temp/git-credentials-514f7a42-0c17-4f53-9171-5c354d3768d0.config'
+2026-11-18T07:12:17.9382740Z Cleaning up orphan processes
+2026-11-18T07:12:17.9653888Z Terminate orphan process: pid (2594) (pnpm)
+2026-11-18T07:12:17.9675156Z Terminate orphan process: pid (2619) (sh)
+2026-11-18T07:12:17.9694280Z Terminate orphan process: pid (2620) (pnpm)
+2026-11-18T07:12:17.9716196Z Terminate orphan process: pid (2643) (sh)
+2026-11-18T07:12:17.9737620Z Terminate orphan process: pid (2644) (MainThread)
+2026-11-18T07:12:17.9767357Z Terminate orphan process: pid (2655) (MainThread)
+2026-11-18T07:12:17.9823661Z Terminate orphan process: pid (2663) (esbuild)
+2026-11-18T07:12:17.9863013Z Terminate orphan process: pid (3445) (esbuild)
