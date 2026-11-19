@@ -1,0 +1,1615 @@
+﻿2026-11-19T20:36:07.6193505Z Current runner version: '2.338.2'
+2026-11-19T20:36:07.6198898Z Runner name: 'boba-135864783432-1'
+2026-11-19T20:36:07.6199666Z Runner group name: 'coldtea boba - etherpad-lite'
+2026-11-19T20:36:07.6200476Z Machine name: 'ubuntu'
+2026-11-19T20:36:07.6203085Z ##[group]GITHUB_TOKEN Permissions
+2026-11-19T20:36:07.6204817Z Actions: read
+2026-11-19T20:36:07.6205364Z Checks: write
+2026-11-19T20:36:07.6205902Z Contents: read
+2026-11-19T20:36:07.6206505Z Metadata: read
+2026-11-19T20:36:07.6207137Z PullRequests: write
+2026-11-19T20:36:07.6207844Z ##[endgroup]
+2026-11-19T20:36:07.6209498Z Secret source: Actions
+2026-11-19T20:36:07.6210365Z Cache mode: write
+2026-11-19T20:36:07.6211206Z Prepare workflow directory
+2026-11-19T20:36:07.6637080Z Prepare all required actions
+2026-11-19T20:36:07.6665203Z Getting action download info
+2026-11-19T20:36:08.1461529Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-19T20:36:08.1970208Z Download action repository 'actions/cache@v6' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+2026-11-19T20:36:08.3148981Z Download action repository 'pnpm/action-setup@v6.1.1' (SHA:73e46992e05b19abd31f2f3c20e0e7370d762115)
+2026-11-19T20:36:08.6487140Z Download action repository 'actions/setup-node@v7' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+2026-11-19T20:36:08.7225951Z Download action repository 'coldteadotai/boba@v1' (SHA:30df239eb2f48d7d7ff6d7934404e2e38cbf70d5)
+2026-11-19T20:36:09.0269337Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-19T20:36:09.1728690Z Complete job name: Playwright Chrome with plugins (boba-turbo)
+2026-11-19T20:36:09.2079057Z A job started hook has been configured by the self-hosted runner administrator
+2026-11-19T20:36:09.2269350Z ##[group]Run '/run/boba/job-started.sh'
+2026-11-19T20:36:09.2280709Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T20:36:09.2281234Z ##[endgroup]
+2026-11-19T20:36:09.3710906Z Boba checked this job in 132 ms; dependency cache: box disk; databases: fresh
+2026-11-19T20:36:09.3931704Z ##[group]Run actions/checkout@v7
+2026-11-19T20:36:09.3932034Z with:
+2026-11-19T20:36:09.3932293Z   repository: boba-benchmarks/etherpad-lite
+2026-11-19T20:36:09.3934524Z   token: ***
+2026-11-19T20:36:09.3934767Z   ssh-strict: true
+2026-11-19T20:36:09.3935025Z   ssh-user: git
+2026-11-19T20:36:09.3935281Z   persist-credentials: true
+2026-11-19T20:36:09.3935549Z   clean: true
+2026-11-19T20:36:09.3935806Z   sparse-checkout-cone-mode: true
+2026-11-19T20:36:09.3936096Z   fetch-depth: 1
+2026-11-19T20:36:09.3936338Z   fetch-tags: false
+2026-11-19T20:36:09.3936582Z   show-progress: true
+2026-11-19T20:36:09.3936830Z   lfs: false
+2026-11-19T20:36:09.3937059Z   submodules: false
+2026-11-19T20:36:09.3937309Z   set-safe-directory: true
+2026-11-19T20:36:09.3937584Z   allow-unsafe-pr-checkout: false
+2026-11-19T20:36:09.3937856Z env:
+2026-11-19T20:36:09.3938085Z   PNPM_HOME: ~/.pnpm-store
+2026-11-19T20:36:09.3938342Z ##[endgroup]
+2026-11-19T20:36:09.5768711Z Syncing repository: boba-benchmarks/etherpad-lite
+2026-11-19T20:36:09.5769922Z ##[group]Getting Git version info
+2026-11-19T20:36:09.5770364Z Working directory is '/home/runner/work/etherpad-lite/etherpad-lite'
+2026-11-19T20:36:09.5771013Z [command]/usr/bin/git version
+2026-11-19T20:36:09.5845411Z git version 2.56.1
+2026-11-19T20:36:09.5859006Z ##[endgroup]
+2026-11-19T20:36:09.5865018Z Temporarily overriding HOME='/home/runner/work/_temp/d6b0e677-4546-4adf-bff6-dc115ca1efe4' before making global git config changes
+2026-11-19T20:36:09.5865935Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T20:36:09.5867022Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/etherpad-lite/etherpad-lite
+2026-11-19T20:36:09.5911877Z [command]/usr/bin/git config --local --get remote.origin.url
+2026-11-19T20:36:09.5929191Z https://github.com/boba-benchmarks/etherpad-lite
+2026-11-19T20:36:09.5936506Z ##[group]Removing previously created refs, to avoid conflicts
+2026-11-19T20:36:09.5938262Z [command]/usr/bin/git rev-parse --symbolic-full-name --verify --quiet HEAD
+2026-11-19T20:36:09.5967984Z refs/heads/main
+2026-11-19T20:36:09.5972699Z [command]/usr/bin/git checkout --detach
+2026-11-19T20:36:09.6080229Z D	.dockerignore
+2026-11-19T20:36:09.6080804Z D	.editorconfig
+2026-11-19T20:36:09.6081215Z D	.env.default
+2026-11-19T20:36:09.6081596Z D	.env.dev.default
+2026-11-19T20:36:09.6081992Z D	.gitattributes
+2026-11-19T20:36:09.6082381Z D	.github/FUNDING.yml
+2026-11-19T20:36:09.6082736Z D	.github/ISSUE_TEMPLATE/bug_report.md
+2026-11-19T20:36:09.6083159Z D	.github/ISSUE_TEMPLATE/feature_request.md
+2026-11-19T20:36:09.6083772Z D	.github/ISSUE_TEMPLATE/plugin-request-template.md
+2026-11-19T20:36:09.6084235Z D	.github/ISSUE_TEMPLATE/security-issue.md
+2026-11-19T20:36:09.6084684Z D	.github/ISSUE_TEMPLATE/security.md
+2026-11-19T20:36:09.6085059Z D	.github/PULL_REQUEST_TEMPLATE.md
+2026-11-19T20:36:09.6085422Z D	.github/workflows/bench.yml
+2026-11-19T20:36:09.6085750Z D	.gitignore
+2026-11-19T20:36:09.6086048Z D	.npmrc
+2026-11-19T20:36:09.6086326Z D	AGENTS.MD
+2026-11-19T20:36:09.6086604Z D	CHANGELOG.md
+2026-11-19T20:36:09.6086904Z D	CONTRIBUTING.md
+2026-11-19T20:36:09.6087213Z D	Dockerfile
+2026-11-19T20:36:09.6087486Z D	LICENSE
+2026-11-19T20:36:09.6087753Z D	PRIVACY.md
+2026-11-19T20:36:09.6088026Z D	README.md
+2026-11-19T20:36:09.6088360Z D	SECURITY.md
+2026-11-19T20:36:09.6088693Z D	admin/.eslintrc.cjs
+2026-11-19T20:36:09.6088995Z D	admin/.gitignore
+2026-11-19T20:36:09.6089344Z D	admin/README.md
+2026-11-19T20:36:09.6090030Z D	admin/index.html
+2026-11-19T20:36:09.6090374Z D	admin/package.json
+2026-11-19T20:36:09.6090707Z D	admin/public/Karla-Bold.ttf
+2026-11-19T20:36:09.6091078Z D	admin/public/Karla-BoldItalic.ttf
+2026-11-19T20:36:09.6091450Z D	admin/public/Karla-ExtraBold.ttf
+2026-11-19T20:36:09.6091832Z D	admin/public/Karla-ExtraBoldItalic.ttf
+2026-11-19T20:36:09.6092224Z D	admin/public/Karla-ExtraLight.ttf
+2026-11-19T20:36:09.6092596Z D	admin/public/Karla-ExtraLightItalic.ttf
+2026-11-19T20:36:09.6093262Z D	admin/public/Karla-Italic.ttf
+2026-11-19T20:36:09.6093626Z D	admin/public/Karla-Light.ttf
+2026-11-19T20:36:09.6093981Z D	admin/public/Karla-LightItalic.ttf
+2026-11-19T20:36:09.6094356Z D	admin/public/Karla-Medium.ttf
+2026-11-19T20:36:09.6094712Z D	admin/public/Karla-MediumItalic.ttf
+2026-11-19T20:36:09.6095083Z D	admin/public/Karla-Regular.ttf
+2026-11-19T20:36:09.6095433Z D	admin/public/Karla-SemiBold.ttf
+2026-11-19T20:36:09.6095797Z D	admin/public/Karla-SemiBoldItalic.ttf
+2026-11-19T20:36:09.6096166Z D	admin/public/brand.svg
+2026-11-19T20:36:09.6096501Z D	admin/public/ep_admin_authors/en.json
+2026-11-19T20:36:09.6096814Z D	admin/public/ep_admin_pads/ar.json
+2026-11-19T20:36:09.6097107Z D	admin/public/ep_admin_pads/bn.json
+2026-11-19T20:36:09.6097398Z D	admin/public/ep_admin_pads/ca.json
+2026-11-19T20:36:09.6097693Z D	admin/public/ep_admin_pads/cs.json
+2026-11-19T20:36:09.6097983Z D	admin/public/ep_admin_pads/cy.json
+2026-11-19T20:36:09.6098278Z D	admin/public/ep_admin_pads/da.json
+2026-11-19T20:36:09.6098580Z D	admin/public/ep_admin_pads/de.json
+2026-11-19T20:36:09.6098872Z D	admin/public/ep_admin_pads/diq.json
+2026-11-19T20:36:09.6099171Z D	admin/public/ep_admin_pads/dsb.json
+2026-11-19T20:36:09.6099524Z D	admin/public/ep_admin_pads/el.json
+2026-11-19T20:36:09.6099815Z D	admin/public/ep_admin_pads/en.json
+2026-11-19T20:36:09.6100101Z D	admin/public/ep_admin_pads/eu.json
+2026-11-19T20:36:09.6100393Z D	admin/public/ep_admin_pads/ff.json
+2026-11-19T20:36:09.6100687Z D	admin/public/ep_admin_pads/fi.json
+2026-11-19T20:36:09.6100977Z D	admin/public/ep_admin_pads/fr.json
+2026-11-19T20:36:09.6101275Z D	admin/public/ep_admin_pads/gl.json
+2026-11-19T20:36:09.6101566Z D	admin/public/ep_admin_pads/he.json
+2026-11-19T20:36:09.6101856Z D	admin/public/ep_admin_pads/hsb.json
+2026-11-19T20:36:09.6102148Z D	admin/public/ep_admin_pads/hu.json
+2026-11-19T20:36:09.6102588Z D	admin/public/ep_admin_pads/ia.json
+2026-11-19T20:36:09.6102877Z D	admin/public/ep_admin_pads/it.json
+2026-11-19T20:36:09.6103505Z D	admin/public/ep_admin_pads/kn.json
+2026-11-19T20:36:09.6103815Z D	admin/public/ep_admin_pads/ko.json
+2026-11-19T20:36:09.6104114Z D	admin/public/ep_admin_pads/krc.json
+2026-11-19T20:36:09.6104417Z D	admin/public/ep_admin_pads/lb.json
+2026-11-19T20:36:09.6104709Z D	admin/public/ep_admin_pads/lt.json
+2026-11-19T20:36:09.6105004Z D	admin/public/ep_admin_pads/mk.json
+2026-11-19T20:36:09.6105296Z D	admin/public/ep_admin_pads/my.json
+2026-11-19T20:36:09.6105585Z D	admin/public/ep_admin_pads/nb.json
+2026-11-19T20:36:09.6105872Z D	admin/public/ep_admin_pads/nl.json
+2026-11-19T20:36:09.6106159Z D	admin/public/ep_admin_pads/oc.json
+2026-11-19T20:36:09.6106458Z D	admin/public/ep_admin_pads/pms.json
+2026-11-19T20:36:09.6106811Z D	admin/public/ep_admin_pads/pt-br.json
+2026-11-19T20:36:09.6107111Z D	admin/public/ep_admin_pads/pt.json
+2026-11-19T20:36:09.6107404Z D	admin/public/ep_admin_pads/qqq.json
+2026-11-19T20:36:09.6107695Z D	admin/public/ep_admin_pads/ru.json
+2026-11-19T20:36:09.6107987Z D	admin/public/ep_admin_pads/sc.json
+2026-11-19T20:36:09.6108288Z D	admin/public/ep_admin_pads/sdc.json
+2026-11-19T20:36:09.6108586Z D	admin/public/ep_admin_pads/sk.json
+2026-11-19T20:36:09.6108886Z D	admin/public/ep_admin_pads/skr-arab.json
+2026-11-19T20:36:09.6109195Z D	admin/public/ep_admin_pads/sl.json
+2026-11-19T20:36:09.6109572Z D	admin/public/ep_admin_pads/smn.json
+2026-11-19T20:36:09.6109868Z D	admin/public/ep_admin_pads/sms.json
+2026-11-19T20:36:09.6110167Z D	admin/public/ep_admin_pads/sq.json
+2026-11-19T20:36:09.6110452Z D	admin/public/ep_admin_pads/sv.json
+2026-11-19T20:36:09.6110741Z D	admin/public/ep_admin_pads/sw.json
+2026-11-19T20:36:09.6111033Z D	admin/public/ep_admin_pads/th.json
+2026-11-19T20:36:09.6111321Z D	admin/public/ep_admin_pads/tl.json
+2026-11-19T20:36:09.6111611Z D	admin/public/ep_admin_pads/tr.json
+2026-11-19T20:36:09.6111896Z D	admin/public/ep_admin_pads/uk.json
+2026-11-19T20:36:09.6112194Z D	admin/public/ep_admin_pads/zh-hans.json
+2026-11-19T20:36:09.6112507Z D	admin/public/ep_admin_pads/zh-hant.json
+2026-11-19T20:36:09.6112826Z D	admin/public/fond.jpg
+2026-11-19T20:36:09.6113242Z D	admin/scripts/__tests__/merge-openapi.test.mjs
+2026-11-19T20:36:09.6113577Z D	admin/scripts/dump-spec.ts
+2026-11-19T20:36:09.6113854Z D	admin/scripts/gen-api.mjs
+2026-11-19T20:36:09.6114128Z D	admin/scripts/merge-openapi.mjs
+2026-11-19T20:36:09.6114413Z D	admin/src/App.css
+2026-11-19T20:36:09.6114652Z D	admin/src/App.tsx
+2026-11-19T20:36:09.6114904Z D	admin/src/api/QueryProvider.tsx
+2026-11-19T20:36:09.6115193Z D	admin/src/api/__tests__/client.test.ts
+2026-11-19T20:36:09.6115491Z D	admin/src/api/client.ts
+2026-11-19T20:36:09.6115760Z D	admin/src/components/ColorSwatch.tsx
+2026-11-19T20:36:09.6116069Z D	admin/src/components/IconButton.tsx
+2026-11-19T20:36:09.6116380Z D	admin/src/components/SearchField.tsx
+2026-11-19T20:36:09.6116723Z D	admin/src/components/ShoutType.ts
+2026-11-19T20:36:09.6117029Z D	admin/src/components/UpdateBanner.tsx
+2026-11-19T20:36:09.6117343Z D	admin/src/components/settings/FormView.tsx
+2026-11-19T20:36:09.6117689Z D	admin/src/components/settings/JsoncNode.tsx
+2026-11-19T20:36:09.6118022Z D	admin/src/components/settings/ModeToggle.tsx
+2026-11-19T20:36:09.6118374Z D	admin/src/components/settings/ParseErrorBanner.tsx
+2026-11-19T20:36:09.6118763Z D	admin/src/components/settings/__tests__/comments.test.ts
+2026-11-19T20:36:09.6119185Z D	admin/src/components/settings/__tests__/stringEscapes.test.ts
+2026-11-19T20:36:09.6119607Z D	admin/src/components/settings/comments.ts
+2026-11-19T20:36:09.6119935Z D	admin/src/components/settings/envPill.ts
+2026-11-19T20:36:09.6120346Z D	admin/src/components/settings/jsoncEdit.ts
+2026-11-19T20:36:09.6120667Z D	admin/src/components/settings/labels.ts
+2026-11-19T20:36:09.6120994Z D	admin/src/components/settings/stringEscapes.ts
+2026-11-19T20:36:09.6121345Z D	admin/src/components/settings/templateComments.ts
+2026-11-19T20:36:09.6121723Z D	admin/src/components/settings/widgets/BooleanToggle.tsx
+2026-11-19T20:36:09.6122094Z D	admin/src/components/settings/widgets/EnvPill.tsx
+2026-11-19T20:36:09.6122572Z D	admin/src/components/settings/widgets/NullChip.tsx
+2026-11-19T20:36:09.6122943Z D	admin/src/components/settings/widgets/NumberInput.tsx
+2026-11-19T20:36:09.6123318Z D	admin/src/components/settings/widgets/StringInput.tsx
+2026-11-19T20:36:09.6123727Z D	admin/src/components/settings/widgets/__tests__/EnvPill.test.tsx
+2026-11-19T20:36:09.6124097Z D	admin/src/index.css
+2026-11-19T20:36:09.6124351Z D	admin/src/localization/i18n.ts
+2026-11-19T20:36:09.6124625Z D	admin/src/main.tsx
+2026-11-19T20:36:09.6124875Z D	admin/src/pages/AuthorPage.tsx
+2026-11-19T20:36:09.6125160Z D	admin/src/pages/HelpPage.tsx
+2026-11-19T20:36:09.6125440Z D	admin/src/pages/HomePage.tsx
+2026-11-19T20:36:09.6125719Z D	admin/src/pages/LoginScreen.tsx
+2026-11-19T20:36:09.6126006Z D	admin/src/pages/PadPage.tsx
+2026-11-19T20:36:09.6126282Z D	admin/src/pages/Plugin.ts
+2026-11-19T20:36:09.6126557Z D	admin/src/pages/SettingsPage.tsx
+2026-11-19T20:36:09.6126900Z D	admin/src/pages/ShoutPage.tsx
+2026-11-19T20:36:09.6127184Z D	admin/src/pages/UpdatePage.tsx
+2026-11-19T20:36:09.6127681Z D	admin/src/store/store.ts
+2026-11-19T20:36:09.6128103Z D	admin/src/utils/AnimationFrameHook.ts
+2026-11-19T20:36:09.6128427Z D	admin/src/utils/AuthorSearch.ts
+2026-11-19T20:36:09.6128729Z D	admin/src/utils/LoadingScreen.tsx
+2026-11-19T20:36:09.6129021Z D	admin/src/utils/PadSearch.ts
+2026-11-19T20:36:09.6129303Z D	admin/src/utils/Toast.tsx
+2026-11-19T20:36:09.6129605Z D	admin/src/utils/__tests__/resolveByPath.test.ts
+2026-11-19T20:36:09.6130006Z D	admin/src/utils/brand.svg
+2026-11-19T20:36:09.6130285Z D	admin/src/utils/resolveByPath.ts
+2026-11-19T20:36:09.6130574Z D	admin/src/utils/sorting.ts
+2026-11-19T20:36:09.6130909Z D	admin/src/utils/useDebounce.ts
+2026-11-19T20:36:09.6131186Z D	admin/src/utils/utils.ts
+2026-11-19T20:36:09.6131488Z D	admin/src/vite-env.d.ts
+2026-11-19T20:36:09.6131771Z D	admin/tools/openapi-codegen/README.md
+2026-11-19T20:36:09.6132093Z D	admin/tools/openapi-codegen/package.json
+2026-11-19T20:36:09.6132397Z D	admin/tsconfig.json
+2026-11-19T20:36:09.6132656Z D	admin/tsconfig.node.json
+2026-11-19T20:36:09.6133080Z D	admin/vite.config.ts
+2026-11-19T20:36:09.6133344Z D	bin/buildDebian.sh
+2026-11-19T20:36:09.6133591Z D	bin/buildForWindows.sh
+2026-11-19T20:36:09.6133849Z D	bin/checkAllPads.ts
+2026-11-19T20:36:09.6134091Z D	bin/checkPad.ts
+2026-11-19T20:36:09.6134323Z D	bin/cleanRun.sh
+2026-11-19T20:36:09.6134563Z D	bin/commonPlugins.ts
+2026-11-19T20:36:09.6134817Z D	bin/compactAllPads.ts
+2026-11-19T20:36:09.6135068Z D	bin/compactPad.ts
+2026-11-19T20:36:09.6135311Z D	bin/compactStalePads.ts
+2026-11-19T20:36:09.6135582Z D	bin/convertSettings.json.template
+2026-11-19T20:36:09.6135874Z D	bin/createUserSession.ts
+2026-11-19T20:36:09.6136142Z D	bin/deb-src/DEBIAN/control
+2026-11-19T20:36:09.6136415Z D	bin/deb-src/DEBIAN/postinst
+2026-11-19T20:36:09.6136688Z D	bin/deb-src/DEBIAN/preinst
+2026-11-19T20:36:09.6136960Z D	bin/deb-src/DEBIAN/prerm
+2026-11-19T20:36:09.6137287Z D	bin/deb-src/sysroot/etc/init/etherpad.conf
+2026-11-19T20:36:09.6137595Z D	bin/debugRun.sh
+2026-11-19T20:36:09.6137853Z D	bin/deleteAllGroupSessions.ts
+2026-11-19T20:36:09.6138128Z D	bin/deletePad.ts
+2026-11-19T20:36:09.6138363Z D	bin/extractPadData.ts
+2026-11-19T20:36:09.6138609Z D	bin/fastRun.sh
+2026-11-19T20:36:09.6138841Z D	bin/functions.sh
+2026-11-19T20:36:09.6139084Z D	bin/generateReleaseNotes.ts
+2026-11-19T20:36:09.6139362Z D	bin/importSqlFile.ts
+2026-11-19T20:36:09.6139658Z D	bin/installDeps.sh
+2026-11-19T20:36:09.6139968Z D	bin/installLocalPlugins.sh
+2026-11-19T20:36:09.6140239Z D	bin/installer.ps1
+2026-11-19T20:36:09.6140480Z D	bin/installer.sh
+2026-11-19T20:36:09.6140710Z D	bin/make_docs.ts
+2026-11-19T20:36:09.6140938Z D	bin/migrateDB.ts
+2026-11-19T20:36:09.6141178Z D	bin/migrateDirtyDBtoRealDB.ts
+2026-11-19T20:36:09.6141450Z D	bin/nsis/README.md
+2026-11-19T20:36:09.6141686Z D	bin/nsis/brand.ico
+2026-11-19T20:36:09.6141927Z D	bin/nsis/etherpad.nsi
+2026-11-19T20:36:09.6142179Z D	bin/package.json
+2026-11-19T20:36:09.6142524Z D	bin/plugins.ts
+2026-11-19T20:36:09.6142761Z D	bin/plugins/README.md
+2026-11-19T20:36:09.6143143Z D	bin/plugins/checkPlugin.ts
+2026-11-19T20:36:09.6143417Z D	bin/plugins/getCorePlugins.sh
+2026-11-19T20:36:09.6143701Z D	bin/plugins/lib/CONTRIBUTING.md
+2026-11-19T20:36:09.6143980Z D	bin/plugins/lib/LICENSE
+2026-11-19T20:36:09.6144239Z D	bin/plugins/lib/README.md
+2026-11-19T20:36:09.6144512Z D	bin/plugins/lib/backend-tests.yml
+2026-11-19T20:36:09.6144804Z D	bin/plugins/lib/dependabot.yml
+2026-11-19T20:36:09.6145087Z D	bin/plugins/lib/eslintrc.cjs
+2026-11-19T20:36:09.6145370Z D	bin/plugins/lib/frontend-tests.yml
+2026-11-19T20:36:09.6145656Z D	bin/plugins/lib/gitignore
+2026-11-19T20:36:09.6145921Z D	bin/plugins/lib/npmpublish.yml
+2026-11-19T20:36:09.6146205Z D	bin/plugins/lib/test-and-release.yml
+2026-11-19T20:36:09.6146503Z D	bin/plugins/listOfficialPlugins
+2026-11-19T20:36:09.6146787Z D	bin/plugins/reTestAllPlugins.sh
+2026-11-19T20:36:09.6147121Z D	bin/plugins/stalePlugins.ts
+2026-11-19T20:36:09.6147405Z D	bin/plugins/updateAllPluginsScript.sh
+2026-11-19T20:36:09.6147722Z D	bin/plugins/updateCorePlugins.sh
+2026-11-19T20:36:09.6148021Z D	bin/push-after-release.sh
+2026-11-19T20:36:09.6148279Z D	bin/rebuildPad.ts
+2026-11-19T20:36:09.6148517Z D	bin/release.ts
+2026-11-19T20:36:09.6148751Z D	bin/repairPad.ts
+2026-11-19T20:36:09.6149013Z D	bin/run-frontend-tests-with-disables.sh
+2026-11-19T20:36:09.6149308Z D	bin/run.sh
+2026-11-19T20:36:09.6149536Z D	bin/safeRun.sh
+2026-11-19T20:36:09.6149783Z D	bin/setup-trusted-publishers.sh
+2026-11-19T20:36:09.6150092Z D	bin/tsconfig.json
+2026-11-19T20:36:09.6150332Z D	bin/updatePlugins.sh
+2026-11-19T20:36:09.6150574Z D	doc/.gitignore
+2026-11-19T20:36:09.6150816Z D	doc/.vitepress/config.mts
+2026-11-19T20:36:09.6151101Z D	doc/.vitepress/theme/components/SvgImage.vue
+2026-11-19T20:36:09.6151425Z D	doc/.vitepress/theme/index.ts
+2026-11-19T20:36:09.6151712Z D	doc/.vitepress/theme/styles/vars.css
+2026-11-19T20:36:09.6152007Z D	doc/PLUGIN_FEATURE_DISABLES.md
+2026-11-19T20:36:09.6152344Z D	doc/PLUGIN_FRONTEND_TESTS.md
+2026-11-19T20:36:09.6152619Z D	doc/accessibility.md
+2026-11-19T20:36:09.6152994Z D	doc/admin/updates.md
+2026-11-19T20:36:09.6153240Z D	doc/api/api.adoc
+2026-11-19T20:36:09.6153489Z D	doc/api/changeset_library.adoc
+2026-11-19T20:36:09.6153767Z D	doc/api/changeset_library.md
+2026-11-19T20:36:09.6154035Z D	doc/api/editbar.adoc
+2026-11-19T20:36:09.6154282Z D	doc/api/editbar.md
+2026-11-19T20:36:09.6154529Z D	doc/api/editorInfo.adoc
+2026-11-19T20:36:09.6154796Z D	doc/api/editorInfo.md
+2026-11-19T20:36:09.6155051Z D	doc/api/embed_parameters.adoc
+2026-11-19T20:36:09.6155321Z D	doc/api/embed_parameters.md
+2026-11-19T20:36:09.6155604Z D	doc/api/hooks_client-side.adoc
+2026-11-19T20:36:09.6155884Z D	doc/api/hooks_client-side.md
+2026-11-19T20:36:09.6156154Z D	doc/api/hooks_overview.adoc
+2026-11-19T20:36:09.6156420Z D	doc/api/hooks_overview.md
+2026-11-19T20:36:09.6156689Z D	doc/api/hooks_server-side.adoc
+2026-11-19T20:36:09.6156962Z D	doc/api/hooks_server-side.md
+2026-11-19T20:36:09.6157226Z D	doc/api/http_api.adoc
+2026-11-19T20:36:09.6157477Z D	doc/api/http_api.md
+2026-11-19T20:36:09.6157728Z D	doc/api/index.md
+2026-11-19T20:36:09.6157966Z D	doc/api/pluginfw.adoc
+2026-11-19T20:36:09.6158222Z D	doc/api/pluginfw.md
+2026-11-19T20:36:09.6158473Z D	doc/api/toolbar.adoc
+2026-11-19T20:36:09.6158716Z D	doc/api/toolbar.md
+2026-11-19T20:36:09.6158960Z D	doc/assets/style.css
+2026-11-19T20:36:09.6159202Z D	doc/cli.md
+2026-11-19T20:36:09.6159428Z D	doc/configuration.md
+2026-11-19T20:36:09.6159675Z D	doc/cookies.adoc
+2026-11-19T20:36:09.6159908Z D	doc/cookies.md
+2026-11-19T20:36:09.6160177Z D	doc/database.adoc
+2026-11-19T20:36:09.6160412Z D	doc/database.md
+2026-11-19T20:36:09.6160641Z D	doc/demo.md
+2026-11-19T20:36:09.6161206Z D	doc/deployment.md
+2026-11-19T20:36:09.6161453Z D	doc/development.md
+2026-11-19T20:36:09.6161737Z D	doc/docker.adoc
+2026-11-19T20:36:09.6162020Z D	doc/docker.md
+2026-11-19T20:36:09.6162272Z D	doc/documentation.adoc
+2026-11-19T20:36:09.6162531Z D	doc/documentation.md
+2026-11-19T20:36:09.6162776Z D	doc/faq.md
+2026-11-19T20:36:09.6162998Z D	doc/index.adoc
+2026-11-19T20:36:09.6163338Z D	doc/index.md
+2026-11-19T20:36:09.6163576Z D	doc/localization.adoc
+2026-11-19T20:36:09.6163840Z D	doc/localization.md
+2026-11-19T20:36:09.6164098Z D	doc/npm-trusted-publishing.md
+2026-11-19T20:36:09.6164380Z D	doc/package.json
+2026-11-19T20:36:09.6164618Z D	doc/plugins.adoc
+2026-11-19T20:36:09.6164850Z D	doc/plugins.md
+2026-11-19T20:36:09.6165082Z D	doc/privacy.md
+2026-11-19T20:36:09.6165324Z D	doc/public/easysync/README.md
+2026-11-19T20:36:09.6165637Z D	doc/public/easysync/easysync-full-description.pdf
+2026-11-19T20:36:09.6166016Z D	doc/public/easysync/easysync-full-description.tex
+2026-11-19T20:36:09.6166368Z D	doc/public/easysync/easysync-notes.pdf
+2026-11-19T20:36:09.6166718Z D	doc/public/easysync/easysync-notes.tex
+2026-11-19T20:36:09.6167039Z D	doc/public/easysync/easysync-notes.txt
+2026-11-19T20:36:09.6167371Z D	doc/public/etherpad_basic.png
+2026-11-19T20:36:09.6167679Z D	doc/public/etherpad_demo.gif
+2026-11-19T20:36:09.6167965Z D	doc/public/etherpad_full_features.png
+2026-11-19T20:36:09.6168290Z D	doc/public/etherpad_skin_variants.gif
+2026-11-19T20:36:09.6168587Z D	doc/public/favicon.ico
+2026-11-19T20:36:09.6168842Z D	doc/skins.adoc
+2026-11-19T20:36:09.6169071Z D	doc/skins.md
+2026-11-19T20:36:09.6169312Z D	doc/stats.adoc
+2026-11-19T20:36:09.6169540Z D	doc/stats.md
+2026-11-19T20:36:09.6169775Z D	docker-compose.dev.yml
+2026-11-19T20:36:09.6170035Z D	docker-compose.yml
+2026-11-19T20:36:09.6170416Z D	docs/superpowers/plans/2026-04-18-gdpr-pr1-deletion-controls.md
+2026-11-19T20:36:09.6170866Z D	docs/superpowers/plans/2026-04-19-gdpr-pr2-ip-privacy-audit.md
+2026-11-19T20:36:09.6171296Z D	docs/superpowers/plans/2026-04-19-gdpr-pr3-anon-identity.md
+2026-11-19T20:36:09.6171719Z D	docs/superpowers/plans/2026-04-19-gdpr-pr4-privacy-banner.md
+2026-11-19T20:36:09.6172141Z D	docs/superpowers/plans/2026-04-19-gdpr-pr5-author-erasure.md
+2026-11-19T20:36:09.6172574Z D	docs/superpowers/plans/2026-04-20-issue-7570-ueberdb2-drivers.md
+2026-11-19T20:36:09.6173007Z D	docs/superpowers/plans/2026-04-22-a11y-dialogs-labels-lang.md
+2026-11-19T20:36:09.6173532Z D	docs/superpowers/plans/2026-04-25-auto-update-pr1-notify.md
+2026-11-19T20:36:09.6173981Z D	docs/superpowers/plans/2026-05-01-issue-7638-admin-typesafe-api.md
+2026-11-19T20:36:09.6174453Z D	docs/superpowers/plans/2026-05-03-gdpr-admin-author-erasure-ui.md
+2026-11-19T20:36:09.6174910Z D	docs/superpowers/plans/2026-05-08-auto-update-pr2-manual-click.md
+2026-11-19T20:36:09.6175355Z D	docs/superpowers/plans/2026-05-08-issue-7693-admin-openapi.md
+2026-11-19T20:36:09.6175800Z D	docs/superpowers/plans/2026-05-08-native-docx-pdf-export-import.md
+2026-11-19T20:36:09.6176263Z D	docs/superpowers/plans/2026-05-09-admin-settings-parsed-view.md
+2026-11-19T20:36:09.6176709Z D	docs/superpowers/plans/2026-05-11-auto-update-pr3-tier3-auto.md
+2026-11-19T20:36:09.6177242Z D	docs/superpowers/plans/2026-05-15-auto-update-pr4-tier4-autonomous.md
+2026-11-19T20:36:09.6177840Z D	docs/superpowers/plans/2026-05-15-issue-7524-swagger-ui-telemetry.md
+2026-11-19T20:36:09.6178345Z D	docs/superpowers/plans/2026-05-18-admin-settings-resolved-runtime.md
+2026-11-19T20:36:09.6178818Z D	docs/superpowers/plans/2026-05-18-issue-7802-url-base-path.md
+2026-11-19T20:36:09.6179253Z D	docs/superpowers/plans/2026-05-18-outdated-notice-redesign.md
+2026-11-19T20:36:09.6179757Z D	docs/superpowers/plans/2026-06-09-downstream-client-compat-tests-phase1.md
+2026-11-19T20:36:09.6180274Z D	docs/superpowers/specs/2026-04-18-gdpr-pr1-deletion-controls-design.md
+2026-11-19T20:36:09.6180809Z D	docs/superpowers/specs/2026-04-18-gdpr-pr2-ip-privacy-audit-design.md
+2026-11-19T20:36:09.6181296Z D	docs/superpowers/specs/2026-04-19-gdpr-pr3-anon-identity-design.md
+2026-11-19T20:36:09.6181774Z D	docs/superpowers/specs/2026-04-19-gdpr-pr4-privacy-banner-design.md
+2026-11-19T20:36:09.6182256Z D	docs/superpowers/specs/2026-04-19-gdpr-pr5-author-erasure-design.md
+2026-11-19T20:36:09.6182873Z D	docs/superpowers/specs/2026-04-20-issue-7570-ueberdb2-drivers-design.md
+2026-11-19T20:36:09.6183323Z D	docs/superpowers/specs/2026-04-25-auto-update-design.md
+2026-11-19T20:36:09.6183851Z D	docs/superpowers/specs/2026-04-25-auto-update-runbook.md
+2026-11-19T20:36:09.6184311Z D	docs/superpowers/specs/2026-04-30-issue-7599-open-graph-metadata-design.md
+2026-11-19T20:36:09.6184832Z D	docs/superpowers/specs/2026-05-01-issue-7638-admin-typesafe-api-design.md
+2026-11-19T20:36:09.6185342Z D	docs/superpowers/specs/2026-05-03-gdpr-admin-author-erasure-ui-design.md
+2026-11-19T20:36:09.6185838Z D	docs/superpowers/specs/2026-05-08-issue-7693-admin-openapi-design.md
+2026-11-19T20:36:09.6186363Z D	docs/superpowers/specs/2026-05-08-native-docx-pdf-export-import-design.md
+2026-11-19T20:36:09.6186871Z D	docs/superpowers/specs/2026-05-09-admin-settings-parsed-view-design.md
+2026-11-19T20:36:09.6187340Z D	docs/superpowers/specs/2026-05-10-openapi-cleanup-design.md
+2026-11-19T20:36:09.6187817Z D	docs/superpowers/specs/2026-05-15-issue-7524-swagger-ui-telemetry-design.md
+2026-11-19T20:36:09.6188354Z D	docs/superpowers/specs/2026-05-18-admin-settings-resolved-runtime-design.md
+2026-11-19T20:36:09.6188903Z D	docs/superpowers/specs/2026-05-18-issue-7802-url-base-path-support-design.md
+2026-11-19T20:36:09.6189409Z D	docs/superpowers/specs/2026-05-18-outdated-notice-redesign-design.md
+2026-11-19T20:36:09.6189913Z D	docs/superpowers/specs/2026-06-09-downstream-client-compat-tests-design.md
+2026-11-19T20:36:09.6190441Z D	docs/superpowers/specs/2026-10-14-pad-retention-design.md
+2026-11-19T20:36:09.6190843Z D	local_plugins/.gitignore
+2026-11-19T20:36:09.6191107Z D	package.json
+2026-11-19T20:36:09.6191345Z D	packaging/README.md
+2026-11-19T20:36:09.6191622Z D	packaging/apt/generate-signing-key.sh
+2026-11-19T20:36:09.6191928Z D	packaging/apt/key.asc
+2026-11-19T20:36:09.6192189Z D	packaging/bin/etherpad
+2026-11-19T20:36:09.6192449Z D	packaging/nfpm.yaml
+2026-11-19T20:36:09.6192713Z D	packaging/scripts/postinstall.sh
+2026-11-19T20:36:09.6193021Z D	packaging/scripts/postremove.sh
+2026-11-19T20:36:09.6193331Z D	packaging/scripts/preinstall.sh
+2026-11-19T20:36:09.6193630Z D	packaging/scripts/preremove.sh
+2026-11-19T20:36:09.6194037Z D	packaging/stage.sh
+2026-11-19T20:36:09.6194309Z D	packaging/systemd/etherpad.default
+2026-11-19T20:36:09.6194615Z D	packaging/systemd/etherpad.service
+2026-11-19T20:36:09.6194953Z D	packaging/test-fixtures/ep_layout_trip_wire/README.md
+2026-11-19T20:36:09.6195340Z D	packaging/test-fixtures/ep_layout_trip_wire/ep.json
+2026-11-19T20:36:09.6195721Z D	packaging/test-fixtures/ep_layout_trip_wire/index.js
+2026-11-19T20:36:09.6196118Z D	packaging/test-fixtures/ep_layout_trip_wire/package.json
+2026-11-19T20:36:09.6196479Z D	packaging/test-local.sh
+2026-11-19T20:36:09.6196744Z D	pnpm-lock.yaml
+2026-11-19T20:36:09.6196987Z D	pnpm-workspace.yaml
+2026-11-19T20:36:09.6197240Z D	settings.json.docker
+2026-11-19T20:36:09.6197496Z D	settings.json.template
+2026-11-19T20:36:09.6197788Z D	snap/README.md
+2026-11-19T20:36:09.6198026Z D	snap/hooks/configure
+2026-11-19T20:36:09.6198282Z D	snap/local/bin/etherpad-cli
+2026-11-19T20:36:09.6198587Z D	snap/local/bin/etherpad-healthcheck-wrapper
+2026-11-19T20:36:09.6198924Z D	snap/local/bin/etherpad-service
+2026-11-19T20:36:09.6199207Z D	snap/snapcraft.yaml
+2026-11-19T20:36:09.6199457Z D	snap/tests/lib.sh
+2026-11-19T20:36:09.6199708Z D	snap/tests/run-all.sh
+2026-11-19T20:36:09.6199961Z D	snap/tests/smoke.sh
+2026-11-19T20:36:09.6200210Z D	snap/tests/test-cli.sh
+2026-11-19T20:36:09.6200478Z D	snap/tests/test-configure.sh
+2026-11-19T20:36:09.6200805Z D	snap/tests/test-service-bootstrap.sh
+2026-11-19T20:36:09.6201116Z D	snap/tests/test-snapcraft-yaml.sh
+2026-11-19T20:36:09.6201407Z D	src/.eslintrc.cjs
+2026-11-19T20:36:09.6201646Z D	src/README.md
+2026-11-19T20:36:09.6201882Z D	src/ep.json
+2026-11-19T20:36:09.6202114Z D	src/etherpad_icon.svg
+2026-11-19T20:36:09.6202365Z D	src/locales/af.json
+2026-11-19T20:36:09.6202617Z D	src/locales/ar.json
+2026-11-19T20:36:09.6202864Z D	src/locales/ast.json
+2026-11-19T20:36:09.6203117Z D	src/locales/awa.json
+2026-11-19T20:36:09.6203364Z D	src/locales/az.json
+2026-11-19T20:36:09.6203612Z D	src/locales/azb.json
+2026-11-19T20:36:09.6203967Z D	src/locales/bcc.json
+2026-11-19T20:36:09.6204224Z D	src/locales/be-tarask.json
+2026-11-19T20:36:09.6204488Z D	src/locales/bg.json
+2026-11-19T20:36:09.6204733Z D	src/locales/bgn.json
+2026-11-19T20:36:09.6204981Z D	src/locales/bn.json
+2026-11-19T20:36:09.6205221Z D	src/locales/br.json
+2026-11-19T20:36:09.6205466Z D	src/locales/bs.json
+2026-11-19T20:36:09.6205713Z D	src/locales/ca.json
+2026-11-19T20:36:09.6205956Z D	src/locales/ce.json
+2026-11-19T20:36:09.6206199Z D	src/locales/cs.json
+2026-11-19T20:36:09.6206439Z D	src/locales/da.json
+2026-11-19T20:36:09.6206682Z D	src/locales/de.json
+2026-11-19T20:36:09.6206929Z D	src/locales/diq.json
+2026-11-19T20:36:09.6207176Z D	src/locales/dsb.json
+2026-11-19T20:36:09.6207428Z D	src/locales/dty.json
+2026-11-19T20:36:09.6207677Z D	src/locales/el.json
+2026-11-19T20:36:09.6207927Z D	src/locales/en-gb.json
+2026-11-19T20:36:09.6208181Z D	src/locales/en.json
+2026-11-19T20:36:09.6208481Z D	src/locales/eo.json
+2026-11-19T20:36:09.6208722Z D	src/locales/es.json
+2026-11-19T20:36:09.6208968Z D	src/locales/et.json
+2026-11-19T20:36:09.6209206Z D	src/locales/eu.json
+2026-11-19T20:36:09.6209450Z D	src/locales/fa.json
+2026-11-19T20:36:09.6209694Z D	src/locales/ff.json
+2026-11-19T20:36:09.6209931Z D	src/locales/fi.json
+2026-11-19T20:36:09.6210176Z D	src/locales/fo.json
+2026-11-19T20:36:09.6210436Z D	src/locales/fr.json
+2026-11-19T20:36:09.6210690Z D	src/locales/fy.json
+2026-11-19T20:36:09.6210989Z D	src/locales/ga.json
+2026-11-19T20:36:09.6211250Z D	src/locales/gl.json
+2026-11-19T20:36:09.6211493Z D	src/locales/got.json
+2026-11-19T20:36:09.6211750Z D	src/locales/gu.json
+2026-11-19T20:36:09.6212005Z D	src/locales/he.json
+2026-11-19T20:36:09.6212257Z D	src/locales/hi.json
+2026-11-19T20:36:09.6212511Z D	src/locales/hr.json
+2026-11-19T20:36:09.6212764Z D	src/locales/hrx.json
+2026-11-19T20:36:09.6213008Z D	src/locales/hsb.json
+2026-11-19T20:36:09.6213254Z D	src/locales/hu.json
+2026-11-19T20:36:09.6213498Z D	src/locales/hy.json
+2026-11-19T20:36:09.6213740Z D	src/locales/ia.json
+2026-11-19T20:36:09.6214090Z D	src/locales/id.json
+2026-11-19T20:36:09.6214339Z D	src/locales/is.json
+2026-11-19T20:36:09.6214581Z D	src/locales/it.json
+2026-11-19T20:36:09.6214821Z D	src/locales/ja.json
+2026-11-19T20:36:09.6215060Z D	src/locales/kab.json
+2026-11-19T20:36:09.6215302Z D	src/locales/km.json
+2026-11-19T20:36:09.6215543Z D	src/locales/kn.json
+2026-11-19T20:36:09.6215789Z D	src/locales/ko.json
+2026-11-19T20:36:09.6216029Z D	src/locales/krc.json
+2026-11-19T20:36:09.6216275Z D	src/locales/ksh.json
+2026-11-19T20:36:09.6216540Z D	src/locales/ku-latn.json
+2026-11-19T20:36:09.6216806Z D	src/locales/lb.json
+2026-11-19T20:36:09.6217047Z D	src/locales/lki.json
+2026-11-19T20:36:09.6217289Z D	src/locales/lrc.json
+2026-11-19T20:36:09.6233387Z D	src/locales/lt.json
+2026-11-19T20:36:09.6233671Z D	src/locales/lv.json
+2026-11-19T20:36:09.6233939Z D	src/locales/map-bms.json
+2026-11-19T20:36:09.6234206Z D	src/locales/mg.json
+2026-11-19T20:36:09.6234457Z D	src/locales/mk.json
+2026-11-19T20:36:09.6234712Z D	src/locales/ml.json
+2026-11-19T20:36:09.6234962Z D	src/locales/mn.json
+2026-11-19T20:36:09.6235206Z D	src/locales/mnw.json
+2026-11-19T20:36:09.6235456Z D	src/locales/mr.json
+2026-11-19T20:36:09.6235698Z D	src/locales/ms.json
+2026-11-19T20:36:09.6235945Z D	src/locales/my.json
+2026-11-19T20:36:09.6236192Z D	src/locales/nah.json
+2026-11-19T20:36:09.6236441Z D	src/locales/nap.json
+2026-11-19T20:36:09.6236690Z D	src/locales/nb.json
+2026-11-19T20:36:09.6236935Z D	src/locales/nds.json
+2026-11-19T20:36:09.6237183Z D	src/locales/ne.json
+2026-11-19T20:36:09.6237426Z D	src/locales/nl.json
+2026-11-19T20:36:09.6237669Z D	src/locales/nn.json
+2026-11-19T20:36:09.6237913Z D	src/locales/oc.json
+2026-11-19T20:36:09.6238160Z D	src/locales/olo.json
+2026-11-19T20:36:09.6238424Z D	src/locales/os.json
+2026-11-19T20:36:09.6238685Z D	src/locales/pa.json
+2026-11-19T20:36:09.6238976Z D	src/locales/pl.json
+2026-11-19T20:36:09.6239224Z D	src/locales/pms.json
+2026-11-19T20:36:09.6239479Z D	src/locales/ps.json
+2026-11-19T20:36:09.6239895Z D	src/locales/pt-br.json
+2026-11-19T20:36:09.6240156Z D	src/locales/pt.json
+2026-11-19T20:36:09.6240400Z D	src/locales/qqq.json
+2026-11-19T20:36:09.6240645Z D	src/locales/ro.json
+2026-11-19T20:36:09.6240898Z D	src/locales/ru.json
+2026-11-19T20:36:09.6241137Z D	src/locales/sc.json
+2026-11-19T20:36:09.6241570Z D	src/locales/sco.json
+2026-11-19T20:36:09.6241819Z D	src/locales/sd.json
+2026-11-19T20:36:09.6242064Z D	src/locales/sh-latn.json
+2026-11-19T20:36:09.6242324Z D	src/locales/shn.json
+2026-11-19T20:36:09.6242566Z D	src/locales/sk.json
+2026-11-19T20:36:09.6242821Z D	src/locales/skr-arab.json
+2026-11-19T20:36:09.6243102Z D	src/locales/sl.json
+2026-11-19T20:36:09.6243370Z D	src/locales/sms.json
+2026-11-19T20:36:09.6243620Z D	src/locales/sq.json
+2026-11-19T20:36:09.6243863Z D	src/locales/sr-ec.json
+2026-11-19T20:36:09.6244119Z D	src/locales/sr-el.json
+2026-11-19T20:36:09.6244370Z D	src/locales/sro.json
+2026-11-19T20:36:09.6244695Z D	src/locales/sv.json
+2026-11-19T20:36:09.6245012Z D	src/locales/sw.json
+2026-11-19T20:36:09.6245317Z D	src/locales/ta.json
+2026-11-19T20:36:09.6245566Z D	src/locales/tcy.json
+2026-11-19T20:36:09.6245813Z D	src/locales/te.json
+2026-11-19T20:36:09.6246055Z D	src/locales/th.json
+2026-11-19T20:36:09.6246301Z D	src/locales/tr.json
+2026-11-19T20:36:09.6246539Z D	src/locales/uk.json
+2026-11-19T20:36:09.6246783Z D	src/locales/vec.json
+2026-11-19T20:36:09.6247034Z D	src/locales/vi.json
+2026-11-19T20:36:09.6247288Z D	src/locales/zh-hans.json
+2026-11-19T20:36:09.6247565Z D	src/locales/zh-hant.json
+2026-11-19T20:36:09.6247825Z D	src/node/README.md
+2026-11-19T20:36:09.6248069Z D	src/node/db/API.ts
+2026-11-19T20:36:09.6248323Z D	src/node/db/AuthorManager.ts
+2026-11-19T20:36:09.6248601Z D	src/node/db/DB.ts
+2026-11-19T20:36:09.6248855Z D	src/node/db/GroupManager.ts
+2026-11-19T20:36:09.6249182Z D	src/node/db/Pad.ts
+2026-11-19T20:36:09.6249457Z D	src/node/db/PadDeletionManager.ts
+2026-11-19T20:36:09.6249754Z D	src/node/db/PadManager.ts
+2026-11-19T20:36:09.6250031Z D	src/node/db/ReadOnlyManager.ts
+2026-11-19T20:36:09.6250467Z D	src/node/db/SecurityManager.ts
+2026-11-19T20:36:09.6250769Z D	src/node/db/SessionManager.ts
+2026-11-19T20:36:09.6251044Z D	src/node/db/SessionStore.ts
+2026-11-19T20:36:09.6251314Z D	src/node/eejs/index.ts
+2026-11-19T20:36:09.6251628Z D	src/node/handler/APIHandler.ts
+2026-11-19T20:36:09.6251922Z D	src/node/handler/APIKeyHandler.ts
+2026-11-19T20:36:09.6252329Z D	src/node/handler/ExportHandler.ts
+2026-11-19T20:36:09.6252622Z D	src/node/handler/ImportHandler.ts
+2026-11-19T20:36:09.6252926Z D	src/node/handler/PadMessageHandler.ts
+2026-11-19T20:36:09.6253233Z D	src/node/handler/RestAPI.ts
+2026-11-19T20:36:09.6253517Z D	src/node/handler/SocketIORouter.ts
+2026-11-19T20:36:09.6253864Z D	src/node/hooks/express.ts
+2026-11-19T20:36:09.6254145Z D	src/node/hooks/express/admin.ts
+2026-11-19T20:36:09.6254440Z D	src/node/hooks/express/adminplugins.ts
+2026-11-19T20:36:09.6254761Z D	src/node/hooks/express/adminsettings.ts
+2026-11-19T20:36:09.6255082Z D	src/node/hooks/express/apicalls.ts
+2026-11-19T20:36:09.6255399Z D	src/node/hooks/express/errorhandling.ts
+2026-11-19T20:36:09.6255718Z D	src/node/hooks/express/importexport.ts
+2026-11-19T20:36:09.6256058Z D	src/node/hooks/express/openapi-admin.ts
+2026-11-19T20:36:09.6256375Z D	src/node/hooks/express/openapi.ts
+2026-11-19T20:36:09.6256687Z D	src/node/hooks/express/padurlsanitize.ts
+2026-11-19T20:36:09.6257004Z D	src/node/hooks/express/pwa.ts
+2026-11-19T20:36:09.6257292Z D	src/node/hooks/express/socketio.ts
+2026-11-19T20:36:09.6257600Z D	src/node/hooks/express/specialpages.ts
+2026-11-19T20:36:09.6257953Z D	src/node/hooks/express/static.ts
+2026-11-19T20:36:09.6258252Z D	src/node/hooks/express/tokenTransfer.ts
+2026-11-19T20:36:09.6258591Z D	src/node/hooks/express/updateActions.ts
+2026-11-19T20:36:09.6258949Z D	src/node/hooks/express/updateStatus.ts
+2026-11-19T20:36:09.6259261Z D	src/node/hooks/express/webaccess.ts
+2026-11-19T20:36:09.6259556Z D	src/node/hooks/i18n.ts
+2026-11-19T20:36:09.6259857Z D	src/node/metrics.ts
+2026-11-19T20:36:09.6260115Z D	src/node/padaccess.ts
+2026-11-19T20:36:09.6260506Z D	src/node/prom-instruments.ts
+2026-11-19T20:36:09.6260794Z D	src/node/prometheus.ts
+2026-11-19T20:36:09.6261074Z D	src/node/security/OAuth2Provider.ts
+2026-11-19T20:36:09.6261385Z D	src/node/security/OAuth2User.ts
+2026-11-19T20:36:09.6261723Z D	src/node/security/OIDCAdapter.ts
+2026-11-19T20:36:09.6262086Z D	src/node/security/OidcProviderSecurity.ts
+2026-11-19T20:36:09.6262518Z D	src/node/security/SecretRotator.ts
+2026-11-19T20:36:09.6262818Z D	src/node/security/crypto.ts
+2026-11-19T20:36:09.6263092Z D	src/node/server.ts
+2026-11-19T20:36:09.6263343Z D	src/node/stats.ts
+2026-11-19T20:36:09.6263647Z D	src/node/types/APIHandlerType.ts
+2026-11-19T20:36:09.6263948Z D	src/node/types/ArgsExpressType.ts
+2026-11-19T20:36:09.6264243Z D	src/node/types/AsyncQueueTask.ts
+2026-11-19T20:36:09.6264533Z D	src/node/types/ChangeSet.ts
+2026-11-19T20:36:09.6264813Z D	src/node/types/DeriveModel.ts
+2026-11-19T20:36:09.6265098Z D	src/node/types/ErrorCaused.ts
+2026-11-19T20:36:09.6265382Z D	src/node/types/I18nPluginDefs.ts
+2026-11-19T20:36:09.6265685Z D	src/node/types/LegacyParams.ts
+2026-11-19T20:36:09.6266073Z D	src/node/types/MapType.ts
+2026-11-19T20:36:09.6266348Z D	src/node/types/PackageInfo.ts
+2026-11-19T20:36:09.6266637Z D	src/node/types/PadSearchQuery.ts
+2026-11-19T20:36:09.6266927Z D	src/node/types/PadType.ts
+2026-11-19T20:36:09.6267206Z D	src/node/types/PartType.ts
+2026-11-19T20:36:09.6267488Z D	src/node/types/Plugin.ts
+2026-11-19T20:36:09.6267805Z D	src/node/types/PromiseWithStd.ts
+2026-11-19T20:36:09.6268135Z D	src/node/types/QueryType.ts
+2026-11-19T20:36:09.6268414Z D	src/node/types/Revision.ts
+2026-11-19T20:36:09.6268735Z D	src/node/types/RunCMDOptions.ts
+2026-11-19T20:36:09.6269077Z D	src/node/types/SecretRotatorType.ts
+2026-11-19T20:36:09.6269485Z D	src/node/types/SettingsUser.ts
+2026-11-19T20:36:09.6269777Z D	src/node/types/SocketAcknowledge.ts
+2026-11-19T20:36:09.6270094Z D	src/node/types/SocketClientRequest.ts
+2026-11-19T20:36:09.6270406Z D	src/node/types/SocketModule.ts
+2026-11-19T20:36:09.6270829Z D	src/node/types/SwaggerUIResource.ts
+2026-11-19T20:36:09.6271135Z D	src/node/types/UserSettingsObject.ts
+2026-11-19T20:36:09.6271436Z D	src/node/types/WebAccessTypes.ts
+2026-11-19T20:36:09.6271785Z D	src/node/updater/InstallMethodDetector.ts
+2026-11-19T20:36:09.6272115Z D	src/node/updater/MaintenanceWindow.ts
+2026-11-19T20:36:09.6272417Z D	src/node/updater/Notifier.ts
+2026-11-19T20:36:09.6272702Z D	src/node/updater/RollbackHandler.ts
+2026-11-19T20:36:09.6273005Z D	src/node/updater/Scheduler.ts
+2026-11-19T20:36:09.6273296Z D	src/node/updater/SessionDrainer.ts
+2026-11-19T20:36:09.6273597Z D	src/node/updater/UpdateExecutor.ts
+2026-11-19T20:36:09.6273895Z D	src/node/updater/UpdatePolicy.ts
+2026-11-19T20:36:09.6274294Z D	src/node/updater/VersionChecker.ts
+2026-11-19T20:36:09.6274598Z D	src/node/updater/applyPipeline.ts
+2026-11-19T20:36:09.6274896Z D	src/node/updater/index.ts
+2026-11-19T20:36:09.6275180Z D	src/node/updater/lock.ts
+2026-11-19T20:36:09.6275451Z D	src/node/updater/preflight.ts
+2026-11-19T20:36:09.6275742Z D	src/node/updater/refSafety.ts
+2026-11-19T20:36:09.6276019Z D	src/node/updater/state.ts
+2026-11-19T20:36:09.6276293Z D	src/node/updater/trustedKeys.ts
+2026-11-19T20:36:09.6276570Z D	src/node/updater/types.ts
+2026-11-19T20:36:09.6276835Z D	src/node/updater/updateLog.ts
+2026-11-19T20:36:09.6277154Z D	src/node/updater/versionCompare.ts
+2026-11-19T20:36:09.6277509Z D	src/node/utils/AbsolutePaths.ts
+2026-11-19T20:36:09.6277800Z D	src/node/utils/AdminSettingsRedact.ts
+2026-11-19T20:36:09.6278099Z D	src/node/utils/Cleanup.ts
+2026-11-19T20:36:09.6278360Z D	src/node/utils/Cli.ts
+2026-11-19T20:36:09.6278622Z D	src/node/utils/ExportEtherpad.ts
+2026-11-19T20:36:09.6278920Z D	src/node/utils/ExportHelper.ts
+2026-11-19T20:36:09.6279312Z D	src/node/utils/ExportHtml.ts
+2026-11-19T20:36:09.6279596Z D	src/node/utils/ExportPdfNative.ts
+2026-11-19T20:36:09.6279900Z D	src/node/utils/ExportSanitizeHtml.ts
+2026-11-19T20:36:09.6280212Z D	src/node/utils/ExportTxt.ts
+2026-11-19T20:36:09.6280496Z D	src/node/utils/ImportDocxNative.ts
+2026-11-19T20:36:09.6280911Z D	src/node/utils/ImportEtherpad.ts
+2026-11-19T20:36:09.6281202Z D	src/node/utils/ImportHtml.ts
+2026-11-19T20:36:09.6281488Z D	src/node/utils/LibreOffice.ts
+2026-11-19T20:36:09.6281811Z D	src/node/utils/Minify.ts
+2026-11-19T20:36:09.6282368Z D	src/node/utils/MinifyWorker.ts
+2026-11-19T20:36:09.6282820Z D	src/node/utils/NodeVersion.ts
+2026-11-19T20:36:09.6283164Z D	src/node/utils/PadRetention.ts
+2026-11-19T20:36:09.6283628Z D	src/node/utils/PluginCapabilities.ts
+2026-11-19T20:36:09.6284029Z D	src/node/utils/Settings.ts
+2026-11-19T20:36:09.6284318Z D	src/node/utils/SettingsTree.ts
+2026-11-19T20:36:09.6284614Z D	src/node/utils/SkinColors.ts
+2026-11-19T20:36:09.6285006Z D	src/node/utils/Stream.ts
+2026-11-19T20:36:09.6285282Z D	src/node/utils/SystemAuthor.ts
+2026-11-19T20:36:09.6285630Z D	src/node/utils/UpdateCheck.ts
+2026-11-19T20:36:09.6286035Z D	src/node/utils/anonymizeIp.ts
+2026-11-19T20:36:09.6286579Z D	src/node/utils/checkValidRev.ts
+2026-11-19T20:36:09.6287002Z D	src/node/utils/customError.ts
+2026-11-19T20:36:09.6287309Z D	src/node/utils/ensureAuthorTokenCookie.ts
+2026-11-19T20:36:09.6287722Z D	src/node/utils/padDiff.ts
+2026-11-19T20:36:09.6288000Z D	src/node/utils/path_exists.ts
+2026-11-19T20:36:09.6288334Z D	src/node/utils/promises.ts
+2026-11-19T20:36:09.6288612Z D	src/node/utils/randomstring.ts
+2026-11-19T20:36:09.6288893Z D	src/node/utils/run_cmd.ts
+2026-11-19T20:36:09.6289181Z D	src/node/utils/sanitizeOrigin.ts
+2026-11-19T20:36:09.6289547Z D	src/node/utils/sanitizePathname.ts
+2026-11-19T20:36:09.6289856Z D	src/node/utils/sanitizeProxyPath.ts
+2026-11-19T20:36:09.6290163Z D	src/node/utils/socialMeta.ts
+2026-11-19T20:36:09.6290554Z D	src/node/utils/takeOverSignal.ts
+2026-11-19T20:36:09.6291047Z D	src/node/utils/tar.json
+2026-11-19T20:36:09.6291421Z D	src/node/utils/toolbar.ts
+2026-11-19T20:36:09.6291684Z D	src/package.json
+2026-11-19T20:36:09.6291938Z D	src/playwright.config.ts
+2026-11-19T20:36:09.6292334Z D	src/static/api-docs.html
+2026-11-19T20:36:09.6292921Z D	src/static/css/admin.css
+2026-11-19T20:36:09.6293360Z D	src/static/css/iframe_editor.css
+2026-11-19T20:36:09.6293662Z D	src/static/css/lists_and_indents.css
+2026-11-19T20:36:09.6293995Z D	src/static/css/pad.css
+2026-11-19T20:36:09.6294268Z D	src/static/css/pad/chat.css
+2026-11-19T20:36:09.6294676Z D	src/static/css/pad/fonts.css
+2026-11-19T20:36:09.6295240Z D	src/static/css/pad/form.css
+2026-11-19T20:36:09.6295708Z D	src/static/css/pad/gritter.css
+2026-11-19T20:36:09.6296266Z D	src/static/css/pad/icons.css
+2026-11-19T20:36:09.6296643Z D	src/static/css/pad/layout.css
+2026-11-19T20:36:09.6296925Z D	src/static/css/pad/loadingbox.css
+2026-11-19T20:36:09.6297220Z D	src/static/css/pad/normalize.css
+2026-11-19T20:36:09.6297507Z D	src/static/css/pad/popup.css
+2026-11-19T20:36:09.6297869Z D	src/static/css/pad/popup_connectivity.css
+2026-11-19T20:36:09.6298216Z D	src/static/css/pad/popup_import_export.css
+2026-11-19T20:36:09.6298534Z D	src/static/css/pad/popup_users.css
+2026-11-19T20:36:09.6298897Z D	src/static/css/pad/toolbar.css
+2026-11-19T20:36:09.6299199Z D	src/static/css/timeslider.css
+2026-11-19T20:36:09.6299477Z D	src/static/empty.html
+2026-11-19T20:36:09.6299738Z D	src/static/favicon.ico
+2026-11-19T20:36:09.6300056Z D	src/static/font/Aleygreya-ExtraBold.woff
+2026-11-19T20:36:09.6300375Z D	src/static/font/Aleygreya-ExtraBold.woff2
+2026-11-19T20:36:09.6300767Z D	src/static/font/Aleygreya-Medium.woff
+2026-11-19T20:36:09.6301072Z D	src/static/font/Aleygreya-Medium.woff2
+2026-11-19T20:36:09.6301395Z D	src/static/font/Montserrat-Light.otf
+2026-11-19T20:36:09.6301748Z D	src/static/font/Montserrat-Regular.otf
+2026-11-19T20:36:09.6302051Z D	src/static/font/Quicksand-Bold.ttf
+2026-11-19T20:36:09.6302561Z D	src/static/font/Quicksand-Medium.ttf
+2026-11-19T20:36:09.6302867Z D	src/static/font/Quicksand-Regular.ttf
+2026-11-19T20:36:09.6303165Z D	src/static/font/Roboto-Bold.ttf
+2026-11-19T20:36:09.6303448Z D	src/static/font/Roboto-Regular.ttf
+2026-11-19T20:36:09.6303742Z D	src/static/font/RobotoMono-Bold.ttf
+2026-11-19T20:36:09.6304207Z D	src/static/font/RobotoMono-Regular.ttf
+2026-11-19T20:36:09.6304525Z D	src/static/font/config.json
+2026-11-19T20:36:09.6304818Z D	src/static/font/fontawesome-etherpad.eot
+2026-11-19T20:36:09.6305139Z D	src/static/font/fontawesome-etherpad.svg
+2026-11-19T20:36:09.6305452Z D	src/static/font/fontawesome-etherpad.ttf
+2026-11-19T20:36:09.6305776Z D	src/static/font/fontawesome-etherpad.woff
+2026-11-19T20:36:09.6306117Z D	src/static/font/fontawesome-etherpad.woff2
+2026-11-19T20:36:09.6306462Z D	src/static/font/opendyslexic.otf
+2026-11-19T20:36:09.6306748Z D	src/static/img/brand.svg
+2026-11-19T20:36:09.6307017Z D	src/static/js/AttributeManager.ts
+2026-11-19T20:36:09.6307305Z D	src/static/js/AttributeMap.ts
+2026-11-19T20:36:09.6307587Z D	src/static/js/AttributePool.ts
+2026-11-19T20:36:09.6307867Z D	src/static/js/Builder.ts
+2026-11-19T20:36:09.6308128Z D	src/static/js/Changeset.ts
+2026-11-19T20:36:09.6308400Z D	src/static/js/ChangesetUtils.ts
+2026-11-19T20:36:09.6308777Z D	src/static/js/ChatMessage.ts
+2026-11-19T20:36:09.6309182Z D	src/static/js/MergingOpAssembler.ts
+2026-11-19T20:36:09.6309534Z D	src/static/js/Op.ts
+2026-11-19T20:36:09.6309804Z D	src/static/js/OpAssembler.ts
+2026-11-19T20:36:09.6310184Z D	src/static/js/OpIter.ts
+2026-11-19T20:36:09.6310519Z D	src/static/js/SmartOpAssembler.ts
+2026-11-19T20:36:09.6310902Z D	src/static/js/StringAssembler.ts
+2026-11-19T20:36:09.6311228Z D	src/static/js/StringIterator.ts
+2026-11-19T20:36:09.6311513Z D	src/static/js/TextLinesMutator.ts
+2026-11-19T20:36:09.6311789Z D	src/static/js/ace.ts
+2026-11-19T20:36:09.6312040Z D	src/static/js/ace2_common.ts
+2026-11-19T20:36:09.6312352Z D	src/static/js/ace2_inner.ts
+2026-11-19T20:36:09.6312618Z D	src/static/js/attributes.ts
+2026-11-19T20:36:09.6312893Z D	src/static/js/basic_error_handler.ts
+2026-11-19T20:36:09.6313187Z D	src/static/js/broadcast.ts
+2026-11-19T20:36:09.6313459Z D	src/static/js/broadcast_revisions.ts
+2026-11-19T20:36:09.6313751Z D	src/static/js/broadcast_slider.ts
+2026-11-19T20:36:09.6314035Z D	src/static/js/caretPosition.ts
+2026-11-19T20:36:09.6314447Z D	src/static/js/changesettracker.ts
+2026-11-19T20:36:09.6314741Z D	src/static/js/chat.ts
+2026-11-19T20:36:09.6314997Z D	src/static/js/collab_client.ts
+2026-11-19T20:36:09.6315279Z D	src/static/js/colorutils.ts
+2026-11-19T20:36:09.6315548Z D	src/static/js/contentcollector.ts
+2026-11-19T20:36:09.6315824Z D	src/static/js/cssmanager.ts
+2026-11-19T20:36:09.6316088Z D	src/static/js/domline.ts
+2026-11-19T20:36:09.6316353Z D	src/static/js/getHomeUrl.ts
+2026-11-19T20:36:09.6316616Z D	src/static/js/index.ts
+2026-11-19T20:36:09.6316866Z D	src/static/js/l10n.ts
+2026-11-19T20:36:09.6317118Z D	src/static/js/linestylefilter.ts
+2026-11-19T20:36:09.6317400Z D	src/static/js/pad.ts
+2026-11-19T20:36:09.6317661Z D	src/static/js/pad_automatic_reconnect.ts
+2026-11-19T20:36:09.6317973Z D	src/static/js/pad_connectionstatus.ts
+2026-11-19T20:36:09.6318266Z D	src/static/js/pad_cookie.ts
+2026-11-19T20:36:09.6318533Z D	src/static/js/pad_editbar.ts
+2026-11-19T20:36:09.6318799Z D	src/static/js/pad_editor.ts
+2026-11-19T20:36:09.6319070Z D	src/static/js/pad_impexp.ts
+2026-11-19T20:36:09.6319331Z D	src/static/js/pad_modals.ts
+2026-11-19T20:36:09.6319597Z D	src/static/js/pad_mode.ts
+2026-11-19T20:36:09.6319909Z D	src/static/js/pad_outdated_notice.ts
+2026-11-19T20:36:09.6320214Z D	src/static/js/pad_retention_notice.ts
+2026-11-19T20:36:09.6320509Z D	src/static/js/pad_savedrevs.ts
+2026-11-19T20:36:09.6320786Z D	src/static/js/pad_userlist.ts
+2026-11-19T20:36:09.6321055Z D	src/static/js/pad_utils.ts
+2026-11-19T20:36:09.6321351Z D	src/static/js/pluginfw/LinkInstaller.ts
+2026-11-19T20:36:09.6321662Z D	src/static/js/pluginfw/client_plugins.ts
+2026-11-19T20:36:09.6321976Z D	src/static/js/pluginfw/dependencyPath.ts
+2026-11-19T20:36:09.6322284Z D	src/static/js/pluginfw/hooks.ts
+2026-11-19T20:36:09.6322613Z D	src/static/js/pluginfw/installer.ts
+2026-11-19T20:36:09.6322909Z D	src/static/js/pluginfw/installerTasks.ts
+2026-11-19T20:36:09.6323322Z D	src/static/js/pluginfw/pluginCatalogFilter.ts
+2026-11-19T20:36:09.6323958Z D	src/static/js/pluginfw/pluginCatalogGuard.ts
+2026-11-19T20:36:09.6324297Z D	src/static/js/pluginfw/pluginEngineCheck.ts
+2026-11-19T20:36:09.6324617Z D	src/static/js/pluginfw/plugin_defs.ts
+2026-11-19T20:36:09.6324980Z D	src/static/js/pluginfw/plugins.ts
+2026-11-19T20:36:09.6325312Z D	src/static/js/pluginfw/shared.ts
+2026-11-19T20:36:09.6325599Z D	src/static/js/pluginfw/tsort.ts
+2026-11-19T20:36:09.6325884Z D	src/static/js/privacy_banner.ts
+2026-11-19T20:36:09.6326237Z D	src/static/js/rjquery.ts
+2026-11-19T20:36:09.6326501Z D	src/static/js/scroll.ts
+2026-11-19T20:36:09.6326770Z D	src/static/js/security.ts
+2026-11-19T20:36:09.6327070Z D	src/static/js/skin_toolbar_colors.ts
+2026-11-19T20:36:09.6327450Z D	src/static/js/skin_variants.ts
+2026-11-19T20:36:09.6327727Z D	src/static/js/skiplist.ts
+2026-11-19T20:36:09.6327995Z D	src/static/js/socketio.ts
+2026-11-19T20:36:09.6328334Z D	src/static/js/stampAuthorOnInserts.ts
+2026-11-19T20:36:09.6328680Z D	src/static/js/timeslider.ts
+2026-11-19T20:36:09.6328965Z D	src/static/js/timesliderReturnUrl.ts
+2026-11-19T20:36:09.6329285Z D	src/static/js/types/AText.ts
+2026-11-19T20:36:09.6329622Z D	src/static/js/types/Attribute.ts
+2026-11-19T20:36:09.6329912Z D	src/static/js/types/ChangeSet.ts
+2026-11-19T20:36:09.6330340Z D	src/static/js/types/ChangeSetBuilder.ts
+2026-11-19T20:36:09.6330679Z D	src/static/js/types/PadRevision.ts
+2026-11-19T20:36:09.6331014Z D	src/static/js/types/RepModel.ts
+2026-11-19T20:36:09.6331450Z D	src/static/js/types/SocketIOMessage.ts
+2026-11-19T20:36:09.6331754Z D	src/static/js/underscore.ts
+2026-11-19T20:36:09.6332025Z D	src/static/js/undomodule.ts
+2026-11-19T20:36:09.6332298Z D	src/static/js/vendors/browser.ts
+2026-11-19T20:36:09.6332641Z D	src/static/js/vendors/farbtastic.ts
+2026-11-19T20:36:09.6332935Z D	src/static/js/vendors/gritter.ts
+2026-11-19T20:36:09.6333219Z D	src/static/js/vendors/html10n.ts
+2026-11-19T20:36:09.6333502Z D	src/static/js/vendors/jquery.ts
+2026-11-19T20:36:09.6333788Z D	src/static/js/vendors/nice-select.ts
+2026-11-19T20:36:09.6334085Z D	src/static/js/welcome.ts
+2026-11-19T20:36:09.6334550Z D	src/static/robots.txt
+2026-11-19T20:36:09.6334841Z D	src/static/skins/colibris/images/Designlayout.png
+2026-11-19T20:36:09.6335181Z D	src/static/skins/colibris/images/fond.jpg
+2026-11-19T20:36:09.6335524Z D	src/static/skins/colibris/images/screenshot.png
+2026-11-19T20:36:09.6335855Z D	src/static/skins/colibris/index.css
+2026-11-19T20:36:09.6336155Z D	src/static/skins/colibris/index.js
+2026-11-19T20:36:09.6336446Z D	src/static/skins/colibris/pad.css
+2026-11-19T20:36:09.6336753Z D	src/static/skins/colibris/pad.js
+2026-11-19T20:36:09.6337071Z D	src/static/skins/colibris/src/components/buttons.css
+2026-11-19T20:36:09.6337432Z D	src/static/skins/colibris/src/components/chat.css
+2026-11-19T20:36:09.6337784Z D	src/static/skins/colibris/src/components/form.css
+2026-11-19T20:36:09.6338148Z D	src/static/skins/colibris/src/components/gritter.css
+2026-11-19T20:36:09.6338533Z D	src/static/skins/colibris/src/components/import-export.css
+2026-11-19T20:36:09.6338928Z D	src/static/skins/colibris/src/components/popup.css
+2026-11-19T20:36:09.6339310Z D	src/static/skins/colibris/src/components/scrollbars.css
+2026-11-19T20:36:09.6339690Z D	src/static/skins/colibris/src/components/sidediv.css
+2026-11-19T20:36:09.6340099Z D	src/static/skins/colibris/src/components/table-of-content.css
+2026-11-19T20:36:09.6340495Z D	src/static/skins/colibris/src/components/toolbar.css
+2026-11-19T20:36:09.6340853Z D	src/static/skins/colibris/src/components/users.css
+2026-11-19T20:36:09.6341196Z D	src/static/skins/colibris/src/general.css
+2026-11-19T20:36:09.6341541Z D	src/static/skins/colibris/src/layout.css
+2026-11-19T20:36:09.6341866Z D	src/static/skins/colibris/src/pad-editor.css
+2026-11-19T20:36:09.6342210Z D	src/static/skins/colibris/src/pad-variants.css
+2026-11-19T20:36:09.6342681Z D	src/static/skins/colibris/src/plugins/author_hover.css
+2026-11-19T20:36:09.6343136Z D	src/static/skins/colibris/src/plugins/brightcolorpicker.css
+2026-11-19T20:36:09.6343527Z D	src/static/skins/colibris/src/plugins/comments.css
+2026-11-19T20:36:09.6344094Z D	src/static/skins/colibris/src/plugins/font_color.css
+2026-11-19T20:36:09.6344478Z D	src/static/skins/colibris/src/plugins/set_title_on_pad.css
+2026-11-19T20:36:09.6344857Z D	src/static/skins/colibris/src/plugins/tables2.css
+2026-11-19T20:36:09.6345195Z D	src/static/skins/colibris/timeslider.css
+2026-11-19T20:36:09.6345506Z D	src/static/skins/colibris/timeslider.js
+2026-11-19T20:36:09.6345814Z D	src/static/skins/no-skin/index.css
+2026-11-19T20:36:09.6346101Z D	src/static/skins/no-skin/index.js
+2026-11-19T20:36:09.6346395Z D	src/static/skins/no-skin/pad.css
+2026-11-19T20:36:09.6346686Z D	src/static/skins/no-skin/pad.js
+2026-11-19T20:36:09.6347057Z D	src/static/skins/no-skin/timeslider.css
+2026-11-19T20:36:09.6347368Z D	src/static/skins/no-skin/timeslider.js
+2026-11-19T20:36:09.6347663Z D	src/static/tests.html
+2026-11-19T20:36:09.6347993Z D	src/static/vendor/scalar/LICENSE
+2026-11-19T20:36:09.6348296Z D	src/static/vendor/scalar/VERSION
+2026-11-19T20:36:09.6348594Z D	src/static/vendor/scalar/standalone.js
+2026-11-19T20:36:09.6348950Z D	src/templates/export_html.html
+2026-11-19T20:36:09.6349237Z D	src/templates/index.html
+2026-11-19T20:36:09.6349510Z D	src/templates/indexBootstrap.js
+2026-11-19T20:36:09.6349801Z D	src/templates/javascript.html
+2026-11-19T20:36:09.6350171Z D	src/templates/pad.html
+2026-11-19T20:36:09.6350511Z D	src/templates/padBootstrap.js
+2026-11-19T20:36:09.6350793Z D	src/templates/padViteBootstrap.js
+2026-11-19T20:36:09.6351101Z D	src/templates/timeSliderBootstrap.js
+2026-11-19T20:36:09.6351398Z D	src/templates/timeslider.html
+2026-11-19T20:36:09.6351674Z D	src/tests/README.md
+2026-11-19T20:36:09.6351943Z D	src/tests/backend-new/easysync-helper.ts
+2026-11-19T20:36:09.6352291Z D	src/tests/backend-new/fixtures/signalDuringStartup.ts
+2026-11-19T20:36:09.6352655Z D	src/tests/backend-new/specs/AttributeMap.ts
+2026-11-19T20:36:09.6353053Z D	src/tests/backend-new/specs/SkinColors.ts
+2026-11-19T20:36:09.6353393Z D	src/tests/backend-new/specs/StringIteratorTest.ts
+2026-11-19T20:36:09.6354003Z D	src/tests/backend-new/specs/admin-i18n-source-lint.test.ts
+2026-11-19T20:36:09.6354382Z D	src/tests/backend-new/specs/admin_utils.ts
+2026-11-19T20:36:09.6354706Z D	src/tests/backend-new/specs/attributes.ts
+2026-11-19T20:36:09.6355103Z D	src/tests/backend-new/specs/backend-tests-flake-mitigation.test.ts
+2026-11-19T20:36:09.6355534Z D	src/tests/backend-new/specs/backend-tests-glob.test.ts
+2026-11-19T20:36:09.6355908Z D	src/tests/backend-new/specs/dependencyPath.test.ts
+2026-11-19T20:36:09.6356269Z D	src/tests/backend-new/specs/easysync-assembler.ts
+2026-11-19T20:36:09.6356622Z D	src/tests/backend-new/specs/easysync-compose.ts
+2026-11-19T20:36:09.6356993Z D	src/tests/backend-new/specs/easysync-inverseRandom.ts
+2026-11-19T20:36:09.6357362Z D	src/tests/backend-new/specs/easysync-mutations.ts
+2026-11-19T20:36:09.6357716Z D	src/tests/backend-new/specs/easysync-other.test.ts
+2026-11-19T20:36:09.6358090Z D	src/tests/backend-new/specs/easysync-subAttribution.ts
+2026-11-19T20:36:09.6358459Z D	src/tests/backend-new/specs/getHomeUrl.test.ts
+2026-11-19T20:36:09.6358855Z D	src/tests/backend-new/specs/hooks/express/firstAuthorOf.test.ts
+2026-11-19T20:36:09.6359291Z D	src/tests/backend-new/specs/hooks/express/updateStatus.test.ts
+2026-11-19T20:36:09.6359687Z D	src/tests/backend-new/specs/installerTasks.test.ts
+2026-11-19T20:36:09.6360051Z D	src/tests/backend-new/specs/locale-files.test.ts
+2026-11-19T20:36:09.6360391Z D	src/tests/backend-new/specs/pad_utils.ts
+2026-11-19T20:36:09.6360709Z D	src/tests/backend-new/specs/path_exists.ts
+2026-11-19T20:36:09.6361062Z D	src/tests/backend-new/specs/pluginEngineCheck.test.ts
+2026-11-19T20:36:09.6361461Z D	src/tests/backend-new/specs/privacy/installer-optout.test.ts
+2026-11-19T20:36:09.6361884Z D	src/tests/backend-new/specs/privacy/settings-defaults.test.ts
+2026-11-19T20:36:09.6362315Z D	src/tests/backend-new/specs/privacy/updateCheck-optout.test.ts
+2026-11-19T20:36:09.6362718Z D	src/tests/backend-new/specs/prom-instruments.test.ts
+2026-11-19T20:36:09.6363376Z D	src/tests/backend-new/specs/promises.ts
+2026-11-19T20:36:09.6363713Z D	src/tests/backend-new/specs/sanitizePathname.ts
+2026-11-19T20:36:09.6364148Z D	src/tests/backend-new/specs/sanitizeProxyPath.test.ts
+2026-11-19T20:36:09.6364496Z D	src/tests/backend-new/specs/skiplist.ts
+2026-11-19T20:36:09.6364854Z D	src/tests/backend-new/specs/stampAuthorOnInserts.test.ts
+2026-11-19T20:36:09.6365355Z D	src/tests/backend-new/specs/takeOverSignal.test.ts
+2026-11-19T20:36:09.6365731Z D	src/tests/backend-new/specs/template-l10n-keys.test.ts
+2026-11-19T20:36:09.6366223Z D	src/tests/backend-new/specs/timesliderReturnUrl.test.ts
+2026-11-19T20:36:09.6366863Z D	src/tests/backend-new/specs/updater/InstallMethodDetector.test.ts
+2026-11-19T20:36:09.6367306Z D	src/tests/backend-new/specs/updater/MaintenanceWindow.test.ts
+2026-11-19T20:36:09.6367768Z D	src/tests/backend-new/specs/updater/Notifier.test.ts
+2026-11-19T20:36:09.6368247Z D	src/tests/backend-new/specs/updater/RollbackHandler.test.ts
+2026-11-19T20:36:09.6368654Z D	src/tests/backend-new/specs/updater/Scheduler.test.ts
+2026-11-19T20:36:09.6369336Z D	src/tests/backend-new/specs/updater/SessionDrainer.test.ts
+2026-11-19T20:36:09.6369970Z D	src/tests/backend-new/specs/updater/UpdateExecutor.test.ts
+2026-11-19T20:36:09.6370593Z D	src/tests/backend-new/specs/updater/UpdatePolicy.test.ts
+2026-11-19T20:36:09.6371195Z D	src/tests/backend-new/specs/updater/VersionChecker.test.ts
+2026-11-19T20:36:09.6371604Z D	src/tests/backend-new/specs/updater/applyPipeline.test.ts
+2026-11-19T20:36:09.6372061Z D	src/tests/backend-new/specs/updater/lock.test.ts
+2026-11-19T20:36:09.6372429Z D	src/tests/backend-new/specs/updater/preflight.test.ts
+2026-11-19T20:36:09.6372807Z D	src/tests/backend-new/specs/updater/refSafety.test.ts
+2026-11-19T20:36:09.6373762Z D	src/tests/backend-new/specs/updater/smtpTransportKey.test.ts
+2026-11-19T20:36:09.6374220Z D	src/tests/backend-new/specs/updater/state.test.ts
+2026-11-19T20:36:09.6374614Z D	src/tests/backend-new/specs/updater/trustedKeys.test.ts
+2026-11-19T20:36:09.6375289Z D	src/tests/backend-new/specs/updater/updateLog.test.ts
+2026-11-19T20:36:09.6375699Z D	src/tests/backend-new/specs/updater/versionCompare.test.ts
+2026-11-19T20:36:09.6376073Z D	src/tests/backend/common.ts
+2026-11-19T20:36:09.6376362Z D	src/tests/backend/fuzzImportTest.ts
+2026-11-19T20:36:09.6376677Z D	src/tests/backend/specs/ExportEtherpad.ts
+2026-11-19T20:36:09.6377001Z D	src/tests/backend/specs/ImportEtherpad.ts
+2026-11-19T20:36:09.6377318Z D	src/tests/backend/specs/LinkInstaller.ts
+2026-11-19T20:36:09.6377630Z D	src/tests/backend/specs/OIDCAdapter.ts
+2026-11-19T20:36:09.6377959Z D	src/tests/backend/specs/OidcProviderSecurity.ts
+2026-11-19T20:36:09.6378293Z D	src/tests/backend/specs/Pad.ts
+2026-11-19T20:36:09.6378583Z D	src/tests/backend/specs/PadManager.ts
+2026-11-19T20:36:09.6378897Z D	src/tests/backend/specs/SecretRotator.ts
+2026-11-19T20:36:09.6379213Z D	src/tests/backend/specs/SessionStore.ts
+2026-11-19T20:36:09.6379517Z D	src/tests/backend/specs/Stream.ts
+2026-11-19T20:36:09.6379865Z D	src/tests/backend/specs/admin/adminSettingsAuthError.ts
+2026-11-19T20:36:09.6380248Z D	src/tests/backend/specs/admin/adminSettingsRedact.ts
+2026-11-19T20:36:09.6380629Z D	src/tests/backend/specs/admin/adminSettingsResolved.ts
+2026-11-19T20:36:09.6381005Z D	src/tests/backend/specs/admin/adminSettingsSave.ts
+2026-11-19T20:36:09.6381425Z D	src/tests/backend/specs/admin/anonymizeAuthorSocket.ts
+2026-11-19T20:36:09.6381786Z D	src/tests/backend/specs/admin/authorSearch.ts
+2026-11-19T20:36:09.6382130Z D	src/tests/backend/specs/admin/padLoadFilter.ts
+2026-11-19T20:36:09.6382593Z D	src/tests/backend/specs/admin/padLoadResilience.ts
+2026-11-19T20:36:09.6382938Z D	src/tests/backend/specs/anonymizeAuthor.ts
+2026-11-19T20:36:09.6383389Z D	src/tests/backend/specs/anonymizeIp.ts
+2026-11-19T20:36:09.6383709Z D	src/tests/backend/specs/api/anonymizeAuthor.ts
+2026-11-19T20:36:09.6384034Z D	src/tests/backend/specs/api/api.ts
+2026-11-19T20:36:09.6384353Z D	src/tests/backend/specs/api/appendTextAuthor.ts
+2026-11-19T20:36:09.6384909Z D	src/tests/backend/specs/api/characterEncoding.ts
+2026-11-19T20:36:09.6385240Z D	src/tests/backend/specs/api/chat.ts
+2026-11-19T20:36:09.6385560Z D	src/tests/backend/specs/api/createDiffHTML.ts
+2026-11-19T20:36:09.6385891Z D	src/tests/backend/specs/api/deletePad.ts
+2026-11-19T20:36:09.6386203Z D	src/tests/backend/specs/api/emojis.html
+2026-11-19T20:36:09.6386531Z D	src/tests/backend/specs/api/fuzzImportTest.ts
+2026-11-19T20:36:09.6386860Z D	src/tests/backend/specs/api/image.png
+2026-11-19T20:36:09.6387173Z D	src/tests/backend/specs/api/importexport.ts
+2026-11-19T20:36:09.6387516Z D	src/tests/backend/specs/api/importexportGetPost.ts
+2026-11-19T20:36:09.6387856Z D	src/tests/backend/specs/api/instance.ts
+2026-11-19T20:36:09.6388171Z D	src/tests/backend/specs/api/jwtAdminClaim.ts
+2026-11-19T20:36:09.6388526Z D	src/tests/backend/specs/api/movePadDeletionToken.ts
+2026-11-19T20:36:09.6388863Z D	src/tests/backend/specs/api/pad.ts
+2026-11-19T20:36:09.6389181Z D	src/tests/backend/specs/api/restoreRevision.ts
+2026-11-19T20:36:09.6389541Z D	src/tests/backend/specs/api/sessionsAndGroups.ts
+2026-11-19T20:36:09.6389876Z D	src/tests/backend/specs/api/test.doc
+2026-11-19T20:36:09.6390178Z D	src/tests/backend/specs/api/test.docx
+2026-11-19T20:36:09.6390483Z D	src/tests/backend/specs/api/test.etherpad
+2026-11-19T20:36:09.6390796Z D	src/tests/backend/specs/api/test.odt
+2026-11-19T20:36:09.6391094Z D	src/tests/backend/specs/api/test.pdf
+2026-11-19T20:36:09.6391390Z D	src/tests/backend/specs/api/test.txt
+2026-11-19T20:36:09.6391684Z D	src/tests/backend/specs/apicalls.ts
+2026-11-19T20:36:09.6392013Z D	src/tests/backend/specs/appendRevisionAtomicity.ts
+2026-11-19T20:36:09.6392355Z D	src/tests/backend/specs/authorNameCap.ts
+2026-11-19T20:36:09.6392680Z D	src/tests/backend/specs/authorTokenCookie.ts
+2026-11-19T20:36:09.6393002Z D	src/tests/backend/specs/chat.ts
+2026-11-19T20:36:09.6393302Z D	src/tests/backend/specs/cleanupHoleSafety.ts
+2026-11-19T20:36:09.6393700Z D	src/tests/backend/specs/cleanupMissingRevisions.ts
+2026-11-19T20:36:09.6394308Z D	src/tests/backend/specs/cleanupNoDestructiveWindow.ts
+2026-11-19T20:36:09.6394694Z D	src/tests/backend/specs/clientvar_rev_consistency.ts
+2026-11-19T20:36:09.6395029Z D	src/tests/backend/specs/colorutils.ts
+2026-11-19T20:36:09.6395327Z D	src/tests/backend/specs/compactPad.ts
+2026-11-19T20:36:09.6395637Z D	src/tests/backend/specs/contentcollector.ts
+2026-11-19T20:36:09.6395977Z D	src/tests/backend/specs/copyPadColonInjection.ts
+2026-11-19T20:36:09.6396362Z D	src/tests/backend/specs/copyPadWithoutHistoryIntegrity.ts
+2026-11-19T20:36:09.6396743Z D	src/tests/backend/specs/crossPadMessageToctou.ts
+2026-11-19T20:36:09.6397102Z D	src/tests/backend/specs/crossPadWriteToctou.ts
+2026-11-19T20:36:09.6397424Z D	src/tests/backend/specs/crypto.ts
+2026-11-19T20:36:09.6397724Z D	src/tests/backend/specs/cssFontInlining.ts
+2026-11-19T20:36:09.6398044Z D	src/tests/backend/specs/dockerfilePnpmPin.ts
+2026-11-19T20:36:09.6398397Z D	src/tests/backend/specs/domline_class_token_injection.ts
+2026-11-19T20:36:09.6398765Z D	src/tests/backend/specs/domline_line_role.ts
+2026-11-19T20:36:09.6399093Z D	src/tests/backend/specs/domline_list_start.ts
+2026-11-19T20:36:09.6399456Z D	src/tests/backend/specs/downstream/generate-vectors.ts
+2026-11-19T20:36:09.6399824Z D	src/tests/backend/specs/downstream/wire-http-api.ts
+2026-11-19T20:36:09.6400209Z D	src/tests/backend/specs/downstream/wire-socket-sequence.ts
+2026-11-19T20:36:09.6400590Z D	src/tests/backend/specs/downstream/wire-vectors.ts
+2026-11-19T20:36:09.6400943Z D	src/tests/backend/specs/ensureAuthorTokenCookie.ts
+2026-11-19T20:36:09.6401321Z D	src/tests/backend/specs/export.ts
+2026-11-19T20:36:09.6401646Z D	src/tests/backend/specs/exportHtmlAuthorColorXss.ts
+2026-11-19T20:36:09.6401990Z D	src/tests/backend/specs/export_list.ts
+2026-11-19T20:36:09.6402318Z D	src/tests/backend/specs/favicon-test-custom.png
+2026-11-19T20:36:09.6402671Z D	src/tests/backend/specs/favicon-test-skin.png
+2026-11-19T20:36:09.6402996Z D	src/tests/backend/specs/favicon.ts
+2026-11-19T20:36:09.6403337Z D	src/tests/backend/specs/filterUpdatablePluginNames.ts
+2026-11-19T20:36:09.6403959Z D	src/tests/backend/specs/fixtures/sample.docx
+2026-11-19T20:36:09.6404279Z D	src/tests/backend/specs/health.ts
+2026-11-19T20:36:09.6404568Z D	src/tests/backend/specs/hooks.ts
+2026-11-19T20:36:09.6404855Z D	src/tests/backend/specs/i18n.ts
+2026-11-19T20:36:09.6405145Z D	src/tests/backend/specs/import.ts
+2026-11-19T20:36:09.6405452Z D	src/tests/backend/specs/ipLoggingSetting.ts
+2026-11-19T20:36:09.6405787Z D	src/tests/backend/specs/joinCatchUpRace.ts
+2026-11-19T20:36:09.6406110Z D	src/tests/backend/specs/largePaste.ts
+2026-11-19T20:36:09.6406428Z D	src/tests/backend/specs/lowerCasePadIds.ts
+2026-11-19T20:36:09.6406740Z D	src/tests/backend/specs/messages.ts
+2026-11-19T20:36:09.6407061Z D	src/tests/backend/specs/npmpublish-workflow.ts
+2026-11-19T20:36:09.6407398Z D	src/tests/backend/specs/nullAuthorToken.ts
+2026-11-19T20:36:09.6407721Z D	src/tests/backend/specs/oidcCookieRotator.ts
+2026-11-19T20:36:09.6408049Z D	src/tests/backend/specs/openapi-admin.ts
+2026-11-19T20:36:09.6408364Z D	src/tests/backend/specs/openapi.ts
+2026-11-19T20:36:09.6408678Z D	src/tests/backend/specs/padCheckErrorContext.ts
+2026-11-19T20:36:09.6409029Z D	src/tests/backend/specs/padDeletionManager.ts
+2026-11-19T20:36:09.6409375Z D	src/tests/backend/specs/padDeletionUiPlacement.ts
+2026-11-19T20:36:09.6409727Z D	src/tests/backend/specs/padIdColonLegacyPad.ts
+2026-11-19T20:36:09.6410087Z D	src/tests/backend/specs/padInsertAuthorInvariant.ts
+2026-11-19T20:36:09.6410454Z D	src/tests/backend/specs/padOptionsLegacyDefaults.ts
+2026-11-19T20:36:09.6410793Z D	src/tests/backend/specs/padRetention.ts
+2026-11-19T20:36:09.6411119Z D	src/tests/backend/specs/padUrlColonRedirect.ts
+2026-11-19T20:36:09.6411454Z D	src/tests/backend/specs/pads-with-spaces.ts
+2026-11-19T20:36:09.6411784Z D	src/tests/backend/specs/pluginCatalog.ts
+2026-11-19T20:36:09.6412112Z D	src/tests/backend/specs/pluginCatalogFilter.ts
+2026-11-19T20:36:09.6412457Z D	src/tests/backend/specs/proxyPathRedirect.ts
+2026-11-19T20:36:09.6412965Z D	src/tests/backend/specs/proxyPathVary.ts
+2026-11-19T20:36:09.6413289Z D	src/tests/backend/specs/pwaManifest.ts
+2026-11-19T20:36:09.6413600Z D	src/tests/backend/specs/regression-db.ts
+2026-11-19T20:36:09.6413957Z D	src/tests/backend/specs/run_cmd.ts
+2026-11-19T20:36:09.6414277Z D	src/tests/backend/specs/sanitizePluginsForWire.ts
+2026-11-19T20:36:09.6414606Z D	src/tests/backend/specs/security.ts
+2026-11-19T20:36:09.6414908Z D	src/tests/backend/specs/sessionFixation.ts
+2026-11-19T20:36:09.6415224Z D	src/tests/backend/specs/sessionIdCookie.ts
+2026-11-19T20:36:09.6415539Z D	src/tests/backend/specs/settings.json
+2026-11-19T20:36:09.6415831Z D	src/tests/backend/specs/settings.ts
+2026-11-19T20:36:09.6416142Z D	src/tests/backend/specs/settingsModalHeading.ts
+2026-11-19T20:36:09.6416494Z D	src/tests/backend/specs/setup-trusted-publishers.ts
+2026-11-19T20:36:09.6416831Z D	src/tests/backend/specs/socialMeta-unit.ts
+2026-11-19T20:36:09.6417137Z D	src/tests/backend/specs/socialMeta.ts
+2026-11-19T20:36:09.6417445Z D	src/tests/backend/specs/socketio.ts
+2026-11-19T20:36:09.6417760Z D	src/tests/backend/specs/sofficeExportRemoteImage.ts
+2026-11-19T20:36:09.6418096Z D	src/tests/backend/specs/specialpages.ts
+2026-11-19T20:36:09.6418427Z D	src/tests/backend/specs/staticPathTraversal.ts
+2026-11-19T20:36:09.6418767Z D	src/tests/backend/specs/timesliderRedirect.ts
+2026-11-19T20:36:09.6419096Z D	src/tests/backend/specs/tokenTransfer.ts
+2026-11-19T20:36:09.6419425Z D	src/tests/backend/specs/undo_clear_authorship.ts
+2026-11-19T20:36:09.6419762Z D	src/tests/backend/specs/updateActions.ts
+2026-11-19T20:36:09.6420071Z D	src/tests/backend/specs/updateStatus.ts
+2026-11-19T20:36:09.6420390Z D	src/tests/backend/specs/updater-integration.ts
+2026-11-19T20:36:09.6420761Z D	src/tests/backend/specs/updater-scheduler-integration.ts
+2026-11-19T20:36:09.6421155Z D	src/tests/backend/specs/updater-window-integration.ts
+2026-11-19T20:36:09.6421504Z D	src/tests/backend/specs/urlBasePath.ts
+2026-11-19T20:36:09.6421818Z D	src/tests/backend/specs/webaccess.ts
+2026-11-19T20:36:09.6422297Z D	src/tests/container/loadSettings.js
+2026-11-19T20:36:09.6422696Z D	src/tests/container/readonly-cleanup.test.mjs
+2026-11-19T20:36:09.6423026Z D	src/tests/container/readonly-root.mjs
+2026-11-19T20:36:09.6423365Z D	src/tests/container/specs/api/adminSettings_7819.ts
+2026-11-19T20:36:09.6423703Z D	src/tests/container/specs/api/pad.js
+2026-11-19T20:36:09.6424045Z D	src/tests/downstream/clients.json
+2026-11-19T20:36:09.6424336Z D	src/tests/downstream/run-clients.sh
+2026-11-19T20:36:09.6424459Z D	src/tests/fixtures/wire-vectors.json
+2026-11-19T20:36:09.6424633Z D	src/tests/frontend-new/admin-spec/admin_authors_page.spec.ts
+2026-11-19T20:36:09.6424802Z D	src/tests/frontend-new/admin-spec/admin_pads_page.spec.ts
+2026-11-19T20:36:09.6424984Z D	src/tests/frontend-new/admin-spec/admin_plugin_catalog.spec.ts
+2026-11-19T20:36:09.6425124Z D	src/tests/frontend-new/admin-spec/admini18n.spec.ts
+2026-11-19T20:36:09.6425288Z D	src/tests/frontend-new/admin-spec/adminsettings.spec.ts
+2026-11-19T20:36:09.6425475Z D	src/tests/frontend-new/admin-spec/admintroubleshooting.spec.ts
+2026-11-19T20:36:09.6425654Z D	src/tests/frontend-new/admin-spec/adminupdateplugins.spec.ts
+2026-11-19T20:36:09.6425799Z D	src/tests/frontend-new/admin-spec/focusloss.spec.ts
+2026-11-19T20:36:09.6425960Z D	src/tests/frontend-new/admin-spec/update-banner.spec.ts
+2026-11-19T20:36:09.6426139Z D	src/tests/frontend-new/admin-spec/update-page-actions.spec.ts
+2026-11-19T20:36:09.6426303Z D	src/tests/frontend-new/admin-spec/update-scheduled.spec.ts
+2026-11-19T20:36:09.6426438Z D	src/tests/frontend-new/helper/adminhelper.ts
+2026-11-19T20:36:09.6426563Z D	src/tests/frontend-new/helper/padHelper.ts
+2026-11-19T20:36:09.6426705Z D	src/tests/frontend-new/helper/settingsHelper.ts
+2026-11-19T20:36:09.6426840Z D	src/tests/frontend-new/helper/timeslider.ts
+2026-11-19T20:36:09.6426982Z D	src/tests/frontend-new/specs/a11y_dialogs.spec.ts
+2026-11-19T20:36:09.6427119Z D	src/tests/frontend-new/specs/alphabet.spec.ts
+2026-11-19T20:36:09.6427443Z D	src/tests/frontend-new/specs/anchor_scroll.spec.ts
+2026-11-19T20:36:09.6427612Z D	src/tests/frontend-new/specs/author_token_cookie.spec.ts
+2026-11-19T20:36:09.6427738Z D	src/tests/frontend-new/specs/bold.spec.ts
+2026-11-19T20:36:09.6427884Z D	src/tests/frontend-new/specs/bold_paste.spec.ts
+2026-11-19T20:36:09.6428044Z D	src/tests/frontend-new/specs/change_user_color.spec.ts
+2026-11-19T20:36:09.6428190Z D	src/tests/frontend-new/specs/change_user_name.spec.ts
+2026-11-19T20:36:09.6428317Z D	src/tests/frontend-new/specs/chat.spec.ts
+2026-11-19T20:36:09.6428482Z D	src/tests/frontend-new/specs/clear_authorship_color.spec.ts
+2026-11-19T20:36:09.6428625Z D	src/tests/frontend-new/specs/collab_client.spec.ts
+2026-11-19T20:36:09.6428752Z D	src/tests/frontend-new/specs/delete.spec.ts
+2026-11-19T20:36:09.6428884Z D	src/tests/frontend-new/specs/editbar.spec.ts
+2026-11-19T20:36:09.6429023Z D	src/tests/frontend-new/specs/embed_value.spec.ts
+2026-11-19T20:36:09.6429148Z D	src/tests/frontend-new/specs/enter.spec.ts
+2026-11-19T20:36:09.6429312Z D	src/tests/frontend-new/specs/error_sanitization.spec.ts
+2026-11-19T20:36:09.6429444Z D	src/tests/frontend-new/specs/font_type.spec.ts
+2026-11-19T20:36:09.6429595Z D	src/tests/frontend-new/specs/hide_menu_right.spec.ts
+2026-11-19T20:36:09.6429773Z D	src/tests/frontend-new/specs/html10n_form_controls_aria.spec.ts
+2026-11-19T20:36:09.6429931Z D	src/tests/frontend-new/specs/inactive_color_fade.spec.ts
+2026-11-19T20:36:09.6430069Z D	src/tests/frontend-new/specs/indentation.spec.ts
+2026-11-19T20:36:09.6430206Z D	src/tests/frontend-new/specs/inner_height.spec.ts
+2026-11-19T20:36:09.6430337Z D	src/tests/frontend-new/specs/italic.spec.ts
+2026-11-19T20:36:09.6430467Z D	src/tests/frontend-new/specs/language.spec.ts
+2026-11-19T20:36:09.6430599Z D	src/tests/frontend-new/specs/line_ops.spec.ts
+2026-11-19T20:36:09.6430747Z D	src/tests/frontend-new/specs/list_wrap_indent.spec.ts
+2026-11-19T20:36:09.6430891Z D	src/tests/frontend-new/specs/ordered_list.spec.ts
+2026-11-19T20:36:09.6431043Z D	src/tests/frontend-new/specs/outdated_notice.spec.ts
+2026-11-19T20:36:09.6431377Z D	src/tests/frontend-new/specs/pad_deletion_token.spec.ts
+2026-11-19T20:36:09.6431542Z D	src/tests/frontend-new/specs/pad_retention_notice.spec.ts
+2026-11-19T20:36:09.6431676Z D	src/tests/frontend-new/specs/pad_settings.spec.ts
+2026-11-19T20:36:09.6431814Z D	src/tests/frontend-new/specs/padmode.spec.ts
+2026-11-19T20:36:09.6431950Z D	src/tests/frontend-new/specs/page_up_down.spec.ts
+2026-11-19T20:36:09.6432123Z D	src/tests/frontend-new/specs/pagedown_wrapped_lines.spec.ts
+2026-11-19T20:36:09.6432270Z D	src/tests/frontend-new/specs/privacy_banner.spec.ts
+2026-11-19T20:36:09.6432401Z D	src/tests/frontend-new/specs/recent_pads.spec.ts
+2026-11-19T20:36:09.6432561Z D	src/tests/frontend-new/specs/recent_pads_delete.spec.ts
+2026-11-19T20:36:09.6432685Z D	src/tests/frontend-new/specs/redo.spec.ts
+2026-11-19T20:36:09.6432848Z D	src/tests/frontend-new/specs/rtl_pad_wide_enforce.spec.ts
+2026-11-19T20:36:09.6432990Z D	src/tests/frontend-new/specs/rtl_url_param.spec.ts
+2026-11-19T20:36:09.6433167Z D	src/tests/frontend-new/specs/scroll_caret_viewport.spec.ts
+2026-11-19T20:36:09.6433326Z D	src/tests/frontend-new/specs/select_focus_restore.spec.ts
+2026-11-19T20:36:09.6433485Z D	src/tests/frontend-new/specs/session_transfer_copy.spec.ts
+2026-11-19T20:36:09.6433632Z D	src/tests/frontend-new/specs/share_readonly.spec.ts
+2026-11-19T20:36:09.6433772Z D	src/tests/frontend-new/specs/strikethrough.spec.ts
+2026-11-19T20:36:09.6433940Z D	src/tests/frontend-new/specs/theme_color_dark_mode.spec.ts
+2026-11-19T20:36:09.6434120Z D	src/tests/frontend-new/specs/timeslider.spec.ts
+2026-11-19T20:36:09.6434293Z D	src/tests/frontend-new/specs/timeslider_author_colors.spec.ts
+2026-11-19T20:36:09.6434453Z D	src/tests/frontend-new/specs/timeslider_deeplink.spec.ts
+2026-11-19T20:36:09.6434620Z D	src/tests/frontend-new/specs/timeslider_export_links.spec.ts
+2026-11-19T20:36:09.6434776Z D	src/tests/frontend-new/specs/timeslider_follow.spec.ts
+2026-11-19T20:36:09.6435116Z D	src/tests/frontend-new/specs/timeslider_identity_changeset.spec.ts
+2026-11-19T20:36:09.6435299Z D	src/tests/frontend-new/specs/timeslider_line_numbers.spec.ts
+2026-11-19T20:36:09.6435478Z D	src/tests/frontend-new/specs/timeslider_playback_speed.spec.ts
+2026-11-19T20:36:09.6435655Z D	src/tests/frontend-new/specs/timeslider_revision_labels.spec.ts
+2026-11-19T20:36:09.6435834Z D	src/tests/frontend-new/specs/timeslider_saved_revisions.spec.ts
+2026-11-19T20:36:09.6436004Z D	src/tests/frontend-new/specs/unaccepted_commit_warning.spec.ts
+2026-11-19T20:36:09.6436133Z D	src/tests/frontend-new/specs/undo.spec.ts
+2026-11-19T20:36:09.6436293Z D	src/tests/frontend-new/specs/undo_clear_authorship.spec.ts
+2026-11-19T20:36:09.6436444Z D	src/tests/frontend-new/specs/undo_redo_scroll.spec.ts
+2026-11-19T20:36:09.6436590Z D	src/tests/frontend-new/specs/unordered_list.spec.ts
+2026-11-19T20:36:09.6436737Z D	src/tests/frontend-new/specs/url_view_options.spec.ts
+2026-11-19T20:36:09.6436882Z D	src/tests/frontend-new/specs/url_wrapping.spec.ts
+2026-11-19T20:36:09.6437250Z D	src/tests/frontend-new/specs/urls_become_clickable.specHEAD is now at cbeced3 chore: new commit so runners save afresh
+2026-11-19T20:36:09.6437356Z .ts
+2026-11-19T20:36:09.6437530Z D	src/tests/frontend-new/specs/userlist_click_to_chat.spec.ts
+2026-11-19T20:36:09.6437689Z D	src/tests/frontend-new/specs/wcag_author_color.spec.ts
+2026-11-19T20:36:09.6437824Z D	src/tests/frontend-new/specs/welcome.spec.ts
+2026-11-19T20:36:09.6437940Z D	src/tests/frontend/cypress/.gitignore
+2026-11-19T20:36:09.6438063Z D	src/tests/frontend/cypress/README.md
+2026-11-19T20:36:09.6438192Z D	src/tests/frontend/cypress/cypress.config.js
+2026-11-19T20:36:09.6438335Z D	src/tests/frontend/cypress/integration/test.js
+2026-11-19T20:36:09.6438455Z D	src/tests/frontend/easysync-helper.js
+2026-11-19T20:36:09.6438573Z D	src/tests/frontend/helper.js
+2026-11-19T20:36:09.6438693Z D	src/tests/frontend/helper/methods.ts
+2026-11-19T20:36:09.6438817Z D	src/tests/frontend/helper/multipleUsers.ts
+2026-11-19T20:36:09.6439103Z D	src/tests/frontend/helper/ui.ts
+2026-11-19T20:36:09.6439220Z D	src/tests/frontend/index.html
+2026-11-19T20:36:09.6439336Z D	src/tests/frontend/runner.css
+2026-11-19T20:36:09.6439447Z D	src/tests/frontend/runner.js
+2026-11-19T20:36:09.6439598Z D	src/tests/frontend/specs/authorship_of_editions.js
+2026-11-19T20:36:09.6439725Z D	src/tests/frontend/specs/chat_hooks.js
+2026-11-19T20:36:09.6439856Z D	src/tests/frontend/specs/chat_load_messages.js
+2026-11-19T20:36:09.6439984Z D	src/tests/frontend/specs/drag_and_drop.js
+2026-11-19T20:36:09.6440112Z D	src/tests/frontend/specs/easysync-follow.js
+2026-11-19T20:36:09.6440234Z D	src/tests/frontend/specs/helper.js
+2026-11-19T20:36:09.6440356Z D	src/tests/frontend/specs/importexport.js
+2026-11-19T20:36:09.6440486Z D	src/tests/frontend/specs/importindents.js
+2026-11-19T20:36:09.6440689Z D	src/tests/frontend/specs/multiple_authors_clear_authorship_colors.js
+2026-11-19T20:36:09.6440805Z D	src/tests/frontend/specs/pad_modal.js
+2026-11-19T20:36:09.6440934Z D	src/tests/frontend/specs/responsiveness.js
+2026-11-19T20:36:09.6441055Z D	src/tests/frontend/specs/scrollTo.js
+2026-11-19T20:36:09.6441206Z D	src/tests/frontend/specs/select_formatting_buttons.js
+2026-11-19T20:36:09.6441334Z D	src/tests/frontend/specs/xxauto_reconnect.js
+2026-11-19T20:36:09.6441458Z D	src/tests/frontend/travis/.gitignore
+2026-11-19T20:36:09.6441582Z D	src/tests/frontend/travis/adminrunner.sh
+2026-11-19T20:36:09.6441703Z D	src/tests/frontend/travis/remote_runner.js
+2026-11-19T20:36:09.6441828Z D	src/tests/frontend/travis/runner.sh
+2026-11-19T20:36:09.6441950Z D	src/tests/frontend/travis/runnerBackend.sh
+2026-11-19T20:36:09.6442084Z D	src/tests/frontend/travis/runnerLoadTest.sh
+2026-11-19T20:36:09.6442208Z D	src/tests/ratelimit/Dockerfile.anotherip
+2026-11-19T20:36:09.6442329Z D	src/tests/ratelimit/Dockerfile.nginx
+2026-11-19T20:36:09.6442449Z D	src/tests/ratelimit/nginx.conf
+2026-11-19T20:36:09.6442568Z D	src/tests/ratelimit/send_changesets.mjs
+2026-11-19T20:36:09.6442705Z D	src/tests/ratelimit/testlimits.sh
+2026-11-19T20:36:09.6443042Z D	src/tests/settings.json
+2026-11-19T20:36:09.6443181Z D	src/tsconfig.json
+2026-11-19T20:36:09.6443302Z D	src/vitest.config.ts
+2026-11-19T20:36:09.6443436Z D	src/web.config
+2026-11-19T20:36:09.6443543Z D	ui/.gitignore
+2026-11-19T20:36:09.6443644Z D	ui/consent.html
+2026-11-19T20:36:09.6443750Z D	ui/login.html
+2026-11-19T20:36:09.6443852Z D	ui/package.json
+2026-11-19T20:36:09.6443961Z D	ui/pad.html
+2026-11-19T20:36:09.6444063Z D	ui/src/consent.ts
+2026-11-19T20:36:09.6444214Z D	ui/src/main.ts
+2026-11-19T20:36:09.6444318Z D	ui/src/style.css
+2026-11-19T20:36:09.6444431Z D	ui/src/typescript.svg
+2026-11-19T20:36:09.6444544Z D	ui/src/vite-env.d.ts
+2026-11-19T20:36:09.6444646Z D	ui/tsconfig.json
+2026-11-19T20:36:09.6444756Z D	ui/vite.config.ts
+2026-11-19T20:36:09.6444856Z D	var/.gitignore
+2026-11-19T20:36:09.6450918Z [command]/usr/bin/git branch --delete --force main
+2026-11-19T20:36:09.6451040Z Deleted branch main (was cbeced3).
+2026-11-19T20:36:09.6452576Z ##[endgroup]
+2026-11-19T20:36:09.6452719Z [command]/usr/bin/git submodule status
+2026-11-19T20:36:09.6469786Z ##[group]Cleaning the repository
+2026-11-19T20:36:09.6479053Z [command]/usr/bin/git clean -ffdx
+2026-11-19T20:36:09.6495972Z [command]/usr/bin/git reset --hard HEAD
+2026-11-19T20:36:09.7650160Z HEAD is now at cbeced3 chore: new commit so runners save afresh
+2026-11-19T20:36:09.7655787Z ##[endgroup]
+2026-11-19T20:36:09.7656838Z ##[group]Disabling automatic garbage collection
+2026-11-19T20:36:09.7659420Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-19T20:36:09.7687266Z ##[endgroup]
+2026-11-19T20:36:09.7687959Z ##[group]Setting up auth
+2026-11-19T20:36:09.7688450Z Removing SSH command configuration
+2026-11-19T20:36:09.7691927Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T20:36:09.7711727Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T20:36:09.7873892Z Removing HTTP extra header
+2026-11-19T20:36:09.7876872Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T20:36:09.7900841Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T20:36:09.8077596Z Removing includeIf entries pointing to credentials config files
+2026-11-19T20:36:09.8080136Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T20:36:09.8103822Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T20:36:09.8276377Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-19T20:36:09.8301438Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git.path /home/runner/work/_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config
+2026-11-19T20:36:09.8324196Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config
+2026-11-19T20:36:09.8344678Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config
+2026-11-19T20:36:09.8367796Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config
+2026-11-19T20:36:09.8387623Z ##[endgroup]
+2026-11-19T20:36:09.8388291Z ##[group]Fetching the repository
+2026-11-19T20:36:09.8391984Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +cbeced36d56ceff769241cef14dd25c892717cba:refs/remotes/origin/main
+2026-11-19T20:36:10.2914969Z [command]/usr/bin/git branch --list --remote origin/main
+2026-11-19T20:36:10.2936245Z   origin/main
+2026-11-19T20:36:10.2941468Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-11-19T20:36:10.2958804Z cbeced36d56ceff769241cef14dd25c892717cba
+2026-11-19T20:36:10.2962811Z ##[endgroup]
+2026-11-19T20:36:10.2963852Z ##[group]Determining the checkout info
+2026-11-19T20:36:10.2964763Z ##[endgroup]
+2026-11-19T20:36:10.2965309Z [command]/usr/bin/git sparse-checkout disable
+2026-11-19T20:36:10.3796806Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-19T20:36:10.3821179Z ##[group]Checking out the ref
+2026-11-19T20:36:10.3823091Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-19T20:36:10.3878890Z Switched to a new branch 'main'
+2026-11-19T20:36:10.3883455Z branch 'main' set up to track 'origin/main'.
+2026-11-19T20:36:10.3885812Z ##[endgroup]
+2026-11-19T20:36:10.3919953Z [command]/usr/bin/git log -1 --format=%H
+2026-11-19T20:36:10.3938974Z cbeced36d56ceff769241cef14dd25c892717cba
+2026-11-19T20:36:10.4926166Z ##[group]Run actions/cache@v6
+2026-11-19T20:36:10.4926781Z with:
+2026-11-19T20:36:10.4927242Z   path: ~/.pnpm-store
+2026-11-19T20:36:10.4928194Z   key: Linux-pnpm-store-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556
+2026-11-19T20:36:10.4929308Z   restore-keys: Linux-pnpm-store-
+
+2026-11-19T20:36:10.4930007Z   enableCrossOsArchive: false
+2026-11-19T20:36:10.4930608Z   fail-on-cache-miss: false
+2026-11-19T20:36:10.4931170Z   lookup-only: false
+2026-11-19T20:36:10.4931684Z   save-always: false
+2026-11-19T20:36:10.4932184Z env:
+2026-11-19T20:36:10.4932642Z   PNPM_HOME: ~/.pnpm-store
+2026-11-19T20:36:10.4933183Z ##[endgroup]
+2026-11-19T20:36:10.9115156Z Cache not found for input keys: Linux-pnpm-store-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556, Linux-pnpm-store-
+2026-11-19T20:36:10.9659409Z ##[group]Run actions/cache@v6
+2026-11-19T20:36:10.9659958Z with:
+2026-11-19T20:36:10.9660384Z   path: ~/.cache/ms-playwright
+2026-11-19T20:36:10.9661293Z   key: Linux-playwright-31ef7bd5f30c4727b0e0bee005389c5796459918031710bea412d2818bda471e
+2026-11-19T20:36:10.9662418Z   restore-keys: Linux-playwright-
+
+2026-11-19T20:36:10.9663027Z   enableCrossOsArchive: false
+2026-11-19T20:36:10.9663565Z   fail-on-cache-miss: false
+2026-11-19T20:36:10.9664074Z   lookup-only: false
+2026-11-19T20:36:10.9664536Z   save-always: false
+2026-11-19T20:36:10.9665016Z env:
+2026-11-19T20:36:10.9665425Z   PNPM_HOME: ~/.pnpm-store
+2026-11-19T20:36:10.9665918Z ##[endgroup]
+2026-11-19T20:36:11.0566177Z Cache hit for: Linux-playwright-31ef7bd5f30c4727b0e0bee005389c5796459918031710bea412d2818bda471e
+2026-11-19T20:36:11.3363024Z Cache Size: ~111 MB (116332150 B)
+2026-11-19T20:36:11.3377733Z [command]/usr/local/bin/tar -xf /home/runner/work/_temp/6a0909ad-9358-467a-9685-564398ab7558/cache.tzst -P -C /home/runner/work/etherpad-lite/etherpad-lite --use-compress-program unzstd
+2026-11-19T20:36:12.3484859Z Cache restored successfully
+2026-11-19T20:36:12.3811459Z Cache restored from key: Linux-playwright-31ef7bd5f30c4727b0e0bee005389c5796459918031710bea412d2818bda471e
+2026-11-19T20:36:12.4013186Z ##[group]Run pnpm/action-setup@v6.1.1
+2026-11-19T20:36:12.4013367Z with:
+2026-11-19T20:36:12.4013488Z   run_install: false
+2026-11-19T20:36:12.4013620Z   dest: ~/setup-pnpm
+2026-11-19T20:36:12.4013740Z   cache: false
+2026-11-19T20:36:12.4013867Z   cache_dependency_path: pnpm-lock.yaml
+2026-11-19T20:36:12.4014035Z   package_json_file: package.json
+2026-11-19T20:36:12.4014177Z   standalone: false
+2026-11-19T20:36:12.4014300Z env:
+2026-11-19T20:36:12.4014423Z   PNPM_HOME: ~/.pnpm-store
+2026-11-19T20:36:12.4014562Z ##[endgroup]
+2026-11-19T20:36:12.4882397Z ##[group]Running self-installer...
+2026-11-19T20:36:13.4521558Z 
+2026-11-19T20:36:13.4522100Z added 2 packages, and audited 3 packages in 788ms
+2026-11-19T20:36:13.4524620Z 
+2026-11-19T20:36:13.4524700Z found 0 vulnerabilities
+2026-11-19T20:36:13.5000376Z Checking for updates...
+2026-11-19T20:36:13.5226195Z Switching pnpm from v12.17.0 to v12.4.2...
+2026-11-19T20:36:13.8376244Z Packages are hard linked from the content-addressable store to the virtual store.
+2026-11-19T20:36:13.8376649Z   Content-addressable store is at: /home/runner/.local/share/pnpm/store/v11
+2026-11-19T20:36:13.8377107Z   Virtual store is at:             node_modules/.bin/global/v11/2ee2-18e98ca6a0fd883c-0/node_modules/.pnpm
+2026-11-19T20:36:13.8995892Z .../global/v11/2ee2-18e98ca6a0fd883c-0   | Progress: resolved 2, reused 2, downloaded 0, added 2, done
+2026-11-19T20:36:13.9435786Z Successfully updated pnpm to v12.4.2
+2026-11-19T20:36:13.9518450Z ##[endgroup]
+2026-11-19T20:36:13.9518866Z Installation Completed!
+2026-11-19T20:36:13.9669081Z ##[group]Run actions/setup-node@v7
+2026-11-19T20:36:13.9669296Z with:
+2026-11-19T20:36:13.9669443Z   node-version: 24
+2026-11-19T20:36:13.9669592Z   cache: pnpm
+2026-11-19T20:36:13.9669732Z   check-latest: false
+2026-11-19T20:36:13.9671161Z   token: ***
+2026-11-19T20:36:13.9671293Z   package-manager-cache: true
+2026-11-19T20:36:13.9671435Z env:
+2026-11-19T20:36:13.9671574Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-19T20:36:13.9671745Z ##[endgroup]
+2026-11-19T20:36:14.0494384Z Found in cache @ /opt/hostedtoolcache/node/24.22.3/x64
+2026-11-19T20:36:14.0868951Z ##[group]Environment details
+2026-11-19T20:36:14.2406864Z node: v24.22.3
+2026-11-19T20:36:14.2407080Z npm: 11.19.1
+2026-11-19T20:36:14.2414236Z yarn: 1.22.22
+2026-11-19T20:36:14.2414631Z ##[endgroup]
+2026-11-19T20:36:14.2414855Z [command]/home/runner/setup-pnpm/node_modules/.bin/bin/pnpm store path --silent
+2026-11-19T20:36:14.2597908Z /home/runner/.local/share/pnpm/store/v11
+2026-11-19T20:36:14.2755496Z Cache hit for: node-cache-Linux-x64-pnpm-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556
+2026-11-19T20:36:14.6028408Z Cache Size: ~155 MB (162803851 B)
+2026-11-19T20:36:14.6041441Z [command]/usr/local/bin/tar -xf /home/runner/work/_temp/158af27e-08c3-4b18-8a04-2e5e99f34b74/cache.tzst -P -C /home/runner/work/etherpad-lite/etherpad-lite --use-compress-program unzstd
+2026-11-19T20:36:18.4258046Z Cache restored successfully
+2026-11-19T20:36:18.4575102Z Cache restored from key: node-cache-Linux-x64-pnpm-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556
+2026-11-19T20:36:18.4750668Z ##[group]Run pnpm install --frozen-lockfile
+2026-11-19T20:36:18.4750993Z [36;1mpnpm install --frozen-lockfile[0m
+2026-11-19T20:36:18.4768263Z shell: /usr/bin/bash -e {0}
+2026-11-19T20:36:18.4768419Z env:
+2026-11-19T20:36:18.4768574Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-19T20:36:18.4768764Z ##[endgroup]
+2026-11-19T20:36:18.5065685Z Scope: all 7 workspace projects
+2026-11-19T20:36:18.5464058Z ✓ Lockfile passes supply-chain policies (verified 1d ago)
+2026-11-19T20:36:18.5464491Z Lockfile is up to date, resolution step is skipped
+2026-11-19T20:36:18.6770281Z Packages are hard linked from the content-addressable store to the virtual store.
+2026-11-19T20:36:18.6771147Z   Content-addressable store is at: /home/runner/.local/share/pnpm/store/v11
+2026-11-19T20:36:18.6771652Z   Virtual store is at:             node_modules/.pnpm
+2026-11-19T20:36:18.8989117Z Packages: +1099
+2026-11-19T20:36:18.8989812Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-11-19T20:36:18.9285121Z Progress: resolved 1099, reused 1099, downloaded 0, added 1099, done
+2026-11-19T20:36:18.9403731Z Ignored build scripts: esbuild@0.28.2.
+2026-11-19T20:36:18.9404059Z Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.
+2026-11-19T20:36:18.9868916Z 
+2026-11-19T20:36:18.9869269Z dependencies:
+2026-11-19T20:36:18.9869506Z + ep_etherpad-lite link:src
+2026-11-19T20:36:18.9869616Z 
+2026-11-19T20:36:18.9869675Z devDependencies:
+2026-11-19T20:36:18.9869815Z + admin link:admin
+2026-11-19T20:36:18.9869950Z + docs link:doc
+2026-11-19T20:36:18.9870117Z + ui link:ui
+2026-11-19T20:36:18.9870227Z 
+2026-11-19T20:36:18.9953026Z Done in 498ms using pnpm v12.4.2
+2026-11-19T20:36:19.0089443Z ##[group]Run pnpm add -w ep_align ep_author_hover ep_font_color ep_font_size ep_hash_auth ep_headings2 ep_markdown ep_guest ep_set_title_on_pad ep_spellcheck ep_subscript_and_superscript ep_table_of_contents
+2026-11-19T20:36:19.0090158Z [36;1mpnpm add -w ep_align ep_author_hover ep_font_color ep_font_size ep_hash_auth ep_headings2 ep_markdown ep_guest ep_set_title_on_pad ep_spellcheck ep_subscript_and_superscript ep_table_of_contents[0m
+2026-11-19T20:36:19.0102662Z shell: /usr/bin/bash -e {0}
+2026-11-19T20:36:19.0102804Z env:
+2026-11-19T20:36:19.0102952Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-19T20:36:19.0103138Z ##[endgroup]
+2026-11-19T20:36:19.4042108Z ✓ Lockfile passes supply-chain policies (verified 1d ago)
+2026-11-19T20:36:20.4043355Z Progress: resolved 0, reused 174, downloaded 0, added 0
+2026-11-19T20:36:20.9882529Z src                                      | [WARN] deprecated prom-client@15.1.3
+2026-11-19T20:36:21.9906003Z Progress: resolved 0, reused 542, downloaded 0, added 0
+2026-11-19T20:36:22.3450184Z [WARN] 3 deprecated subdependencies found: node-domexception@1.0.0, rspack-resolver@1.3.0, whatwg-encoding@3.1.1
+2026-11-19T20:36:22.4976484Z Packages: +50
+2026-11-19T20:36:22.4976915Z ++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-11-19T20:36:22.5051842Z Progress: resolved 50, reused 583, downloaded 0, added 50, done
+2026-11-19T20:36:22.5112993Z Ignored build scripts: argon2@0.45.2, bcrypt@6.0.0, esbuild@0.28.2.
+2026-11-19T20:36:22.5113373Z Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.
+2026-11-19T20:36:22.5634809Z [WARN] Issues with peer dependencies found. Run "pnpm peers check" to list them.
+2026-11-19T20:36:22.5635051Z 
+2026-11-19T20:36:22.5635130Z dependencies:
+2026-11-19T20:36:22.5635269Z + ep_align 11.0.58
+2026-11-19T20:36:22.5635414Z + ep_author_hover 11.0.39
+2026-11-19T20:36:22.5635904Z + ep_font_color 0.0.154
+2026-11-19T20:36:22.5636040Z + ep_font_size 0.4.113
+2026-11-19T20:36:22.5636194Z + ep_guest 1.0.72
+2026-11-19T20:36:22.5636328Z + ep_hash_auth 11.0.26
+2026-11-19T20:36:22.5636456Z + ep_headings2 0.2.135
+2026-11-19T20:36:22.5636589Z + ep_markdown 12.0.34
+2026-11-19T20:36:22.5636737Z + ep_set_title_on_pad 0.7.22
+2026-11-19T20:36:22.5636882Z + ep_spellcheck 0.0.116
+2026-11-19T20:36:22.5637049Z + ep_subscript_and_superscript 0.3.93
+2026-11-19T20:36:22.5637216Z + ep_table_of_contents 0.4.12
+2026-11-19T20:36:22.5637310Z 
+2026-11-19T20:36:22.5848230Z Done in 3.6s using pnpm v12.4.2
+2026-11-19T20:36:22.6268900Z ##[group]Run cp ./src/tests/settings.json settings.json
+2026-11-19T20:36:22.6269160Z [36;1mcp ./src/tests/settings.json settings.json[0m
+2026-11-19T20:36:22.6281119Z shell: /usr/bin/bash -e {0}
+2026-11-19T20:36:22.6281260Z env:
+2026-11-19T20:36:22.6281400Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-19T20:36:22.6281567Z ##[endgroup]
+2026-11-19T20:36:22.6335887Z ##[group]Run set -euo pipefail
+2026-11-19T20:36:22.6336075Z [36;1mset -euo pipefail[0m
+2026-11-19T20:36:22.6336237Z [36;1mpnpm run prod > /tmp/etherpad-server.log 2>&1 &[0m
+2026-11-19T20:36:22.6336493Z [36;1mcan_connect() { curl --max-time 3 -sSfo /dev/null http://localhost:9001/; }[0m
+2026-11-19T20:36:22.6336758Z [36;1mfor i in $(seq 1 90); do can_connect && break; sleep 1; done[0m
+2026-11-19T20:36:22.6336952Z [36;1mif ! can_connect; then[0m
+2026-11-19T20:36:22.6337137Z [36;1m  echo "::error::Etherpad did not respond on :9001 within 90s"[0m
+2026-11-19T20:36:22.6337342Z [36;1m  echo "----- server log -----"[0m
+2026-11-19T20:36:22.6337522Z [36;1m  tail -n 200 /tmp/etherpad-server.log || true[0m
+2026-11-19T20:36:22.6337692Z [36;1m  exit 1[0m
+2026-11-19T20:36:22.6337804Z [36;1mfi[0m
+2026-11-19T20:36:22.6337914Z [36;1mcd src[0m
+2026-11-19T20:36:22.6338069Z [36;1mpnpm exec playwright install chromium --with-deps[0m
+2026-11-19T20:36:22.6350552Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T20:36:22.6350742Z env:
+2026-11-19T20:36:22.6350886Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-19T20:36:22.6351062Z ##[endgroup]
+2026-11-19T20:36:22.6457711Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:23.6520299Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:24.6581797Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:25.6640733Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:26.6699222Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:27.6755271Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:28.6812360Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:29.6875389Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:30.6939693Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:31.7001654Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:32.7091714Z curl: (7) Failed to connect to localhost port 9001 after 0 ms: Couldn't connect to server
+2026-11-19T20:36:34.0901454Z Installing dependencies...
+2026-11-19T20:36:34.0951156Z Switching to root user to install dependencies...
+2026-11-19T20:36:34.1814635Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-19T20:36:34.2460188Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-19T20:36:34.2577815Z Hit:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease
+2026-11-19T20:36:34.2582558Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-19T20:36:34.2817135Z Hit:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease
+2026-11-19T20:36:34.2876215Z Hit:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease
+2026-11-19T20:36:34.3898832Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1475 kB]
+2026-11-19T20:36:34.4284109Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1716 kB]
+2026-11-19T20:36:34.7278840Z Fetched 3317 kB in 0s (7102 kB/s)
+2026-11-19T20:36:35.7504223Z Reading package lists...
+2026-11-19T20:36:35.7816490Z Reading package lists...
+2026-11-19T20:36:35.9436055Z Building dependency tree...
+2026-11-19T20:36:35.9443129Z Reading state information...
+2026-11-19T20:36:36.0438076Z libasound2t64 is already the newest version (1.2.11-1ubuntu0.3).
+2026-11-19T20:36:36.0438583Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-11-19T20:36:36.0439070Z libatk-bridge2.0-0t64 set to manually installed.
+2026-11-19T20:36:36.0440080Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+2026-11-19T20:36:36.0440505Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-11-19T20:36:36.0440846Z libatspi2.0-0t64 set to manually installed.
+2026-11-19T20:36:36.0441175Z libcairo2 is already the newest version (1.18.0-3build1).
+2026-11-19T20:36:36.0441561Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+2026-11-19T20:36:36.0441891Z libcups2t64 set to manually installed.
+2026-11-19T20:36:36.0442232Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+2026-11-19T20:36:36.0442624Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+2026-11-19T20:36:36.0442953Z libdrm2 set to manually installed.
+2026-11-19T20:36:36.0443287Z libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.10).
+2026-11-19T20:36:36.0443676Z libnspr4 is already the newest version (2:4.35-1.1build1).
+2026-11-19T20:36:36.0443998Z libnspr4 set to manually installed.
+2026-11-19T20:36:36.0444310Z libnss3 is already the newest version (2:3.98-1ubuntu0.3).
+2026-11-19T20:36:36.0444609Z libnss3 set to manually installed.
+2026-11-19T20:36:36.0444935Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+2026-11-19T20:36:36.0445314Z libx11-6 is already the newest version (2:1.8.7-1ubuntu0.1).
+2026-11-19T20:36:36.0445666Z libxcb1 is already the newest version (1.15-1ubuntu2).
+2026-11-19T20:36:36.0446039Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+2026-11-19T20:36:36.0446416Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+2026-11-19T20:36:36.0446772Z libxext6 is already the newest version (2:1.3.4-1build2).
+2026-11-19T20:36:36.0447208Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+2026-11-19T20:36:36.0447613Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+2026-11-19T20:36:36.0447827Z libxkbcommon0 set to manually installed.
+2026-11-19T20:36:36.0448049Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+2026-11-19T20:36:36.0448291Z xvfb is already the newest version (2:21.1.12-1ubuntu1.9).
+2026-11-19T20:36:36.0448589Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+2026-11-19T20:36:36.0448891Z fonts-unifont is already the newest version (1:15.1.01-1build1).
+2026-11-19T20:36:36.0449162Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+2026-11-19T20:36:36.0449441Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.2).
+2026-11-19T20:36:36.0449710Z xfonts-cyrillic is already the newest version (1:1.0.5+nmu1).
+2026-11-19T20:36:36.0449965Z xfonts-scalable is already the newest version (1:1.0.3-1.3).
+2026-11-19T20:36:36.0450214Z fonts-liberation is already the newest version (1:2.1.5-3).
+2026-11-19T20:36:36.0450489Z fonts-ipafont-gothic is already the newest version (00303-21ubuntu1).
+2026-11-19T20:36:36.0450766Z fonts-wqy-zenhei is already the newest version (0.9.45-8).
+2026-11-19T20:36:36.0451029Z fonts-tlwg-loma-otf is already the newest version (1:0.7.3-1).
+2026-11-19T20:36:36.0451318Z fonts-freefont-ttf is already the newest version (20211204+svn4273-2).
+2026-11-19T20:36:36.0451781Z The following additional packages will be installed:
+2026-11-19T20:36:36.0452100Z   libgl1-mesa-dri libglx-mesa0 mesa-libgallium
+2026-11-19T20:36:36.0579163Z The following packages will be upgraded:
+2026-11-19T20:36:36.0581086Z   libgbm1 libgl1-mesa-dri libglx-mesa0 mesa-libgallium
+2026-11-19T20:36:36.0711616Z 4 upgraded, 0 newly installed, 0 to remove and 25 not upgraded.
+2026-11-19T20:36:36.0712866Z Need to get 11.0 MB of archives.
+2026-11-19T20:36:36.0713259Z After this operation, 134 kB of additional disk space will be used.
+2026-11-19T20:36:36.0713561Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-19T20:36:36.1265533Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgl1-mesa-dri amd64 25.2.8-0ubuntu0.24.04.5 [38.0 kB]
+2026-11-19T20:36:36.1499845Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglx-mesa0 amd64 25.2.8-0ubuntu0.24.04.5 [110 kB]
+2026-11-19T20:36:36.1743473Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgbm1 amd64 25.2.8-0ubuntu0.24.04.5 [34.2 kB]
+2026-11-19T20:36:36.1916327Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-libgallium amd64 25.2.8-0ubuntu0.24.04.5 [10.8 MB]
+2026-11-19T20:36:37.2543730Z Fetched 11.0 MB in 1s (11.1 MB/s)
+2026-11-19T20:36:37.3279053Z (Reading database ... 
+2026-11-19T20:36:37.3279285Z (Reading database ... 5%
+2026-11-19T20:36:37.3279450Z (Reading database ... 10%
+2026-11-19T20:36:37.3279596Z (Reading database ... 15%
+2026-11-19T20:36:37.3279734Z (Reading database ... 20%
+2026-11-19T20:36:37.3279869Z (Reading database ... 25%
+2026-11-19T20:36:37.3280008Z (Reading database ... 30%
+2026-11-19T20:36:37.3280148Z (Reading database ... 35%
+2026-11-19T20:36:37.3280377Z (Reading database ... 40%
+2026-11-19T20:36:37.3280530Z (Reading database ... 45%
+2026-11-19T20:36:37.3280671Z (Reading database ... 50%
+2026-11-19T20:36:37.3310713Z (Reading database ... 55%
+2026-11-19T20:36:37.3515520Z (Reading database ... 60%
+2026-11-19T20:36:37.3759471Z (Reading database ... 65%
+2026-11-19T20:36:37.3884290Z (Reading database ... 70%
+2026-11-19T20:36:37.4022592Z (Reading database ... 75%
+2026-11-19T20:36:37.4183464Z (Reading database ... 80%
+2026-11-19T20:36:37.4442383Z (Reading database ... 85%
+2026-11-19T20:36:37.4794272Z (Reading database ... 90%
+2026-11-19T20:36:37.5114254Z (Reading database ... 95%
+2026-11-19T20:36:37.5114484Z (Reading database ... 100%
+2026-11-19T20:36:37.5114745Z (Reading database ... 210744 files and directories currently installed.)
+2026-11-19T20:36:37.5149398Z Preparing to unpack .../libgl1-mesa-dri_25.2.8-0ubuntu0.24.04.5_amd64.deb ...
+2026-11-19T20:36:37.5273343Z Unpacking libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.5) over (25.2.8-0ubuntu0.24.04.4) ...
+2026-11-19T20:36:37.5662935Z Preparing to unpack .../libglx-mesa0_25.2.8-0ubuntu0.24.04.5_amd64.deb ...
+2026-11-19T20:36:37.5681768Z Unpacking libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.5) over (25.2.8-0ubuntu0.24.04.4) ...
+2026-11-19T20:36:37.5946146Z Preparing to unpack .../libgbm1_25.2.8-0ubuntu0.24.04.5_amd64.deb ...
+2026-11-19T20:36:37.5961473Z Unpacking libgbm1:amd64 (25.2.8-0ubuntu0.24.04.5) over (25.2.8-0ubuntu0.24.04.4) ...
+2026-11-19T20:36:37.6233522Z Preparing to unpack .../mesa-libgallium_25.2.8-0ubuntu0.24.04.5_amd64.deb ...
+2026-11-19T20:36:37.6246843Z Unpacking mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.5) over (25.2.8-0ubuntu0.24.04.4) ...
+2026-11-19T20:36:37.7687224Z Setting up mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T20:36:37.7702503Z Setting up libgbm1:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T20:36:37.7715789Z Setting up libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T20:36:37.7770041Z Setting up libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T20:36:37.7784423Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-11-19T20:36:38.1124891Z 
+2026-11-19T20:36:38.1125665Z Failed to retrieve available kernel versions.
+2026-11-19T20:36:38.1125916Z 
+2026-11-19T20:36:38.1126081Z No services need to be restarted.
+2026-11-19T20:36:38.1126624Z 
+2026-11-19T20:36:38.1126747Z No containers need to be restarted.
+2026-11-19T20:36:38.1126909Z 
+2026-11-19T20:36:38.1127060Z No user sessions are running outdated binaries.
+2026-11-19T20:36:38.1127240Z 
+2026-11-19T20:36:38.1127479Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-11-19T20:36:38.9035305Z ##[group]Run coldteadotai/boba@v1
+2026-11-19T20:36:38.9035474Z with:
+2026-11-19T20:36:38.9035599Z   working-directory: src
+2026-11-19T20:36:38.9035734Z   project: chromium
+2026-11-19T20:36:38.9035859Z   turbo: true
+2026-11-19T20:36:38.9035976Z   fail-fast: false
+2026-11-19T20:36:38.9037374Z   github-token: ***
+2026-11-19T20:36:38.9037495Z   timeout-minutes: 60
+2026-11-19T20:36:38.9037622Z   check-name: Boba
+2026-11-19T20:36:38.9037738Z   post: true
+2026-11-19T20:36:38.9037855Z env:
+2026-11-19T20:36:38.9038000Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-11-19T20:36:38.9038179Z   NODE_ENV: production
+2026-11-19T20:36:38.9038322Z   WITH_PLUGINS: 1
+2026-11-19T20:36:38.9038447Z ##[endgroup]
+2026-11-19T20:36:40.1884518Z Waiting for Boba job bj_26bfe11799aa5e54
+2026-11-19T20:36:40.4162257Z Boba history read in 228 ms
+2026-11-19T20:36:41.6438725Z Boba job bj_26bfe11799aa5e54: running, building
+2026-11-19T20:36:48.6275153Z Boba job bj_26bfe11799aa5e54: running, listing
+2026-11-19T20:36:51.1824207Z Boba job bj_26bfe11799aa5e54: running, running
+2026-11-19T20:37:34.9145406Z Boba job bj_26bfe11799aa5e54: done
+2026-11-19T20:37:35.0044415Z Merged report unpacked into /home/runner/work/_temp/boba-report
+2026-11-19T20:37:35.7869642Z Check run: https://github.com/boba-benchmarks/etherpad-lite/runs/135865773355
+2026-11-19T20:37:35.8196188Z Post job cleanup.
+2026-11-19T20:37:35.9032068Z Cache hit occurred on the primary key node-cache-Linux-x64-pnpm-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556, not saving cache.
+2026-11-19T20:37:35.9150456Z Post job cleanup.
+2026-11-19T20:37:36.0168794Z Pruning is unnecessary.
+2026-11-19T20:37:36.0716285Z Post job cleanup.
+2026-11-19T20:37:36.1593794Z Cache hit occurred on the primary key Linux-playwright-31ef7bd5f30c4727b0e0bee005389c5796459918031710bea412d2818bda471e, not saving cache.
+2026-11-19T20:37:38.3794571Z Post job cleanup.
+2026-11-19T20:37:38.5033287Z [command]/usr/local/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/etherpad-lite/etherpad-lite --files-from manifest.txt --use-compress-program zstdmt
+2026-11-19T20:37:38.6221335Z ##[warning]Cache reservation failed: cache entry with key Linux-pnpm-store-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556 already exists for refs/heads/main
+2026-11-19T20:37:38.6226962Z Failed to save: Unable to reserve cache with key Linux-pnpm-store-d6428897bbeaf16a3ec91521a8ce44c456af69cd4b95c6f95687df54612db556, another job may be creating this cache.
+2026-11-19T20:37:38.6389056Z Post job cleanup.
+2026-11-19T20:37:38.6935746Z [command]/usr/bin/git version
+2026-11-19T20:37:38.6994563Z git version 2.56.1
+2026-11-19T20:37:38.7013385Z Temporarily overriding HOME='/home/runner/work/_temp/b3b3943c-ac7b-4f23-a1d3-adeb80064f01' before making global git config changes
+2026-11-19T20:37:38.7013869Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T20:37:38.7017170Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/etherpad-lite/etherpad-lite
+2026-11-19T20:37:38.7039731Z Removing SSH command configuration
+2026-11-19T20:37:38.7042726Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T20:37:38.7064924Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T20:37:38.7244387Z Removing HTTP extra header
+2026-11-19T20:37:38.7246396Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T20:37:38.7267369Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T20:37:38.7432294Z Removing includeIf entries pointing to credentials config files
+2026-11-19T20:37:38.7434848Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T20:37:38.7451328Z includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git.path
+2026-11-19T20:37:38.7451807Z includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git/worktrees/*.path
+2026-11-19T20:37:38.7452206Z includeif.gitdir:/github/workspace/.git.path
+2026-11-19T20:37:38.7452577Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-19T20:37:38.7456445Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git.path
+2026-11-19T20:37:38.7471606Z /home/runner/work/_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config
+2026-11-19T20:37:38.7478194Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-687b9a6d\-1bf1\-4eeb\-9b35\-10df42860dfd\.config
+2026-11-19T20:37:38.7501247Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git/worktrees/*.path
+2026-11-19T20:37:38.7516195Z /home/runner/work/_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config
+2026-11-19T20:37:38.7526486Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/etherpad-lite/etherpad-lite/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-687b9a6d\-1bf1\-4eeb\-9b35\-10df42860dfd\.config
+2026-11-19T20:37:38.7548436Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-19T20:37:38.7564691Z /github/runner_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config
+2026-11-19T20:37:38.7569346Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-687b9a6d\-1bf1\-4eeb\-9b35\-10df42860dfd\.config
+2026-11-19T20:37:38.7591226Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-19T20:37:38.7607571Z /github/runner_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config
+2026-11-19T20:37:38.7613486Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-687b9a6d\-1bf1\-4eeb\-9b35\-10df42860dfd\.config
+2026-11-19T20:37:38.7637689Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T20:37:38.7811648Z Removing credentials config '/home/runner/work/_temp/git-credentials-687b9a6d-1bf1-4eeb-9b35-10df42860dfd.config'
+2026-11-19T20:37:38.7956443Z Cleaning up orphan processes
+2026-11-19T20:37:38.8225817Z Terminate orphan process: pid (12231) (pnpm)
+2026-11-19T20:37:38.8240096Z Terminate orphan process: pid (12256) (sh)
+2026-11-19T20:37:38.8252667Z Terminate orphan process: pid (12257) (pnpm)
+2026-11-19T20:37:38.8266569Z Terminate orphan process: pid (12280) (sh)
+2026-11-19T20:37:38.8289659Z Terminate orphan process: pid (12281) (MainThread)
+2026-11-19T20:37:38.8305579Z Terminate orphan process: pid (12292) (MainThread)
+2026-11-19T20:37:38.8321120Z Terminate orphan process: pid (12364) (esbuild)
